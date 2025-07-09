@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MellowMill Studio - Transform Your Productivity with Calm Focus</title>
     <meta name="description" content="MellowMill Studio - The most calming and intuitive note-taking and task management app. Organize your thoughts, track your progress, and achieve your goals with zen-like focus.">
     <meta name="keywords" content="note taking app, task management, productivity, organization, mindful productivity, calm focus">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
     <style>
+        :root {
+            --color-text: #1A1A1A;
+            --color-background: #FFFFFF;
+            --color-primary: #0052FF; /* A strong, classic blue */
+            --color-primary-hover: #0041CC;
+            --color-light-gray: #F0F0F0;
+            --color-border: #DDDDDD;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -18,24 +25,18 @@
 
         body {
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
-            color: #2E3440;
-            background: #FAFAFA;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
             overflow-x: hidden;
-            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-            font-variant-numeric: tabular-nums;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .container-narrow {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
         /* Header */
@@ -45,359 +46,268 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(46, 52, 64, 0.08);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
+            background: var(--color-background);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.5rem 0;
         }
-
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
         }
 
         .logo {
-            font-family: "Poppins", sans-serif;
             font-size: 1.5rem;
-            font-weight: 500;
-            color: #2E3440;
+            font-weight: 700;
+            color: var(--color-text);
             text-decoration: none;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.5px;
         }
 
         .cta-button {
-            background: #2E3440;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
+            background: var(--color-primary);
+            color: var(--color-background);
+            padding: 10px 20px;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
             font-size: 0.9rem;
-            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
-            background: #434C5E;
-            transform: translateY(-1px);
+            background: var(--color-primary-hover);
         }
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 100px;
-            text-align: center;
-            background: #ECEFF4; /* Changed background */
-            min-height: 80vh;
-            display: flex;
+            padding: 180px 0 120px;
+            background: var(--color-background);
+            text-align: left;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
             align-items: center;
+            gap: 2rem;
         }
 
         .hero h1 {
-            font-family: "Poppins", sans-serif;
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: #2E3440;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            letter-spacing: -0.01em;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
         }
 
         .hero h2 {
             font-size: 1.25rem;
-            color: #4C566A; /* Changed color for softer tone */
-            margin-bottom: 2.5rem;
+            color: var(--color-text);
+            margin-bottom: 2rem;
             font-weight: 400;
-            line-height: 1.6;
-            letter-spacing: 0;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 500px;
         }
 
         .hero-cta {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            margin: 2.5rem 0;
+            margin: 0;
         }
 
         .cta-primary {
-            background: #5E81AC; /* Changed to a calm blue */
-            color: white;
-            padding: 16px 32px;
-            border-radius: 6px;
+            background: var(--color-primary);
+            color: var(--color-background);
+            padding: 15px 30px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1rem;
-            transition: all 0.3s ease;
-            letter-spacing: 0.01em;
+            transition: background-color 0.2s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .cta-primary:hover {
-            background: #81A1C1; /* Lighter blue for hover */
-            transform: translateY(-1px);
-        }
-
-        .hero-image {
-            margin-top: 60px;
-            max-width: 100%;
-            height: auto;
+            background: var(--color-primary-hover);
         }
 
         /* Features Section */
         .features {
             padding: 100px 0;
-            background: #FFFFFF; /* Changed to white */
+            background: var(--color-light-gray);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
         }
 
-        .features h2 {
-            font-family: "Poppins", sans-serif;
-            font-size: 2.5rem;
+        .section-title {
+            font-size: 1rem;
             font-weight: 600;
-            text-align: center;
-            color: #2E3440;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text);
             margin-bottom: 3rem;
-            letter-spacing: -0.01em;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: left;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--color-border);
+            border: 1px solid var(--color-border);
         }
 
         .feature-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            border: 1px solid #E5E9F0; /* Softer border */
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(46, 52, 64, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(46, 52, 64, 0.08); /* Softer shadow */
+            background: var(--color-background);
+            padding: 2rem;
+            text-align: left;
         }
 
         .feature-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: #5E81AC;
+            color: var(--color-primary);
         }
 
         .feature-card h3 {
-            font-size: 1.25rem;
-            color: #2E3440;
-            margin-bottom: 1rem;
-            font-weight: 500;
-            letter-spacing: 0;
+            font-size: 1.2rem;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         .feature-card p {
-            color: #4C566A;
-            line-height: 1.7;
+            color: var(--color-text);
             font-weight: 400;
             font-size: 1rem;
+            line-height: 1.6;
         }
 
         /* Benefits Section */
         .benefits {
             padding: 100px 0;
-            background: #ECEFF4; /* Changed background */
-        }
-
-        .benefits h2 {
-            font-family: "Poppins", sans-serif;
-            font-size: 2.5rem;
-            font-weight: 600;
-            text-align: center;
-            color: #2E3440;
-            margin-bottom: 3rem;
-            letter-spacing: -0.01em;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            background: var(--color-background);
         }
 
         .benefits-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr;
             gap: 1.5rem;
-            margin-top: 3rem;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .benefit-item {
-            display: flex;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            align-items: center;
             gap: 1.5rem;
-            padding: 2rem;
-            background: #FFFFFF; /* Changed background */
-            border-radius: 8px;
-            border: 1px solid #E5E9F0; /* Softer border */
-            transition: all 0.3s ease;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--color-border);
         }
-
-        .benefit-item:hover {
-            transform: translateY(-1px);
-            background: #FFFFFF;
-            box-shadow: 0 2px 8px rgba(46, 52, 64, 0.05);
+        .benefit-item:first-child {
+            border-top: 1px solid var(--color-border);
         }
 
         .benefit-check {
-            color: #8FBCBB; /* Changed to a calm green/blue */
+            color: var(--color-primary);
             font-size: 1.5rem;
-            margin-top: 0.2rem;
-            flex-shrink: 0;
+            font-weight: bold;
         }
 
         .benefit-text {
-            color: #4C566A;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.7;
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 1.2rem;
         }
 
-        /* Testimonials */
+        /* Testimonials Section */
         .testimonials {
             padding: 100px 0;
-            background: #FFFFFF; /* Changed background */
-        }
-
-        .testimonials h2 {
-            font-family: "Inter", sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 4rem;
-            letter-spacing: -0.02em;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            background: var(--color-light-gray);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .testimonial-card {
-            background: white;
-            padding: 3rem 2.5rem;
-            border-radius: 16px; /* Adjusted for softer look */
-            position: relative;
-            box-shadow: 0 8px 32px rgba(46, 52, 64, 0.08); /* Softer shadow */
-            border: 1px solid #E5E9F0; /* Softer border */
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(46, 52, 64, 0.1); /* Softer shadow */
-            background: white;
+            background: transparent;
+            padding: 0;
         }
 
         .testimonial-quote {
-            font-style: italic;
-            color: #4C566A; /* Softer color */
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            font-style: normal;
+            color: var(--color-text);
+            margin-bottom: 1rem;
             font-weight: 400;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .testimonial-quote::before {
+            content: '"';
+        }
+        .testimonial-quote::after {
+            content: '"';
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #2E3440; /* Changed color */
-            font-size: 1.1rem;
+            color: var(--color-text);
+            font-size: 1rem;
         }
 
         .testimonial-role {
-            color: #81A1C1; /* Changed to a calm blue */
+            color: var(--color-text);
+            opacity: 0.7;
             font-size: 1rem;
             font-weight: 400;
-            margin-top: 0.5rem;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 120px 0;
-            background: #8FBCBB; /* Changed to a calm green/blue */
+            padding: 100px 0;
+            background: var(--color-primary);
             text-align: center;
-            color: #2E3440; /* Changed text color for contrast */
         }
 
         .cta-section h2 {
-            font-family: "Inter", sans-serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #FFFFFF; /* Title color to white */
-        }
-
-        .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
+            margin-bottom: 2rem;
+            color: var(--color-background);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            color: #ECEFF4; /* Subtitle color */
         }
 
         .cta-white {
-            background: white;
-            color: #8FBCBB; /* Changed to match new CTA background */
-            padding: 20px 48px;
-            border-radius: 12px;
+            background: var(--color-background);
+            color: var(--color-primary);
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .cta-white:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+            background: var(--color-light-gray);
+            color: var(--color-primary-hover);
         }
 
         /* Footer */
         footer {
-            background: #2E3440; /* Darker footer */
-            color: #D8DEE9; /* Lighter text on dark background */
-            padding: 40px 0;
-            text-align: center;
+            background: var(--color-background);
+            color: var(--color-text);
+            padding: 4rem 0;
+            border-top: 1px solid var(--color-border);
         }
 
         .footer-content {
@@ -405,1149 +315,162 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1rem;
         }
 
         .footer-logo {
-            font-family: "Comfortaa", sans-serif;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 600;
-            color: #ECEFF4;
+            color: var(--color-text);
+            opacity: 0.7;
         }
 
         .footer-links {
             display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
         }
 
         .footer-links a {
-            color: #D8DEE9; /* Lighter link color */
+            color: var(--color-text);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
             font-weight: 400;
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
-            color: #8FBCBB; /* Calm green/blue for hover */
+            color: var(--color-primary);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container,
-            .container-narrow {
-                padding: 0 20px;
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: left;
             }
-            
-            header {
-                top: 10px;
-                left: 10px;
-                right: 10px;
-                padding: 0.75rem 0;
-            }
-            
-            .header-content {
-                padding: 0 1rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .main-nav {
-                gap: 1rem;
-            }
-            
-            .hero {
-                padding: 120px 0 80px;
-                min-height: 90vh;
-            }
-            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
-            
             .hero h2 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
-            
-            .features h2,
-            .benefits h2,
-            .testimonials h2,
-            .cta-section h2,
-            .pricing h2 {
-                font-size: 2rem;
-            }
-            
-            .features,
-            .benefits,
-            .testimonials,
-            .pricing,
-            .product-preview,
-            .social-proof,
-            .mid-cta {
-                padding: 60px 0;
-            }
-            
-            .features-grid,
-            .testimonials-grid,
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .benefits-list {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .pricing-card.featured {
-                transform: none;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            /* Mobile styles for new elements */
-            .screenshot-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .customer-logos {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            
-            .feature-item {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-            
-            .feature-item.reverse {
-                direction: ltr;
-            }
-            
-            .feature-content h3 {
-                font-size: 1.5rem;
-            }
-            
-            .cta-box h3 {
-                font-size: 2rem;
-            }
-            
-            .social-testimonials {
-                grid-template-columns: 1fr;
-            }
-            
-            .video-placeholder {
-                padding: 3rem 1rem;
-            }
-            
-            .video-placeholder.large {
-                padding: 4rem 1rem;
-            }
-            
-            .play-button {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
-            }
-            
-            .testimonial-overlay {
-                bottom: 1rem;
-                left: 1rem;
-                right: 1rem;
-                padding: 1rem;
-            }
-            
-            .testimonial-overlay p {
-                font-size: 1rem;
-            }
-            
-            .main-screenshot {
-                min-height: 250px;
-            }
-            
-            .screenshot-grid .screenshot-placeholder {
-                min-height: 150px;
-            }
-            
-            /* Mobile signup form */
-            .form-group {
+            .header-content {
                 flex-direction: column;
                 gap: 1rem;
             }
-            
-            .form-group button {
-                width: 100%;
-            }
-            
-            .trial-form {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* Trust badges */
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .trust-badge {
-            background: white;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(40, 41, 40, 0.08);
-            font-weight: 500;
-            color: #5a5b5a;
-            border: 1px solid rgba(40, 41, 40, 0.08);
-        }
-
-        /* Navigation */
-        .main-nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .main-nav a {
-            color: #282928;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .main-nav a:hover {
-            color: #5E81AC; /* Calm blue for hover */
-        }
-
-        /* Hero Secondary CTA */
-        .cta-secondary {
-            margin-top: 1rem;
-        }
-
-        .demo-link {
-            color: #4C566A; /* Softer color */
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 2px solid #8FBCBB; /* Calm green/blue */
-            transition: all 0.3s ease;
-        }
-
-        .demo-link:hover {
-            color: #5E81AC; /* Calm blue for hover */
-            border-bottom-color: #5E81AC;
-        }
-
-        /* Product Preview Section */
-        .product-preview {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .preview-video {
-            margin-bottom: 4rem;
-        }
-
-        .video-placeholder {
-            background: #f8f9fa;
-            border-radius: 16px;
-            padding: 4rem 2rem;
-            text-align: center;
-            border: 2px dashed #E5E9F0; /* Softer border */
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .video-placeholder.large {
-            padding: 6rem 2rem;
-        }
-
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: #5E81AC; /* Calm blue */
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .play-button:hover {
-            background: #81A1C1; /* Lighter blue for hover */
-            transform: scale(1.1);
-        }
-
-        .product-screenshots {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .screenshot-placeholder {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 3rem 2rem;
-            text-align: center;
-            border: 2px dashed #E5E9F0; /* Softer border */
-            color: #6c757d;
-            font-weight: 500;
-        }
-
-        .main-screenshot {
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .screenshot-grid .screenshot-placeholder {
-            min-height: 200px;
-        }
-
-        /* Social Proof Section */
-        .social-proof {
-            padding: 60px 0;
-            background: #ECEFF4; /* Changed background */
-        }
-
-        .social-proof h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 3rem;
-        }
-
-        .customer-logos {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .logo-placeholder {
-            background: white;
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(46, 52, 64, 0.06); /* Softer shadow */
-            font-weight: 600;
-            color: #4C566A; /* Softer color */
-            border: 1px solid #E5E9F0; /* Softer border */
-        }
-
-        /* Mid-Page CTA */
-        .mid-cta {
-            padding: 80px 0;
-            background: #FFFFFF; /* Changed background */
-        }
-
-        .cta-box {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cta-box h3 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 1rem;
-        }
-
-        .cta-box p {
-            font-size: 1.2rem;
-            color: #4C566A; /* Softer color */
-            margin-bottom: 2rem;
-        }
-
-        /* Feature Showcase */
-        .feature-showcase {
-            margin-top: 4rem;
-        }
-
-        .feature-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 6rem;
-        }
-
-        .feature-item.reverse {
-            direction: rtl;
-        }
-
-        .feature-item.reverse > * {
-            direction: ltr;
-        }
-
-        .feature-image {
-            position: relative;
-        }
-
-        .image-placeholder {
-            background: #f8f9fa;
-            border-radius: 16px;
-            padding: 4rem 2rem;
-            text-align: center;
-            border: 2px dashed #E5E9F0; /* Softer border */
-            color: #6c757d;
-            font-weight: 500;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature-content h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 1rem;
-        }
-
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #4C566A; /* Softer color */
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-benefits {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .feature-benefits li {
-            padding: 0.5rem 0;
-            color: #4C566A; /* Softer color */
-            font-weight: 500;
-        }
-
-        /* Video Testimonials */
-        .video-testimonial {
-            margin-bottom: 4rem;
-        }
-
-        .testimonial-overlay {
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            right: 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: left;
-        }
-
-        .testimonial-overlay p {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 0.5rem;
-        }
-
-        .testimonial-overlay span {
-            color: #4C566A; /* Softer color */
-            font-weight: 500;
-        }
-
-        /* Social Media Testimonials */
-        .social-testimonials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .social-embed {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 16px rgba(46, 52, 64, 0.06); /* Softer shadow */
-            border: 1px solid #E5E9F0; /* Softer border */
-        }
-
-        .tweet-placeholder {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        .tweet-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .tweet-header strong {
-            color: #1da1f2;
-            font-weight: 600;
-        }
-
-        .tweet-header span {
-            color: #657786;
-            font-size: 0.9rem;
-        }
-
-        .tweet-placeholder p {
-            color: #14171a;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-        }
-
-        .tweet-stats {
-            color: #657786;
-            font-size: 0.9rem;
-        }
-
-        /* Enhanced Testimonials */
-        .customer-photo {
-            margin-bottom: 1.5rem;
-        }
-
-        .photo-placeholder {
-            width: 60px;
-            height: 60px;
-            background: #8FBCBB; /* Calm green/blue */
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-card.featured {
-            border: 2px solid #8FBCBB; /* Calm green/blue */
-            position: relative;
-        }
-
-        .case-study-link {
-            margin-top: 1.5rem;
-        }
-
-        .case-study-link a {
-            color: #8FBCBB; /* Calm green/blue */
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .case-study-link a:hover {
-            color: #81A1C1; /* Calm blue for hover */
-        }
-
-        /* Signup Form */
-        .signup-form {
-            max-width: 600px;
-            margin: 3rem auto;
-        }
-
-        .trial-form {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .form-group {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .form-group input {
-            flex: 1;
-            padding: 15px 20px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.9);
-            color: #2E3440; /* Changed color */
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-group button {
-            padding: 15px 30px;
-            white-space: nowrap;
-        }
-
-        .form-benefits {
-            text-align: center;
-            opacity: 0.9;
-        }
-
-        .form-benefits small {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-        }
-
-        /* Demo Section */
-        .demo-section {
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .demo-video {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 120px 0;
-            background: #ECEFF4; /* Changed background */
-        }
-
-        .pricing h2 {
-            font-family: "Inter", sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .pricing-subtitle {
-            text-align: center;
-            color: #4C566A; /* Softer color */
-            font-size: 1.2rem;
-            margin-bottom: 4rem;
-            font-weight: 400;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-            max-width: 1200px;
-            margin: 4rem auto 0;
-        }
-
-        .pricing-card {
-            background: white;
-            padding: 3rem 2.5rem;
-            border-radius: 24px; /* Adjusted for softer look */
-            text-align: center;
-            box-shadow: 0 8px 36px rgba(46, 52, 64, 0.06); /* Softer shadow */
-            transition: all 0.3s ease;
-            position: relative;
-            border: 2px solid #E5E9F0; /* Softer border */
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 50px rgba(46, 52, 64, 0.1); /* Softer shadow */
-            background: white;
-        }
-
-        .pricing-card.featured {
-            border-color: #8FBCBB; /* Calm green/blue */
-            transform: scale(1.05);
-            box-shadow: 0 8px 40px rgba(143, 188, 187, 0.25); /* Softer shadow */
-        }
-
-        .pricing-card.featured::before {
-            content: "Most Popular";
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #8FBCBB; /* Calm green/blue */
-            color: #FFFFFF;
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .pricing-plan {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #2E3440; /* Changed color */
-            margin-bottom: 0.5rem;
-            font-family: "Inter", sans-serif;
-            letter-spacing: -0.01em;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #5E81AC; /* Calm blue */
-            margin-bottom: 0.5rem;
-            font-family: "Inter", sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        .pricing-period {
-            color: #4C566A; /* Softer color */
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-
-        .pricing-features {
-            list-style: none;
-            padding: 0;
-            margin: 2rem 0;
-        }
-
-        .pricing-features li {
-            padding: 0.5rem 0;
-            color: #4C566A; /* Softer color */
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 400;
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            color: #8FBCBB; /* Calm green/blue */
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .pricing-cta {
-            background: #5E81AC; /* Calm blue */
-            color: white;
-            padding: 15px 30px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(94, 129, 172, 0.3); /* Softer shadow */
-            display: inline-block;
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .pricing-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(94, 129, 172, 0.4); /* Softer shadow */
-            background: #81A1C1; /* Lighter blue for hover */
-        }
-
-        .pricing-cta.secondary {
-            background: transparent;
-            color: #5E81AC; /* Calm blue */
-            border: 2px solid #5E81AC; /* Calm blue */
-            box-shadow: none;
-        }
-
-        .pricing-cta.secondary:hover {
-            background: #5E81AC; /* Calm blue */
-            color: white;
-            box-shadow: 0 6px 25px rgba(94, 129, 172, 0.3); /* Softer shadow */
         }
     </style>
 </head>
-<body id="top">
+<body>
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#top" class="logo">MellowMill Studio</a>
-                <nav class="main-nav">
-                    <a href="#features">Features</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#testimonials">Reviews</a>
-                    <a href="#demo">Demo</a>
-                </nav>
-                <a href="#signup" class="cta-button">Download Now</a>
+                <a href="#" class="logo">MellowMill</a>
+                <a href="#" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
 
-    <section class="hero fade-in">
-        <div class="container">
-            <h1>Productivity For Busy Minds</h1>
-            <h2>MellowMill Studio helps busy professionals capture, organize, and execute on their ideas without the stress.</h2>
-            <div class="hero-cta">
-                <a href="#signup" class="cta-primary">Download Now</a>
-                <div class="cta-secondary">
-                    <a href="#demo" class="demo-link">Watch 2-min Demo</a>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Calm, Focused, and Organized.</h1>
+                    <h2>The minimalist note-taking and task management app designed to bring clarity to your workflow.</h2>
+                    <div class="hero-cta">
+                        <a href="#" class="cta-primary">Start Your Free Trial</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Placeholder for a clean, abstract visual or product screenshot -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Product Preview Section -->
-    <section class="product-preview">
-        <div class="container">
-            <div class="preview-video">
-                <div class="video-placeholder">
-                    <div class="play-button">▶</div>
-                    <p>Watch MellowMill Studio in Action (2:15)</p>
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Core Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3>Distraction-Free Interface</h3>
+                        <p>A clean workspace that helps you focus on what truly matters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3>Intuitive Task Management</h3>
+                        <p>Organize your to-do lists with simple, yet powerful, tools.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3>Seamless Synchronization</h3>
+                        <p>Access your notes and tasks on any device, anytime.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="features">
-        <div class="container">
-            <h2>Powerful Features That Actually Help You Get Things Done</h2>
-            <div class="feature-showcase">
-                <div class="feature-item">
-                    <div class="feature-image">
-                        <div class="image-placeholder">
-                            <p>Smart Capture Screenshot</p>
-                        </div>
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">Why You'll Love It</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-check">→</div>
+                        <p class="benefit-text">Achieve Mental Clarity</p>
                     </div>
-                    <div class="feature-content">
-                        <h3>Smart Idea Capture</h3>
-                        <p>Never lose another brilliant idea. Our intelligent capture system automatically organizes your thoughts by context, urgency, and project - reducing the mental load of remembering everything.</p>
-                        <ul class="feature-benefits">
-                            <li>✓ Voice-to-text with 99% accuracy</li>
-                            <li>✓ Auto-categorization by AI</li>
-                            <li>✓ One-click capture from any device</li>
-                        </ul>
+                    <div class="benefit-item">
+                        <div class="benefit-check">→</div>
+                        <p class="benefit-text">Boost Your Productivity</p>
                     </div>
-                </div>
-                
-                <div class="feature-item reverse">
-                    <div class="feature-image">
-                        <div class="image-placeholder">
-                            <p>Task Flow Screenshot</p>
-                        </div>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Stress-Free Task Management</h3>
-                        <p>Transform overwhelming to-do lists into manageable workflows. Our calm approach to task management helps you focus on what matters without the anxiety.</p>
-                        <ul class="feature-benefits">
-                            <li>✓ Priority scoring based on impact</li>
-                            <li>✓ Gentle reminder system</li>
-                            <li>✓ Progress visualization</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-image">
-                        <div class="image-placeholder">
-                            <p>Analytics Dashboard Screenshot</p>
-                        </div>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Insights That Drive Results</h3>
-                        <p>Understand your productivity patterns and optimize your workflow. See exactly where your time goes and identify opportunities for improvement.</p>
-                        <ul class="feature-benefits">
-                            <li>✓ Weekly productivity reports</li>
-                            <li>✓ Focus time tracking</li>
-                            <li>✓ Goal achievement metrics</li>
-                        </ul>
+                    <div class="benefit-item">
+                        <div class="benefit-check">→</div>
+                        <p class="benefit-text">Build Better Habits</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="benefits">
-        <div class="container">
-            <h2>Why Choose MellowMill Studio?</h2>
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-text">Reduce stress and overwhelm with our calming approach to productivity</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-text">Save 3+ hours weekly with intelligent task automation and organization</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-text">Achieve better focus and deeper work with our distraction-free environment</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-text">Never lose important thoughts with reliable cloud synchronization</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-text">Track and improve your productivity patterns with insightful analytics</div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-text">Enjoy a beautiful, zen-like interface that makes work feel peaceful</div>
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Users Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">MellowMill has transformed my chaotic workflow into a streamlined process. It's simplicity by design.</p>
+                        <p class="testimonial-author">Alex Johnson</p>
+                        <p class="testimonial-role">Designer &amp; Developer</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">Finally, a productivity app that doesn't add to the noise. It helps me focus on deep work.</p>
+                        <p class="testimonial-author">Samantha Bee</p>
+                        <p class="testimonial-role">Writer &amp; Researcher</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="pricing">
-        <div class="container">
-            <h2>No Subscriptions Just Perpetual Licenses!</h2>
-            <p class="pricing-subtitle">Start for free, upgrade when you're ready to unlock your full potential</p>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-plan">Free</div>
-                    <div class="pricing-price">$0</div>
-                    <div class="pricing-period">Forever</div>
-                    <ul class="pricing-features">
-                        <li>Up to 50 notes</li>
-                        <li>Basic task management</li>
-                        <li>1 device sync</li>
-                        <li>Basic templates</li>
-                        <li>Email support</li>
-                    </ul>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="pricing-plan">Pro</div>
-                    <div class="pricing-price">$9</div>
-                    <div class="pricing-period">lifetine license</div>
-                    <ul class="pricing-features">
-                        <li>Unlimited notes & tasks</li>
-                        <li>Advanced task automation</li>
-                        <li>Unlimited device sync</li>
-                        <li>Focus mode & analytics</li>
-                        <li>Premium templates</li>
-                        <li>Priority support</li>
-                        <li>Advanced search & tags</li>
-                    </ul>
-                </div>
-                
-                <div class="pricing-card">
-                    <div class="pricing-plan">Pro+</div>
-                    <div class="pricing-price">$19</div>
-                    <div class="pricing-period">lifetime license</div>
-                    <ul class="pricing-features">
-                        <li>Everything in Pro</li>
-                        <li>Team collaboration</li>
-                        <li>Advanced integrations</li>
-                        <li>Custom workflows</li>
-                        <li>API access</li>
-                        <li>White-label options</li>
-                        <li>Dedicated account manager</li>
-                    </ul>
-             
-                </div>
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Productivity?</h2>
+                <a href="#" class="cta-white">Get Started for Free</a>
             </div>
-
-        
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Our Customers Say</h2>
-            
-            <!-- Featured Video Testimonial -->
-            <div class="video-testimonial">
-                <div class="video-placeholder large">
-                    <div class="play-button">▶</div>
-                    <div class="testimonial-overlay">
-                        <p>"I reduced my task overwhelm by 80% in just 2 weeks"</p>
-                        <span>- Jennifer Walsh, Marketing Director</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Social Media Testimonials -->
-            <div class="social-testimonials">
-                <div class="social-embed">
-                    <div class="tweet-placeholder">
-                        <div class="tweet-header">
-                            <strong>@sarahdesigns</strong> <span>2h</span>
-                        </div>
-                        <p>Just hit my most productive month ever thanks to @MellowMillStudio! The stress-free approach actually works 🙌</p>
-                        <div class="tweet-stats">12 replies • 47 retweets • 156 likes</div>
-                    </div>
-                </div>
-                
-                <div class="social-embed">
-                    <div class="tweet-placeholder">
-                        <div class="tweet-header">
-                            <strong>@techfounder</strong> <span>1d</span>
-                        </div>
-                        <p>MellowMill Studio is the first productivity app that doesn't make me anxious. Game changer for my ADHD brain! 🧠✨</p>
-                        <div class="tweet-stats">8 replies • 23 retweets • 89 likes</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Traditional Testimonials with Photos -->
-            <div class="testimonials-grid">
-                <div class="testimonial-card featured">
-                    <div class="customer-photo">
-                        <div class="photo-placeholder">SC</div>
-                    </div>
-                    <div class="testimonial-quote">
-                        "MellowMill Studio helped me go from scattered thoughts to organized action. I saved 12 hours per week and reduced my stress levels dramatically. The ROI is incredible."
-                    </div>
-                    <div class="testimonial-author">Sarah Chen</div>
-                    <div class="testimonial-role">Product Designer at TechCorp</div>
-                    <div class="case-study-link">
-                        <a href="#case-study-sarah">Read Full Case Study →</a>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="customer-photo">
-                        <div class="photo-placeholder">MR</div>
-                    </div>
-                    <div class="testimonial-quote">
-                        "The calm design is everything. I finally found a productivity system that works with my brain, not against it. My team adopted it company-wide."
-                    </div>
-                    <div class="testimonial-author">Marcus Rodriguez</div>
-                    <div class="testimonial-role">Creative Director</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="customer-photo">
-                        <div class="photo-placeholder">ET</div>
-                    </div>
-                    <div class="testimonial-quote">
-                        "I went from feeling overwhelmed by my to-do list to feeling in control of my projects. It's like having a personal productivity coach."
-                    </div>
-                    <div class="testimonial-author">Emma Thompson</div>
-                    <div class="testimonial-role">Freelance Writer</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section" id="signup">
-        <div class="container">
-            <h2>Ready to Reduce Your Task Overwhelm by 75%?</h2>
-            <p>Join 2,500+ professionals who've transformed their productivity with MellowMill Studio</p>
-            
-            <div class="signup-form">
-                <form class="trial-form">
-                    <div class="form-group">
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit" class="cta-white">Download Now</button>
-                    </div>
-                    <div class="form-benefits">
-                        <small>✓ No credit card required • ✓ Cancel anytime • ✓ Full access to all features</small>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="demo-section" id="demo">
-                <div class="demo-video">
-                    <div class="video-placeholder">
-                        <div class="play-button">▶</div>
-                        <p>Watch How MellowMill Studio Works (2:15)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">MellowMill Studio</div>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Support</a>
+                <p class="footer-logo">&copy; 2025 MellowMill Studio</p>
+                <nav class="footer-links">
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
                     <a href="#">Contact</a>
-                </div>
-            </div>
-            <div style="margin-top: 2rem; text-align: center; opacity: 0.7;">
-                <p>&copy; 2024 MellowMill Studio. All rights reserved.</p>
+                    <a href="#">Twitter</a>
+                </nav>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                
-                if (target) {
-                    // Special handling for top scroll
-                    if (targetId === '#top') {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    } else {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-
-        // Simple fade-in animation on scroll
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.2,
-            rootMargin: "0px 0px -50px 0px"
-        };
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('appear');
-                    appearOnScroll.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    </script>
 </body>
 </html>
