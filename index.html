@@ -3,7 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MellowMill Studio - Transform Your Productivity with Calm Focus</title>
@@ -18,120 +18,111 @@
 
         body {
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #2f3e46;
-            background: linear-gradient(135deg, #cad2c5 0%, #84a98c 100%);
+            line-height: 1.7;
+            color: #2E3440;
+            background: #FAFAFA;
             overflow-x: hidden;
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
             font-variant-numeric: tabular-nums;
         }
 
         .container {
-            max-width: 1440px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 24px;
         }
 
         .container-narrow {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 24px;
         }
 
         /* Header */
         header {
             position: fixed;
-            top: 20px;
-            left: 20px;
-            right: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            border: 1px solid rgba(40, 41, 40, 0.08);
-            box-shadow: 0 8px 32px rgba(40, 41, 40, 0.1);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(46, 52, 64, 0.08);
             padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
-        header:hover {
-            box-shadow: 0 12px 40px rgba(40, 41, 40, 0.15);
-        }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1440px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 24px;
         }
 
         .logo {
-            font-family: "Comfortaa", sans-serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: #2f3e46;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2E3440;
             text-decoration: none;
+            letter-spacing: -0.01em;
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #6B9797 0%, #5a8080 100%);
+            background: #2E3440;
             color: white;
             padding: 12px 24px;
-            border-radius: 12px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(107, 151, 151, 0.3);
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.01em;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(107, 151, 151, 0.4);
+            background: #434C5E;
+            transform: translateY(-1px);
         }
 
         /* Hero Section */
         .hero {
-            padding: 140px 0 120px;
+            padding: 120px 0 100px;
             text-align: center;
-            background: linear-gradient(135deg, #6B9797 0%, #85b3b3 100%);
-            min-height: 100vh;
+            background: #ECEFF4; /* Changed background */
+            min-height: 80vh;
             display: flex;
             align-items: center;
         }
 
         .hero h1 {
-            font-family: "Inter", sans-serif;
-            font-size: 4.5rem;
-            font-weight: 800;
-            color: #2f3e46;
-            margin-bottom: 2rem;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            max-width: 800px;
+            font-family: "Poppins", sans-serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #2E3440;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .hero h2 {
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 3rem;
-            font-weight: 500;
-            line-height: 1.4;
-            letter-spacing: -0.01em;
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: #4C566A; /* Changed color for softer tone */
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: 0;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            opacity: 0.9;
         }
 
         .hero-cta {
@@ -139,25 +130,24 @@
             justify-content: center;
             align-items: center;
             gap: 1rem;
-            margin: 3rem 0;
+            margin: 2.5rem 0;
         }
 
         .cta-primary {
-            background: #4ba527;
+            background: #5E81AC; /* Changed to a calm blue */
             color: white;
-            padding: 20px 48px;
-            border-radius: 12px;
+            padding: 16px 32px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
+            font-weight: 500;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(75, 165, 39, 0.3);
+            letter-spacing: 0.01em;
         }
 
         .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(75, 165, 39, 0.4);
-            background: #3a8b1f;
+            background: #81A1C1; /* Lighter blue for hover */
+            transform: translateY(-1px);
         }
 
         .hero-image {
@@ -168,81 +158,81 @@
 
         /* Features Section */
         .features {
-            padding: 120px 0;
-            background: white;
+            padding: 100px 0;
+            background: #FFFFFF; /* Changed to white */
         }
 
         .features h2 {
-            font-family: "Inter", sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
             text-align: center;
-            color: #2f3e46;
-            margin-bottom: 4rem;
-            letter-spacing: -0.02em;
-            max-width: 800px;
+            color: #2E3440;
+            margin-bottom: 3rem;
+            letter-spacing: -0.01em;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .feature-card {
             background: white;
-            padding: 3rem 2rem;
-            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 1px solid #E5E9F0; /* Softer border */
             text-align: center;
-            box-shadow: 0 8px 32px rgba(40, 41, 40, 0.08);
+            box-shadow: 0 2px 8px rgba(46, 52, 64, 0.05);
             transition: all 0.3s ease;
-            border: 1px solid rgba(40, 41, 40, 0.06);
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(40, 41, 40, 0.12);
-            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(46, 52, 64, 0.08); /* Softer shadow */
         }
 
         .feature-icon {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
+            color: #5E81AC;
         }
 
         .feature-card h3 {
-            font-size: 1.5rem;
-            color: #282928;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.01em;
+            font-size: 1.25rem;
+            color: #2E3440;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            letter-spacing: 0;
         }
 
         .feature-card p {
-            color: #5a5b5a;
-            line-height: 1.6;
+            color: #4C566A;
+            line-height: 1.7;
             font-weight: 400;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         /* Benefits Section */
         .benefits {
-            padding: 120px 0;
-            background: #F8FBF8;
+            padding: 100px 0;
+            background: #ECEFF4; /* Changed background */
         }
 
         .benefits h2 {
-            font-family: "Inter", sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
             text-align: center;
-            color: #282928;
-            margin-bottom: 4rem;
-            letter-spacing: -0.02em;
-            max-width: 800px;
+            color: #2E3440;
+            margin-bottom: 3rem;
+            letter-spacing: -0.01em;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -250,9 +240,9 @@
         .benefits-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-            max-width: 1200px;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -262,37 +252,36 @@
             align-items: flex-start;
             gap: 1.5rem;
             padding: 2rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 6px 24px rgba(40, 41, 40, 0.08);
-            border: 1px solid rgba(40, 41, 40, 0.06);
+            background: #FFFFFF; /* Changed background */
+            border-radius: 8px;
+            border: 1px solid #E5E9F0; /* Softer border */
             transition: all 0.3s ease;
         }
 
         .benefit-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 36px rgba(40, 41, 40, 0.12);
-            background: white;
+            transform: translateY(-1px);
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(46, 52, 64, 0.05);
         }
 
         .benefit-check {
-            color: #4ba527;
-            font-size: 1.8rem;
+            color: #8FBCBB; /* Changed to a calm green/blue */
+            font-size: 1.5rem;
             margin-top: 0.2rem;
             flex-shrink: 0;
         }
 
         .benefit-text {
-            color: #5a5b5a;
-            font-weight: 500;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            color: #4C566A;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* Testimonials */
         .testimonials {
-            padding: 120px 0;
-            background: #FEFEFE;
+            padding: 100px 0;
+            background: #FFFFFF; /* Changed background */
         }
 
         .testimonials h2 {
@@ -300,10 +289,10 @@
             font-size: 3rem;
             font-weight: 700;
             text-align: center;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             margin-bottom: 4rem;
             letter-spacing: -0.02em;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -321,22 +310,22 @@
         .testimonial-card {
             background: white;
             padding: 3rem 2.5rem;
-            border-radius: 24px;
+            border-radius: 16px; /* Adjusted for softer look */
             position: relative;
-            box-shadow: 0 8px 32px rgba(40, 41, 40, 0.08);
-            border: 1px solid rgba(40, 41, 40, 0.06);
+            box-shadow: 0 8px 32px rgba(46, 52, 64, 0.08); /* Softer shadow */
+            border: 1px solid #E5E9F0; /* Softer border */
             transition: all 0.3s ease;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 16px 48px rgba(40, 41, 40, 0.12);
+            box-shadow: 0 12px 40px rgba(46, 52, 64, 0.1); /* Softer shadow */
             background: white;
         }
 
         .testimonial-quote {
             font-style: italic;
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             margin-bottom: 2rem;
             line-height: 1.6;
             font-weight: 400;
@@ -345,12 +334,12 @@
 
         .testimonial-author {
             font-weight: 600;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             font-size: 1.1rem;
         }
 
         .testimonial-role {
-            color: #6b8d6b;
+            color: #81A1C1; /* Changed to a calm blue */
             font-size: 1rem;
             font-weight: 400;
             margin-top: 0.5rem;
@@ -359,9 +348,9 @@
         /* CTA Section */
         .cta-section {
             padding: 120px 0;
-            background: #4ba527;
+            background: #8FBCBB; /* Changed to a calm green/blue */
             text-align: center;
-            color: white;
+            color: #2E3440; /* Changed text color for contrast */
         }
 
         .cta-section h2 {
@@ -370,9 +359,10 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            color: #FFFFFF; /* Title color to white */
         }
 
         .cta-section p {
@@ -382,11 +372,12 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: #ECEFF4; /* Subtitle color */
         }
 
         .cta-white {
             background: white;
-            color: #4ba527;
+            color: #8FBCBB; /* Changed to match new CTA background */
             padding: 20px 48px;
             border-radius: 12px;
             text-decoration: none;
@@ -398,13 +389,13 @@
 
         .cta-white:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
         }
 
         /* Footer */
         footer {
-            background: #282928;
-            color: white;
+            background: #2E3440; /* Darker footer */
+            color: #D8DEE9; /* Lighter text on dark background */
             padding: 40px 0;
             text-align: center;
         }
@@ -421,6 +412,7 @@
             font-family: "Comfortaa", sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
+            color: #ECEFF4;
         }
 
         .footer-links {
@@ -430,14 +422,14 @@
         }
 
         .footer-links a {
-            color: #a8a9a8;
+            color: #D8DEE9; /* Lighter link color */
             text-decoration: none;
             transition: color 0.3s ease;
             font-weight: 400;
         }
 
         .footer-links a:hover {
-            color: #4ba527;
+            color: #8FBCBB; /* Calm green/blue for hover */
         }
 
         /* Responsive Design */
@@ -651,7 +643,7 @@
         }
 
         .main-nav a:hover {
-            color: #4ba527;
+            color: #5E81AC; /* Calm blue for hover */
         }
 
         /* Hero Secondary CTA */
@@ -660,15 +652,16 @@
         }
 
         .demo-link {
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             text-decoration: none;
             font-weight: 500;
-            border-bottom: 2px solid #4ba527;
+            border-bottom: 2px solid #8FBCBB; /* Calm green/blue */
             transition: all 0.3s ease;
         }
 
         .demo-link:hover {
-            color: #4ba527;
+            color: #5E81AC; /* Calm blue for hover */
+            border-bottom-color: #5E81AC;
         }
 
         /* Product Preview Section */
@@ -686,7 +679,7 @@
             border-radius: 16px;
             padding: 4rem 2rem;
             text-align: center;
-            border: 2px dashed #e9ecef;
+            border: 2px dashed #E5E9F0; /* Softer border */
             position: relative;
             max-width: 800px;
             margin: 0 auto;
@@ -699,7 +692,7 @@
         .play-button {
             width: 80px;
             height: 80px;
-            background: #4ba527;
+            background: #5E81AC; /* Calm blue */
             color: white;
             border-radius: 50%;
             display: flex;
@@ -712,7 +705,7 @@
         }
 
         .play-button:hover {
-            background: #3a8b1f;
+            background: #81A1C1; /* Lighter blue for hover */
             transform: scale(1.1);
         }
 
@@ -726,7 +719,7 @@
             border-radius: 12px;
             padding: 3rem 2rem;
             text-align: center;
-            border: 2px dashed #e9ecef;
+            border: 2px dashed #E5E9F0; /* Softer border */
             color: #6c757d;
             font-weight: 500;
         }
@@ -751,13 +744,13 @@
         /* Social Proof Section */
         .social-proof {
             padding: 60px 0;
-            background: #F8FBF8;
+            background: #ECEFF4; /* Changed background */
         }
 
         .social-proof h2 {
             text-align: center;
             font-size: 2rem;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             margin-bottom: 3rem;
         }
 
@@ -772,16 +765,16 @@
             background: white;
             padding: 1.5rem 2rem;
             border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(40, 41, 40, 0.08);
+            box-shadow: 0 4px 16px rgba(46, 52, 64, 0.06); /* Softer shadow */
             font-weight: 600;
-            color: #5a5b5a;
-            border: 1px solid rgba(40, 41, 40, 0.08);
+            color: #4C566A; /* Softer color */
+            border: 1px solid #E5E9F0; /* Softer border */
         }
 
         /* Mid-Page CTA */
         .mid-cta {
             padding: 80px 0;
-            background: #F5F9F5;
+            background: #FFFFFF; /* Changed background */
         }
 
         .cta-box {
@@ -793,13 +786,13 @@
         .cta-box h3 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             margin-bottom: 1rem;
         }
 
         .cta-box p {
             font-size: 1.2rem;
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             margin-bottom: 2rem;
         }
 
@@ -833,7 +826,7 @@
             border-radius: 16px;
             padding: 4rem 2rem;
             text-align: center;
-            border: 2px dashed #e9ecef;
+            border: 2px dashed #E5E9F0; /* Softer border */
             color: #6c757d;
             font-weight: 500;
             min-height: 300px;
@@ -845,13 +838,13 @@
         .feature-content h3 {
             font-size: 2rem;
             font-weight: 700;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             margin-bottom: 1rem;
         }
 
         .feature-content p {
             font-size: 1.1rem;
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             line-height: 1.6;
             margin-bottom: 1.5rem;
         }
@@ -864,7 +857,7 @@
 
         .feature-benefits li {
             padding: 0.5rem 0;
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             font-weight: 500;
         }
 
@@ -887,12 +880,12 @@
         .testimonial-overlay p {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             margin-bottom: 0.5rem;
         }
 
         .testimonial-overlay span {
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             font-weight: 500;
         }
 
@@ -908,8 +901,8 @@
             background: white;
             border-radius: 16px;
             padding: 2rem;
-            box-shadow: 0 4px 16px rgba(40, 41, 40, 0.08);
-            border: 1px solid rgba(40, 41, 40, 0.08);
+            box-shadow: 0 4px 16px rgba(46, 52, 64, 0.06); /* Softer shadow */
+            border: 1px solid #E5E9F0; /* Softer border */
         }
 
         .tweet-placeholder {
@@ -952,7 +945,7 @@
         .photo-placeholder {
             width: 60px;
             height: 60px;
-            background: #4ba527;
+            background: #8FBCBB; /* Calm green/blue */
             color: white;
             border-radius: 50%;
             display: flex;
@@ -963,7 +956,7 @@
         }
 
         .testimonial-card.featured {
-            border: 2px solid #4ba527;
+            border: 2px solid #8FBCBB; /* Calm green/blue */
             position: relative;
         }
 
@@ -972,14 +965,14 @@
         }
 
         .case-study-link a {
-            color: #4ba527;
+            color: #8FBCBB; /* Calm green/blue */
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .case-study-link a:hover {
-            color: #3a8b1f;
+            color: #81A1C1; /* Calm blue for hover */
         }
 
         /* Signup Form */
@@ -1008,7 +1001,7 @@
             border-radius: 12px;
             font-size: 1rem;
             background: rgba(255, 255, 255, 0.9);
-            color: #282928;
+            color: #2E3440; /* Changed color */
         }
 
         .form-group input:focus {
@@ -1046,7 +1039,7 @@
         /* Pricing Section */
         .pricing {
             padding: 120px 0;
-            background: #F5F9F5;
+            background: #ECEFF4; /* Changed background */
         }
 
         .pricing h2 {
@@ -1054,17 +1047,17 @@
             font-size: 3rem;
             font-weight: 700;
             text-align: center;
-            color: #282928;
+            color: #2E3440; /* Changed color */
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .pricing-subtitle {
             text-align: center;
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             font-size: 1.2rem;
             margin-bottom: 4rem;
             font-weight: 400;
@@ -1085,24 +1078,24 @@
         .pricing-card {
             background: white;
             padding: 3rem 2.5rem;
-            border-radius: 28px;
+            border-radius: 24px; /* Adjusted for softer look */
             text-align: center;
-            box-shadow: 0 8px 36px rgba(40, 41, 40, 0.08);
+            box-shadow: 0 8px 36px rgba(46, 52, 64, 0.06); /* Softer shadow */
             transition: all 0.3s ease;
             position: relative;
-            border: 2px solid rgba(40, 41, 40, 0.06);
+            border: 2px solid #E5E9F0; /* Softer border */
         }
 
         .pricing-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(40, 41, 40, 0.12);
+            box-shadow: 0 16px 50px rgba(46, 52, 64, 0.1); /* Softer shadow */
             background: white;
         }
 
         .pricing-card.featured {
-            border-color: #4ba527;
+            border-color: #8FBCBB; /* Calm green/blue */
             transform: scale(1.05);
-            box-shadow: 0 8px 40px rgba(75, 165, 39, 0.15);
+            box-shadow: 0 8px 40px rgba(143, 188, 187, 0.25); /* Softer shadow */
         }
 
         .pricing-card.featured::before {
@@ -1111,8 +1104,8 @@
             top: -10px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, #6B9797 0%, #5a8080 100%);
-            color: white;
+            background: #8FBCBB; /* Calm green/blue */
+            color: #FFFFFF;
             padding: 0.5rem 1.5rem;
             border-radius: 20px;
             font-size: 0.9rem;
@@ -1122,7 +1115,7 @@
         .pricing-plan {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #2f3e46;
+            color: #2E3440; /* Changed color */
             margin-bottom: 0.5rem;
             font-family: "Inter", sans-serif;
             letter-spacing: -0.01em;
@@ -1131,14 +1124,14 @@
         .pricing-price {
             font-size: 3rem;
             font-weight: 800;
-            color: #4ba527;
+            color: #5E81AC; /* Calm blue */
             margin-bottom: 0.5rem;
             font-family: "Inter", sans-serif;
             letter-spacing: -0.02em;
         }
 
         .pricing-period {
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             font-size: 1rem;
             margin-bottom: 2rem;
             font-weight: 400;
@@ -1152,7 +1145,7 @@
 
         .pricing-features li {
             padding: 0.5rem 0;
-            color: #5a5b5a;
+            color: #4C566A; /* Softer color */
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -1161,13 +1154,13 @@
 
         .pricing-features li::before {
             content: "✓";
-            color: #4ba527;
+            color: #8FBCBB; /* Calm green/blue */
             font-weight: bold;
             font-size: 1.2rem;
         }
 
         .pricing-cta {
-            background: #4ba527;
+            background: #5E81AC; /* Calm blue */
             color: white;
             padding: 15px 30px;
             border-radius: 12px;
@@ -1175,7 +1168,7 @@
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(75, 165, 39, 0.3);
+            box-shadow: 0 4px 20px rgba(94, 129, 172, 0.3); /* Softer shadow */
             display: inline-block;
             width: 100%;
             margin-top: 1rem;
@@ -1183,21 +1176,21 @@
 
         .pricing-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(75, 165, 39, 0.4);
-            background: #3a8b1f;
+            box-shadow: 0 6px 25px rgba(94, 129, 172, 0.4); /* Softer shadow */
+            background: #81A1C1; /* Lighter blue for hover */
         }
 
         .pricing-cta.secondary {
             background: transparent;
-            color: #4ba527;
-            border: 2px solid #4ba527;
+            color: #5E81AC; /* Calm blue */
+            border: 2px solid #5E81AC; /* Calm blue */
             box-shadow: none;
         }
 
         .pricing-cta.secondary:hover {
-            background: #4ba527;
+            background: #5E81AC; /* Calm blue */
             color: white;
-            box-shadow: 0 6px 25px rgba(75, 165, 39, 0.3);
+            box-shadow: 0 6px 25px rgba(94, 129, 172, 0.3); /* Softer shadow */
         }
     </style>
 </head>
@@ -1238,44 +1231,6 @@
                     <div class="play-button">▶</div>
                     <p>Watch MellowMill Studio in Action (2:15)</p>
                 </div>
-            </div>
-            <div class="product-screenshots">
-                <div class="screenshot-placeholder main-screenshot">
-                    <p>Main Dashboard Screenshot</p>
-                </div>
-                <div class="screenshot-grid">
-                    <div class="screenshot-placeholder">
-                        <p>Notes View</p>
-                    </div>
-                    <div class="screenshot-placeholder">
-                        <p>Task Management</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof Section -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>Trusted by Leading Companies and Professionals</h2>
-            <div class="customer-logos">
-                <div class="logo-placeholder">TechCorp</div>
-                <div class="logo-placeholder">InnovateCo</div>
-                <div class="logo-placeholder">StartupXYZ</div>
-                <div class="logo-placeholder">DesignStudio</div>
-                <div class="logo-placeholder">ConsultingPro</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mid-Page CTA -->
-    <section class="mid-cta">
-        <div class="container">
-            <div class="cta-box">
-                <h3>Ready to Transform Your Productivity?</h3>
-                <p>Join 2,500+ professionals who've reduced task overwhelm by 75%</p>
-                <a href="#signup" class="cta-primary">Start Free Trial - No Credit Card</a>
             </div>
         </div>
     </section>
@@ -1574,21 +1529,24 @@
         });
 
         // Simple fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
         };
-
-        const observer = new IntersectionObserver((entries) => {
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, appearOptions);
 
-        document.querySelectorAll('.feature-card, .testimonial-card, .benefit-item, .pricing-card').forEach(el => {
-            observer.observe(el);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
         });
     </script>
 </body>
