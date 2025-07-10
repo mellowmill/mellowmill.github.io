@@ -5,6 +5,12 @@ This document serves as a reference for Claude Code when working on this project
 ## Project Overview
 This appears to be a GitHub Pages website for mellowmill.github.io with a simple HTML structure and CSS styling.
 
+## Core UX Principles
+- We are aiming for a simple, clean and effecient style
+- We are basing this on Swiss design principles
+- But we are amending to feel a bit more personal, e.g. slightly rounded corners
+- We should use animation to make it feel alive
+
 ## File Structure
 - `index.html` - Main website content
 - `style.css` - Styling for the website
@@ -31,7 +37,7 @@ This appears to be a GitHub Pages website for mellowmill.github.io with a simple
 - `style.css` - Has uncommitted changes
 
 ## Colors
-- Background: #e8edea
+- Background: #FAF9F6
 - Main: #80C293
 - Dark background: #544f51
 - Secondary: #7da2d0

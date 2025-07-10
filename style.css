@@ -1,11 +1,11 @@
 /* MellowMill Studio Main Stylesheet */
 :root {
     --color-text: #1A1A1A;
-    --color-background: #FFFFFF;
-    --color-primary: #0052FF;
-    --color-primary-hover: #0041CC;
-    --color-light-gray: #F0F0F0;
-    --color-border: #DDDDDD;
+    --color-background: #FAF9F6;
+    --color-primary: #80C293;
+    --color-primary-hover: #6fb382;
+    --color-light-gray: #544f51;
+    --color-border: #7da2d0;
 }
 
 * {
@@ -38,7 +38,7 @@ header {
     right: 0;
     z-index: 1000;
     background: var(--color-background);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-light-gray);
     padding: 1.5rem 0;
 }
 
