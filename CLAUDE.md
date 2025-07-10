@@ -1,0 +1,37 @@
+# Claude Code Reference Document
+
+This document serves as a reference for Claude Code when working on this project.
+
+## Project Overview
+This appears to be a GitHub Pages website for mellowmill.github.io with a simple HTML structure and CSS styling.
+
+## File Structure
+- `index.html` - Main website content
+- `style.css` - Styling for the website
+- `CNAME` - Custom domain configuration for GitHub Pages
+
+## Development Notes
+- This is a static website hosted on GitHub Pages
+- The site uses standard HTML/CSS without any build process
+- Changes are deployed automatically when pushed to the main branch
+
+## Common Tasks
+- When making changes to styling, edit `style.css`
+- When updating content, edit `index.html`
+- Always test changes locally before committing
+- Use semantic HTML and maintain accessibility standards
+
+## Git Workflow
+- Main branch: `main`
+- Current working branch: `develop`
+- Recent commits show work on pricing section and Swiss/Scandinavian design themes
+
+## Modified Files (as of conversation start)
+- `index.html` - Has uncommitted changes
+- `style.css` - Has uncommitted changes
+
+## Colors
+- Background: #e8edea
+- Main: #80C293
+- Dark background: #544f51
+- Secondary: #7da2d0

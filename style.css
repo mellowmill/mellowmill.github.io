@@ -66,6 +66,7 @@ header {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border-radius: 10px;
 }
 
 .cta-button:hover {
@@ -439,6 +440,30 @@ footer {
 
 .footer-links a:hover {
     color: var(--color-primary);
+}
+
+/* General soft rounding for all cards, images, and containers */
+.features-multi .image-placeholder,
+.pricing-card,
+.testimonial-card,
+.cta-section,
+footer,
+.header-content,
+.feature-card,
+.feature-image,
+input,
+button,
+.cta-white,
+.cta-primary {
+    border-radius: 10px;
+}
+
+/* Slightly round containers and grid items */
+.container,
+.features-multi,
+.pricing-grid,
+.testimonials-grid {
+    border-radius: 8px;
 }
 
 /* Responsive Design */
