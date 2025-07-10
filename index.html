@@ -23,10 +23,10 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-text">
-                    <h1>Calm, Focused, and Organized.</h1>
+                    <h1>Productivity for busy minds.</h1>
                     <h2>The minimalist note-taking and task management app designed to bring clarity to your workflow.</h2>
                     <div class="hero-cta">
-                        <a href="#" class="cta-primary">Start Your Free Trial</a>
+                        <a href="#" class="cta-primary">Join the Waitlist</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -49,12 +49,12 @@
                         </div>
                     </div>
                     <div class="feature-row reverse">
+                        <div class="feature-image">
+                            <div class="image-placeholder">Image 2</div>
+                        </div>
                         <div class="feature-text">
                             <h3>Intuitive Task Management</h3>
                             <p>Organize your to-do lists with simple, yet powerful, tools designed for clarity and speed.</p>
-                        </div>
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 2</div>
                         </div>
                     </div>
                     <div class="feature-row">
@@ -67,12 +67,12 @@
                         </div>
                     </div>
                     <div class="feature-row reverse">
+                        <div class="feature-image">
+                            <div class="image-placeholder">Image 4</div>
+                        </div>
                         <div class="feature-text">
                             <h3>Focus Mode & Analytics</h3>
                             <p>Enter a focused mode for deep work and track your productivity with built-in analytics.</p>
-                        </div>
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 4</div>
                         </div>
                     </div>
                     <div class="feature-row">
@@ -91,6 +91,7 @@
         <section class="pricing">
             <div class="container">
                 <h2 class="section-title">Pricing</h2>
+                <p class="pricing-description">We don't believe in subscriptions. Once you pay for MellowMill Studio, you always have access to the software.</p>
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-plan">Free</div>
@@ -172,5 +173,23 @@
             </div>
         </div>
     </footer>
+    <script>
+      // Detect user locale and set currency symbol
+      document.addEventListener('DOMContentLoaded', function() {
+        function getCurrencySymbol(locale) {
+          if (locale.startsWith('en-GB') || locale.startsWith('en-IE') || locale.startsWith('cy-GB')) return '£';
+          if (locale.startsWith('en-US') || locale.startsWith('en-CA') || locale.startsWith('en-AU')) return '$';
+          if (locale.startsWith('de-DE') || locale.startsWith('fr-FR') || locale.startsWith('es-ES') || locale.startsWith('it-IT') || locale.startsWith('nl-NL') || locale.startsWith('pt-PT')) return '€';
+          if (locale.startsWith('ja-JP')) return '¥';
+          // Add more as needed
+          return '$';
+        }
+        var symbol = getCurrencySymbol(navigator.language || navigator.userLanguage || 'en-US');
+        document.querySelectorAll('.pricing-price').forEach(function(el) {
+          var price = el.textContent.replace(/[^0-9]/g, '');
+          el.textContent = symbol + price;
+        });
+      });
+    </script>
 </body>
 </html>

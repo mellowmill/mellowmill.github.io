@@ -310,6 +310,16 @@ header {
     border-bottom: none;
 }
 
+.pricing-description {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--color-text);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
 /* Testimonials Section */
 .testimonials {
     padding: 100px 0;
