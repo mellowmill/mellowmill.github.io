@@ -25,6 +25,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -49,6 +53,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary);
 }
 
 .logo {
@@ -78,9 +100,12 @@ header {
 
 /* Hero Section */
 .hero {
+    min-height: 100vh;
     padding: 180px 0 120px;
     background: var(--color-background);
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 .hero .container {
@@ -488,6 +513,10 @@ button,
     }
     .header-content {
         flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
         gap: 1rem;
     }
 }

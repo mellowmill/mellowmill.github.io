@@ -20,12 +20,15 @@ This appears to be a GitHub Pages website for mellowmill.github.io with a simple
 - This is a static website hosted on GitHub Pages
 - The site uses standard HTML/CSS without any build process
 - Changes are deployed automatically when pushed to the main branch
+- Hero section fills full viewport height (100vh) for initial impact
+- Smooth scrolling behavior implemented for navigation
 
 ## Common Tasks
 - When making changes to styling, edit `style.css`
 - When updating content, edit `index.html`
 - Always test changes locally before committing
 - Use semantic HTML and maintain accessibility standards
+- Add ID attributes to sections for navigation linking
 
 ## Git Workflow
 - Main branch: `main`
@@ -47,3 +50,18 @@ This appears to be a GitHub Pages website for mellowmill.github.io with a simple
 - Always use the dark background color (#544f51) for text on primary color backgrounds
 - This ensures better contrast and readability than white text on green
 - Apply this rule to all buttons, cards, and elements with primary color backgrounds
+- Use dark background color (#544f51) for section borders and footer background
+- CTA and footer sections should not have rounded corners for a cleaner look
+
+## Layout Structure
+- Header: Fixed position with transparent background and backdrop blur
+- Hero: Full viewport height (100vh) with centered content
+- Features: Alternate background color with top/bottom borders
+- Pricing: White background with subtle borders using alternate color
+- CTA: Alternate background color with top border
+- Footer: Dark background color with light text
+
+## Navigation
+- Header contains logo, navigation menu (Features, Pricing), and CTA button
+- Navigation uses smooth scrolling to sections
+- All sections have ID attributes for anchor linking
