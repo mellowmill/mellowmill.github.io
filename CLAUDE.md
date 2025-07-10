@@ -41,3 +41,9 @@ This appears to be a GitHub Pages website for mellowmill.github.io with a simple
 - Main: #80C293
 - Dark background: #544f51
 - Secondary: #7da2d0
+- Section alternative: #f0efeb
+
+## Color Usage Rules
+- Always use the dark background color (#544f51) for text on primary color backgrounds
+- This ensures better contrast and readability than white text on green
+- Apply this rule to all buttons, cards, and elements with primary color backgrounds
