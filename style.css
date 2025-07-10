@@ -59,6 +59,7 @@ header {
 .nav-menu {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -71,6 +72,21 @@ header {
 
 .nav-menu a:hover {
     color: var(--color-primary);
+}
+
+.nav-button {
+    background: var(--color-primary);
+    color: var(--color-light-gray) !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-light-gray) !important;
 }
 
 .logo {
@@ -417,11 +433,38 @@ header {
     justify-content: center;
 }
 
+.cta-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+}
+
 .cta-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--color-text);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+}
+
+.cta-bonus {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
