@@ -495,15 +495,21 @@ button,
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 80px;
+        min-height: 100vh;
+    }
     .hero .container {
         grid-template-columns: 1fr;
         text-align: left;
     }
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
     .hero h2 {
         font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
     .features-grid {
         grid-template-columns: 1fr;
@@ -512,12 +518,40 @@ button,
         grid-template-columns: 1fr;
     }
     .header-content {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 1rem;
     }
     
     .nav-menu {
-        gap: 1rem;
+        gap: 1.5rem;
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .cta-button {
+        order: 3;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
+    }
+    
+    .pricing-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -533,5 +567,44 @@ button,
     }
     .image-placeholder {
         max-width: 100%;
+        min-height: 160px;
+    }
+    .features {
+        padding: 60px 0;
+    }
+    .pricing {
+        padding: 60px 0;
+    }
+    .cta-section {
+        padding: 60px 0;
+    }
+    footer {
+        padding: 3rem 0;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 1rem;
+    }
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+    .pricing-price {
+        font-size: 2.5rem;
+    }
+    .feature-text h3 {
+        font-size: 1.3rem;
+    }
+    .nav-menu {
+        gap: 1rem;
     }
 }
