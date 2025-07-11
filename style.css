@@ -82,6 +82,7 @@ header {
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.2s ease;
+    border: 1px solid #6bd442;
 }
 
 .nav-button:hover {
@@ -111,6 +112,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-radius: 10px;
+    border: 1px solid #6bd442;
 }
 
 .cta-button:hover {
@@ -166,6 +168,7 @@ header {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border: 1px solid #6bd442;
 }
 
 .cta-primary:hover {
