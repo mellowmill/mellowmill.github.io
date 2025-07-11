@@ -3,7 +3,7 @@
     --color-text: #1A1A1A;
     --color-background: #FAF9F6;
     --color-primary: #8BFA57;
-    --color-primary-hover: #6fb382;
+    --color-primary-hover: #74ff34;
     --color-light-gray: #544f51;
     --color-border: #7da2d0;
     --color-section-alt: #f0efeb;
@@ -295,7 +295,7 @@ header {
 }
 
 .pricing-card {
-    background: var(--color-background);
+    background: var(--color-section-alt);
     padding: 2rem;
     text-align: left;
     position: relative;
