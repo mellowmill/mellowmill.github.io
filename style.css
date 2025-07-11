@@ -308,15 +308,15 @@ header {
     position: absolute;
     top: -10px;
     right: -10px;
-    background: var(--color-primary);
-    color: var(--color-text);
+    background: var(--color-border);
+    color: white;
     padding: 6px 12px;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-radius: 8px;
-    border: 1px solid #6bd442;
+    border: 1px solid var(--color-border);
     transform: rotate(15deg);
     z-index: 1;
 }
@@ -376,6 +376,26 @@ header {
 
 .pricing-features li:last-child {
     border-bottom: none;
+}
+
+.pricing-cta {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-text);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #6bd442;
+    transition: background-color 0.2s ease;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-cta:hover {
+    background: var(--color-primary-hover);
 }
 
 .pricing-description {
@@ -481,13 +501,17 @@ header {
 }
 
 .cta-bonus {
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-border);
+    font-weight: 700;
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    background: rgba(125, 162, 208, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
 }
 
 .cta-white {
