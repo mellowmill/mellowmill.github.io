@@ -41,7 +41,7 @@ This appears to be a GitHub Pages website for mellowmill.github.io with a simple
 
 ## Colors
 - Background: #FAF9F6
-- Main: #80C293
+- Main: #8BFA57
 - Dark background: #544f51
 - Secondary: #7da2d0
 - Section alternative: #f0efeb
