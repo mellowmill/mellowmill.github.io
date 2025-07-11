@@ -27,6 +27,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 .container {
@@ -356,6 +357,7 @@ header {
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
 .pricing-features {
@@ -570,6 +572,77 @@ footer {
 
 .footer-links a:hover {
     color: var(--color-primary);
+}
+
+/* Add-ons Section */
+.addons-section {
+    padding: 20px 0 80px 0;
+    background: var(--color-background);
+    text-align: center;
+}
+
+.addons-description {
+    font-size: 1.15rem;
+    color: var(--color-text);
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.addon-card {
+    background: var(--color-section-alt);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+.addon-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.addon-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-border);
+    margin-bottom: 1rem;
+}
+
+.addon-description {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.addon-features {
+    list-style: none;
+    padding: 0;
+}
+
+.addon-features li {
+    padding: 0.5rem 0;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(125, 162, 208, 0.2);
+}
+
+.addon-features li:last-child {
+    border-bottom: none;
 }
 
 /* General soft rounding for all cards, images, and containers */

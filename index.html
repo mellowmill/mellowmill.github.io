@@ -99,7 +99,7 @@
         <section class="pricing" id="pricing">
             <div class="container">
                 <h2 class="section-title">Pricing</h2>
-                <p class="pricing-description">We don't believe in subscriptions. Once you pay for MellowMill Studio, you always have access to the software.</p>
+                <p class="pricing-description">You own the software, forever & including updates. You can add bonus packs if you need more power..</p>
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-plan">Free</div>
@@ -152,6 +152,34 @@
             </div>
         </section>
 
+        <section class="addons-section">
+            <div class="container">
+                <h2 class="section-title">Optional Add-ons</h2>
+                <p class="addons-description">Enhance your Mellow Mill experience with optional add-ons available for an annual subscription fee. These premium features complement your lifetime license with cloud based services.</p>
+                <div class="addons-grid">
+                    <div class="addon-card">
+                        <div class="coming-soon-banner">Coming Soon</div>
+                        <h3 class="addon-title">Cloud Sync</h3>
+                        <div class="addon-price">$10/year</div>
+                        <p class="addon-description">Seamlessly sync your notes and tasks across all your devices with secure cloud storage and real-time synchronization.</p>
+                        <ul class="addon-features">
+                            <li>Real-time sync across all your devices</li>
+                            <li>Secure cloud backup</li>
+                        </ul>
+                    </div>
+                    <div class="addon-card">
+                        <div class="coming-soon-banner">Coming Soon</div>
+                        <h3 class="addon-title">3rd Party Integrations</h3>
+                        <div class="addon-price">$10/year</div>
+                        <p class="addon-description">Connect MellowMill with your favorite apps and services to streamline your workflow and boost productivity.</p>
+                        <ul class="addon-features">
+                            <li>Slack & Teams integration</li>
+                            <li>Zapier automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="cta-section" id="cta-section">
             <div class="container">
@@ -194,6 +222,10 @@
         document.querySelectorAll('.pricing-price').forEach(function(el) {
           var price = el.textContent.replace(/[^0-9]/g, '');
           el.textContent = symbol + price;
+        });
+        document.querySelectorAll('.addon-price').forEach(function(el) {
+          var price = el.textContent.replace(/[^0-9]/g, '');
+          el.textContent = symbol + price + '/year';
         });
       });
     </script>
