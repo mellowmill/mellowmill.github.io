@@ -40,11 +40,14 @@ This appears to be a GitHub Pages website for mellowmill.github.io with a simple
 - `style.css` - Has uncommitted changes
 
 ## Colors
-- Background: #FAF9F6
-- Main: #8BFA57
-- Dark background: #544f51
-- Secondary: #7da2d0
-- Section alternative: #f0efeb
+From the CSS :root variables:
+- `--color-text`: #1A1A1A (primary text color)
+- `--color-background`: #FAF9F6 (main background)
+- `--color-primary`: #8BFA57 (primary green)
+- `--color-primary-hover`: #74ff34 (primary green hover state)
+- `--color-light-gray`: #544f51 (dark gray for text/borders)
+- `--color-border`: #7da2d0 (blue border color)
+- `--color-section-alt`: #f0efeb (alternate section background)
 
 ## Color Usage Rules
 - Always use the dark background color (#544f51) for text on primary color backgrounds
