@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--color-text);
     background: var(--color-background);
@@ -42,12 +42,16 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    margin: 20px;
     z-index: 1000;
-    background: rgba(250, 249, 246, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(250, 249, 246, 0.35);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-light-gray);
+    /* border-top: 2px solid rgba(240, 239, 235, 0.7);
+    border-bottom: 1px solid rgb(84, 79, 81); */
     padding: 1.5rem 0;
+    border-radius: 12px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0 0 18px #fff inset;
 }
 
 .header-content {
