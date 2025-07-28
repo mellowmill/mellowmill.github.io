@@ -574,6 +574,67 @@ footer {
     color: var(--color-primary);
 }
 
+/* Pricing Tabs */
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 3rem;
+    background: var(--color-section-alt);
+    border-radius: 12px;
+    padding: 4px;
+    border: 1px solid var(--color-light-gray);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-button {
+    background: transparent;
+    color: var(--color-text);
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tab-button:hover {
+    background: rgba(139, 250, 87, 0.1);
+    color: var(--color-text);
+}
+
+.tab-button.active {
+    background: var(--color-primary);
+    color: var(--color-light-gray);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features-tabbed {
+    position: relative;
+    min-height: 1000px;
+}
+
+.tab-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.tab-content.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Add-ons Section */
 .addons-section {
     padding: 20px 0 80px 0;
@@ -749,6 +810,9 @@ button,
         text-align: center;
         gap: 1.5rem;
     }
+    .features-tabbed {
+        min-height: 800px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -769,5 +833,16 @@ button,
     }
     .nav-menu {
         gap: 1rem;
+    }
+    .pricing-tabs {
+        max-width: 300px;
+        margin-bottom: 2rem;
+    }
+    .tab-button {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+    .features-tabbed {
+        min-height: 700px;
     }
 }

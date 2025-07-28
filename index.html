@@ -45,51 +45,142 @@
 
         <section class="features" id="features">
             <div class="container">
-                <h2 class="section-title">Core Features</h2>
-                <div class="features-multi">
-                    <div class="feature-row">
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 1</div>
-                        </div>
-                        <div class="feature-text">
-                            <h3>Distraction-Free Interface</h3>
-                            <p>A clean workspace that helps you focus on what truly matters, free from clutter and unnecessary distractions.</p>
+                <h2 class="section-title">Features by Plan</h2>
+                
+                <!-- Pricing Plan Tabs -->
+                <div class="pricing-tabs">
+                    <button class="tab-button active" data-plan="free">Free</button>
+                    <button class="tab-button" data-plan="core">Core</button>
+                    <button class="tab-button" data-plan="pro">Pro</button>
+                </div>
+                
+                <!-- Feature Lists for Each Plan -->
+                <div class="features-tabbed">
+                    <!-- Free Plan Features -->
+                    <div class="tab-content active" id="free-features">
+                        <div class="features-multi">
+                            <div class="feature-row">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Basic Notes</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Seamless Note-Taking</h3>
+                                    <p>Using the new simpler Markdown alternative makes writing 
+                                        and organizing your notes a breeze.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row reverse">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Simple Tags</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Use Tags to Organize</h3>
+                                    <p>Organize your notes with up to 10 tags to keep your content categorized and easy to find.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Task Lists</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Basic Task Management</h3>
+                                    <p>Simple to-do lists and task tracking to help you stay on top of your daily activities.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row reverse">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Focus Mode</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Distraction-Free Writing</h3>
+                                    <p>Clean, focused interface designed to help you concentrate on your thoughts without unnecessary distractions.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-row reverse">
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 2</div>
-                        </div>
-                        <div class="feature-text">
-                            <h3>Intuitive Task Management</h3>
-                            <p>Organize your to-do lists with simple, yet powerful, tools designed for clarity and speed.</p>
+                    
+                    <!-- Core Plan Features -->
+                    <div class="tab-content" id="core-features">
+                        <div class="features-multi">
+                            <div class="feature-row">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Unlimited</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Unlimited Notes, Tags & Tasks</h3>
+                                    <p>No limits on your productivity. Create as many notes and tasks as you need without restrictions.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row reverse">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">History</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>30-Day Note History</h3>
+                                    <p>Keep track of changes with automatic version history, allowing you to revert to previous versions within 30 days.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Dark Mode</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Advanced Editor</h3>
+                                    <p>Easy on the eyes dark mode plus support for images, files, and tables to enrich your notes.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row reverse">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Advanced Tasks</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Pomodoro Timer</h3>
+                                    <p>Stay focused and productive with the built-in Pomodoro timer, helping you manage your time effectively.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-row">
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 3</div>
-                        </div>
-                        <div class="feature-text">
-                            <h3>Seamless Synchronization</h3>
-                            <p>Access your notes and tasks on any device, anytime, with real-time sync and backup.</p>
-                        </div>
-                    </div>
-                    <div class="feature-row reverse">
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 4</div>
-                        </div>
-                        <div class="feature-text">
-                            <h3>Focus Mode & Analytics</h3>
-                            <p>Enter a focused mode for deep work and track your productivity with built-in analytics.</p>
-                        </div>
-                    </div>
-                    <div class="feature-row">
-                        <div class="feature-image">
-                            <div class="image-placeholder">Image 5</div>
-                        </div>
-                        <div class="feature-text">
-                            <h3>Collaboration & Sharing</h3>
-                            <p>Work together with your team or share notes and tasks easily with others, all in one place.</p>
+                    
+                    <!-- Pro Plan Features -->
+                    <div class="tab-content" id="pro-features">
+                        <div class="features-multi">
+                            <div class="feature-row">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Extended History</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>AI in Your Corner</h3>
+                                    <p>Seamlessly leverage AI to enhance your note-taking experience with smart suggestions and automation.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row reverse">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Export & AI</div>
+                                </div>
+                                <div class="feature-text">
+                                                                        <h3>Email & Calendar Support</h3>
+                                    <p>Integrate with GMail, Google Calendar and Outlook for maximum productivity.</p>
+
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Sync & Themes</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Integrations</h3>
+                                    <p>Allows your notes to connect with 3rd part services such as Jira.</p>
+                                </div>
+                            </div>
+                            <div class="feature-row reverse">
+                                <div class="feature-image">
+                                    <div class="image-placeholder">Integrations</div>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Dashboards</h3>
+                                    <p>Visualize your notes and tasks with customizable dashboards for better insights.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,10 +197,11 @@
                         <div class="pricing-price">$0</div>
                         <div class="pricing-period">Lifetime License</div>
                         <ul class="pricing-features">
-                            <li>Up to 50 notes</li>
-                            <li>Up to 10 tags</li>
-                            <li>Basic task management</li>
-                            <li>No support</li>
+                            <li>Unlimited notes</li>
+                            <li>Unlimited tasks</li>
+                            <li>Unlimited tags</li>
+                            <li>Lifetime updates</li>
+                            <li>All data stays local</li>
                         </ul>
                         <a href="#cta-section" class="pricing-cta">Get Started</a>
                     </div>
@@ -119,33 +211,36 @@
                         <div class="pricing-price">$30</div>
                         <div class="pricing-period">Lifetime License</div>
                         <ul class="pricing-features">
-                            <li>Unlimited notes & tasks</li>
-                            <li>14 day note history</li>
+                            <li>Everything in Free plus...</li>
+                            <li>30 day note history</li>
                             <li>Dark mode</li>
                             <li>Image and file support</li>
+                            <li>Hyperlink support</li>
                             <li>Tables</li>
                             <li>Search</li>
                             <li>Advanced task management</li>
+                            <li>Pomodoro timer</li>
                             <li>Email support</li>
                         </ul>
                     </div>
                     <div class="pricing-card">
                         <div class="coming-soon-banner">Coming Soon</div>
                         <div class="pricing-plan">Pro</div>
-                        <div class="pricing-price">$70</div>
+                        <div class="pricing-price">$80</div>
                         <div class="pricing-period">Lifetime License</div>
                         <ul class="pricing-features">
-                            <li>Everything in Pro plus...</li>
+                            <li>Everything in Core plus...</li>
                             <li>90 day note history</li>
                             <li>Export to markdown & PDF</li>
                             <li>AI integration</li>
-                            <li>Extra themes and customization</li>
-                            <li>3rd perty integrations</li>
-                            <li>Cloud sync across devices</li>
-                            <li>Scripting</li>
-                            <li>Templates</li>
                             <li>Email integration</li>
                             <li>Calendar integration</li>
+                            <li>Extra themes and customization</li>
+                            <li>3rd party integrations</li>
+                            <li>Scripting</li>
+                            <li>Templates</li>
+                            <li>Dashboards</li>
+
                         </ul>
                     </div>
                 </div>
@@ -155,12 +250,13 @@
         <section class="addons-section">
             <div class="container">
                 <h2 class="section-title">Optional Add-ons</h2>
-                <p class="addons-description">Enhance your Mellow Mill experience with optional add-ons available for an annual subscription fee. These premium features complement your lifetime license with cloud based services.</p>
+                <p class="addons-description">Enhance your Mellow Mill experience with optional add-ons available for an annual 
+                    subscription fee. These premium features complement your Pro lifetime license with cloud based services.</p>
                 <div class="addons-grid">
                     <div class="addon-card">
                         <div class="coming-soon-banner">Coming Soon</div>
                         <h3 class="addon-title">Cloud Sync</h3>
-                        <div class="addon-price">$10/year</div>
+                        <div class="addon-price">$10 / year </div>
                         <p class="addon-description">Seamlessly sync your notes and tasks across all your devices with secure cloud storage and real-time synchronization.</p>
                         <ul class="addon-features">
                             <li>Real-time sync across all your devices</li>
@@ -169,12 +265,26 @@
                     </div>
                     <div class="addon-card">
                         <div class="coming-soon-banner">Coming Soon</div>
-                        <h3 class="addon-title">3rd Party Integrations</h3>
-                        <div class="addon-price">$10/year</div>
+                        <h3 class="addon-title">Advanced Integrations</h3>
+                        <div class="addon-price">$10 / year</div>
                         <p class="addon-description">Connect MellowMill with your favorite apps and services to streamline your workflow and boost productivity.</p>
                         <ul class="addon-features">
                             <li>Slack & Teams integration</li>
                             <li>Zapier automation</li>
+                        </ul>
+                    </div>
+                    <div class="addon-card">
+                        <div class="coming-soon-banner">Coming Soon</div>
+                        <h3 class="addon-title">Enterprise Features</h3>
+                        <div class="addon-price">$100/year</div>
+                        <p class="addon-description">Enterprise-grade features designed for teams and organizations requiring advanced security, support, and administrative controls.</p>
+                        <ul class="addon-features">
+                            <li>Cost is per user</li>
+                            <li>Single Sign-On (SSO) support</li>
+                            <li>Priority support & dedicated account manager</li>
+                            <li>Advanced user management & permissions</li>
+                            <li>Audit logs & compliance reporting</li>
+                            <li>Free Cloud Sync and Advanced Integrations</li>
                         </ul>
                     </div>
                 </div>
@@ -226,6 +336,42 @@
         document.querySelectorAll('.addon-price').forEach(function(el) {
           var price = el.textContent.replace(/[^0-9]/g, '');
           el.textContent = symbol + price + '/year';
+        });
+        
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            const targetPlan = this.getAttribute('data-plan');
+            const targetContent = document.getElementById(targetPlan + '-features');
+            
+            // Don't do anything if this tab is already active
+            if (this.classList.contains('active')) {
+              return;
+            }
+            
+            // Remove active class from all buttons
+            tabButtons.forEach(function(btn) {
+              btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Fade out all content first
+            tabContents.forEach(function(content) {
+              content.classList.remove('active');
+            });
+            
+            // Fade in target content after a brief delay
+            if (targetContent) {
+              setTimeout(function() {
+                targetContent.classList.add('active');
+              }, 100);
+            }
+          });
         });
       });
     </script>
