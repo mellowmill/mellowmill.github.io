@@ -2,11 +2,12 @@
 :root {
     --color-text: #1A1A1A;
     --color-background: #FAF9F6;
-    --color-primary: #73cb27;
-    --color-primary-hover: #88f12e;
+    --color-primary: #412194;
+    --color-primary-hover: #654db6;
     --color-light-gray: #544f51;
     --color-border: #7da2d0;
     --color-section-alt: #f0efeb;
+    --cta-color-text: #FAF9F6;
 }
 
 * {
@@ -88,18 +89,18 @@ header:hover {
 
 .nav-button {
     background: var(--color-primary);
-    color: var(--color-light-gray) !important;
+    color: var(--cta-color-text) !important;
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.2s ease;
-    border: 1px solid #6bd442;
+    border: 1px solid #654db6;
 }
 
 .nav-button:hover {
     background: var(--color-primary-hover);
-    color: var(--color-light-gray) !important;
+    color: var(--cta-color-text) !important;
 }
 
 .logo {
@@ -115,7 +116,7 @@ header:hover {
 
 .cta-button {
     background: var(--color-primary);
-    color: var(--color-text);
+    color: var(--cta-color-text);
     padding: 10px 20px;
     text-decoration: none;
     font-weight: 600;
@@ -124,7 +125,7 @@ header:hover {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-radius: 10px;
-    border: 1px solid #6bd442;
+    border: 1px solid #654db6;
 }
 
 .cta-button:hover {
@@ -171,7 +172,7 @@ header:hover {
 
 .cta-primary {
     background: var(--color-primary);
-    color: var(--color-text);
+    color: var(--cta-color-text);
     padding: 15px 30px;
     text-decoration: none;
     font-weight: 600;
@@ -180,7 +181,7 @@ header:hover {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border: 1px solid #6bd442;
+    border: 1px solid #654db6;
 }
 
 .cta-primary:hover {
@@ -341,7 +342,7 @@ header:hover {
 .pricing-card.featured .pricing-plan,
 .pricing-card.featured .pricing-price,
 .pricing-card.featured .pricing-features li {
-    color: var(--color-text);
+    color: var(--cta-color-text);
 }
 
 .pricing-plan {
@@ -371,6 +372,16 @@ header:hover {
     font-weight: 700;
 }
 
+.pricing-period-featured {
+    font-size: 0.9rem;
+    color: var(--cta-color-text);
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
 .pricing-features {
     list-style: none;
 }
@@ -385,6 +396,7 @@ header:hover {
 
 .pricing-card.featured .pricing-features li {
     border-bottom-color: rgba(255, 255, 255, 0.2);
+    color: var(--cta-color-text)
 }
 
 .pricing-features li:last-child {
@@ -400,7 +412,7 @@ header:hover {
     font-weight: 600;
     font-size: 0.9rem;
     border-radius: 8px;
-    border: 1px solid #6bd442;
+    border: 1px solid #654db6;
     transition: background-color 0.2s ease;
     margin-top: 1.5rem;
     text-transform: uppercase;
@@ -616,13 +628,13 @@ footer {
 }
 
 .tab-button:hover {
-    background: rgba(139, 250, 87, 0.1);
+    background: rgba(190, 87, 250, 0.1);
     color: var(--color-text);
 }
 
 .tab-button.active {
     background: var(--color-primary);
-    color: var(--color-light-gray);
+    color: var(--cta-color-text);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
