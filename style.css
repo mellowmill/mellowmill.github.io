@@ -56,7 +56,11 @@
     --container-max-width: 1100px;
     --container-padding: 20px;
     --section-padding: 100px 0;
+    --section-padding-mobile: 60px 0;
     --header-height: 60px;
+    
+    /* Typography */
+    --letter-spacing-wide: 0.5px;
 }
 
 * {
@@ -101,8 +105,6 @@ header {
     border-radius: var(--radius-lg);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0 0 5px #fff inset;
     width: calc(100% - 350px);
-}
-header {
     transition: width var(--transition-smooth), background var(--transition-smooth);
 }
 
@@ -144,7 +146,7 @@ header:hover {
     font-size: 0.85rem;
     font-weight: 600;
     transition: all var(--transition-fast);
-    border: 1px solid #654db6;
+    border: 1px solid var(--color-primary-hover);
 }
 
 .nav-button:hover {
@@ -172,9 +174,9 @@ header:hover {
     transition: background-color var(--transition-fast);
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
     border-radius: var(--radius-md);
-    border: 1px solid #654db6;
+    border: 1px solid var(--color-primary-hover);
 }
 
 .cta-button:hover {
@@ -229,8 +231,8 @@ header:hover {
     transition: background-color var(--transition-fast);
     display: inline-block;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border: 1px solid #654db6;
+    letter-spacing: var(--letter-spacing-wide);
+    border: 1px solid var(--color-primary-hover);
 }
 
 .cta-primary:hover {
@@ -376,7 +378,7 @@ header:hover {
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
     transform: rotate(15deg);
@@ -389,8 +391,7 @@ header:hover {
 }
 
 .pricing-card.featured .pricing-plan,
-.pricing-card.featured .pricing-price,
-.pricing-card.featured .pricing-features li {
+.pricing-card.featured .pricing-price {
     color: var(--cta-color-text);
 }
 
@@ -417,7 +418,7 @@ header:hover {
     opacity: var(--opacity-light);
     margin-bottom: var(--spacing-lg);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
     font-weight: 700;
 }
 
@@ -427,7 +428,7 @@ header:hover {
     opacity: var(--opacity-light);
     margin-bottom: var(--spacing-lg);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
     font-weight: 700;
 }
 
@@ -445,7 +446,7 @@ header:hover {
 
 .pricing-card.featured .pricing-features li {
     border-bottom-color: rgba(255, 255, 255, 0.2);
-    color: var(--cta-color-text)
+    color: var(--cta-color-text);
 }
 
 .pricing-features li:last-child {
@@ -461,11 +462,11 @@ header:hover {
     font-weight: 600;
     font-size: 0.9rem;
     border-radius: var(--radius-sm);
-    border: 1px solid #654db6;
+    border: 1px solid var(--color-primary-hover);
     transition: background-color var(--transition-fast);
     margin-top: var(--spacing-md);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
 }
 
 .pricing-cta:hover {
@@ -597,7 +598,7 @@ header:hover {
     font-size: 1rem;
     transition: all var(--transition-fast);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
     margin-left: 2em;
 }
 
@@ -673,7 +674,7 @@ footer {
     transition: all var(--transition-fast);
     flex: 1;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: var(--letter-spacing-wide);
 }
 
 .tab-button:hover {
@@ -866,13 +867,13 @@ button,
         min-height: 160px;
     }
     .features {
-        padding: 60px 0;
+        padding: var(--section-padding-mobile);
     }
     .pricing {
-        padding: 60px 0;
+        padding: var(--section-padding-mobile);
     }
     .cta-section {
-        padding: 60px 0;
+        padding: var(--section-padding-mobile);
     }
     footer {
         padding: 3rem 0;
