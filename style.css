@@ -1,5 +1,6 @@
 /* MellowMill Studio Main Stylesheet */
 :root {
+    /* Colors */
     --color-text: #1A1A1A;
     --color-background: #FAF9F6;
     --color-primary: #412194;
@@ -8,6 +9,54 @@
     --color-border: #7da2d0;
     --color-section-alt: #f0efeb;
     --cta-color-text: #FAF9F6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;    /* 8px */
+    --spacing-sm: 1rem;      /* 16px */
+    --spacing-md: 1.5rem;    /* 24px */
+    --spacing-lg: 2rem;      /* 32px */
+    --spacing-xl: 2.5rem;    /* 40px */
+    --spacing-2xl: 3rem;     /* 48px */
+    --spacing-3xl: 4rem;     /* 64px */
+    --spacing-4xl: 6rem;     /* 96px */
+    --spacing-5xl: 8rem;     /* 128px */
+    
+    /* Font Sizes */
+    --font-xs: 0.8rem;       /* 12.8px */
+    --font-sm: 0.85rem;      /* 13.6px */
+    --font-base: 0.9rem;     /* 14.4px */
+    --font-md: 1rem;         /* 16px */
+    --font-lg: 1.1rem;       /* 17.6px */
+    --font-xl: 1.15rem;      /* 18.4px */
+    --font-2xl: 1.2rem;      /* 19.2px */
+    --font-3xl: 1.25rem;     /* 20px */
+    --font-4xl: 1.5rem;      /* 24px */
+    --font-5xl: 1.8rem;      /* 28.8px */
+    --font-6xl: 2rem;        /* 32px */
+    --font-7xl: 2.5rem;      /* 40px */
+    --font-8xl: 3rem;        /* 48px */
+    --font-9xl: 4rem;        /* 64px */
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    
+    /* Opacity */
+    --opacity-light: 0.7;
+    --opacity-medium: 0.8;
+    --opacity-heavy: 0.85;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fade: 0.4s ease-in-out;
+    
+    /* Layout */
+    --container-max-width: 1100px;
+    --container-padding: 20px;
+    --section-padding: 100px 0;
+    --header-height: 60px;
 }
 
 * {
@@ -28,13 +77,13 @@ body {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 60px;
+    scroll-padding-top: var(--header-height);
 }
 
 .container {
-    max-width: 1100px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--container-padding);
 }
 
 /* Header */
@@ -43,18 +92,18 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin: 20px 0;
+    margin: var(--container-padding) 0;
     z-index: 1000;
     background: rgba(250, 249, 246, 0.2);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 1.5rem 0;
-    border-radius: 12px;
+    padding: var(--spacing-md) 0;
+    border-radius: var(--radius-lg);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0 0 5px #fff inset;
     width: calc(100% - 350px);
 }
 header {
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width var(--transition-smooth), background var(--transition-smooth);
 }
 
 header:hover {
@@ -66,12 +115,12 @@ header:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: var(--spacing-lg);
 }
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: var(--spacing-lg);
     align-items: center;
 }
 
@@ -80,7 +129,7 @@ header:hover {
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 .nav-menu a:hover {
@@ -91,10 +140,10 @@ header:hover {
     background: var(--color-primary);
     color: var(--cta-color-text) !important;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-size: 0.85rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     border: 1px solid #654db6;
 }
 
@@ -120,11 +169,11 @@ header:hover {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.2s ease;
+    transition: background-color var(--transition-fast);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     border: 1px solid #654db6;
 }
 
@@ -146,14 +195,14 @@ header:hover {
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
-    gap: 2rem;
+    gap: var(--spacing-lg);
 }
 
 .hero h1 {
     font-size: 4rem;
     font-weight: 700;
     color: var(--color-text);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     line-height: 1.1;
     letter-spacing: -1.5px;
 }
@@ -161,7 +210,7 @@ header:hover {
 .hero h2 {
     font-size: 1.25rem;
     color: var(--color-text);
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     font-weight: 400;
     max-width: 500px;
 }
@@ -177,7 +226,7 @@ header:hover {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: background-color 0.2s ease;
+    transition: background-color var(--transition-fast);
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -190,7 +239,7 @@ header:hover {
 
 /* Features Section */
 .features {
-    padding: 100px 0;
+    padding: var(--section-padding);
     background: var(--color-section-alt);
     border-top: 1px solid var(--color-light-gray);
     border-bottom: 1px solid var(--color-light-gray);
@@ -202,7 +251,7 @@ header:hover {
     text-transform: none;
     letter-spacing: -0.5px;
     color: var(--color-text);
-    margin-bottom: 3rem;
+    margin-bottom: var(--spacing-2xl);
     text-align: left;
 }
 
@@ -216,7 +265,7 @@ header:hover {
 
 .feature-card {
     background: var(--color-background);
-    padding: 2rem;
+    padding: var(--spacing-lg);
     text-align: left;
 }
 
@@ -229,7 +278,7 @@ header:hover {
 .feature-card h3 {
     font-size: 1.2rem;
     color: var(--color-text);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xs);
     font-weight: 600;
 }
 
@@ -243,14 +292,14 @@ header:hover {
 .features-multi {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    margin-top: 3rem;
+    gap: var(--spacing-3xl);
+    margin-top: var(--spacing-2xl);
 }
 
 .feature-row {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: var(--spacing-2xl);
 }
 
 .feature-row.reverse {
@@ -270,7 +319,7 @@ header:hover {
     min-height: 180px;
     background: var(--color-section-alt);
     border: 2px dashed var(--color-border);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,7 +335,7 @@ header:hover {
 .feature-text h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     color: var(--color-text);
 }
 
@@ -298,7 +347,7 @@ header:hover {
 
 /* Pricing Section */
 .pricing {
-    padding: 100px 0;
+    padding: var(--section-padding);
     background: var(--color-background);
 }
 
@@ -312,7 +361,7 @@ header:hover {
 
 .pricing-card {
     background: var(--color-section-alt);
-    padding: 2rem;
+    padding: var(--spacing-lg);
     text-align: left;
     position: relative;
 }
@@ -328,7 +377,7 @@ header:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
     transform: rotate(15deg);
     z-index: 1;
@@ -350,7 +399,7 @@ header:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     color: var(--color-text);
 }
 
@@ -358,15 +407,15 @@ header:hover {
     font-size: 3rem;
     font-weight: 700;
     color: var(--color-text);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xs);
     letter-spacing: -1px;
 }
 
 .pricing-period {
     font-size: 0.9rem;
     color: var(--color-text);
-    opacity: 0.7;
-    margin-bottom: 2rem;
+    opacity: var(--opacity-light);
+    margin-bottom: var(--spacing-lg);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 700;
@@ -375,8 +424,8 @@ header:hover {
 .pricing-period-featured {
     font-size: 0.9rem;
     color: var(--cta-color-text);
-    opacity: 0.7;
-    margin-bottom: 2rem;
+    opacity: var(--opacity-light);
+    margin-bottom: var(--spacing-lg);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 700;
@@ -411,10 +460,10 @@ header:hover {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     border: 1px solid #654db6;
-    transition: background-color 0.2s ease;
-    margin-top: 1.5rem;
+    transition: background-color var(--transition-fast);
+    margin-top: var(--spacing-md);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -430,12 +479,12 @@ header:hover {
     color: var(--color-text);
     font-size: 1.15rem;
     line-height: 1.7;
-    opacity: 0.85;
+    opacity: var(--opacity-heavy);
 }
 
 /* Testimonials Section */
 .testimonials {
-    padding: 100px 0;
+    padding: var(--section-padding);
     background: var(--color-section-alt);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
@@ -444,7 +493,7 @@ header:hover {
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: var(--spacing-lg);
 }
 
 .testimonial-card {
@@ -455,7 +504,7 @@ header:hover {
 .testimonial-quote {
     font-style: normal;
     color: var(--color-text);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -475,14 +524,14 @@ header:hover {
 
 .testimonial-role {
     color: var(--color-text);
-    opacity: 0.7;
+    opacity: var(--opacity-light);
     font-size: 1rem;
     font-weight: 400;
 }
 
 /* CTA Section */
 .cta-section {
-    padding: 100px 0;
+    padding: var(--section-padding);
     background: var(--color-section-alt);
     text-align: center;
     border-top: 1px solid var(--color-light-gray);
@@ -502,7 +551,7 @@ header:hover {
     width: 80px;
     height: 80px;
     margin-bottom: 1.5rem;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
 }
 
 .cta-section h2 {
@@ -518,24 +567,24 @@ header:hover {
 .cta-description {
     font-size: 1.2rem;
     color: var(--color-text);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.8;
+    opacity: var(--opacity-medium);
 }
 
 .cta-bonus {
     font-size: 1.2rem;
     color: var(--color-border);
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-lg);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     background: rgba(125, 162, 208, 0.1);
     padding: 1rem 1.5rem;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     border: 1px solid var(--color-border);
 }
 
@@ -546,7 +595,7 @@ header:hover {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-left: 2em;
@@ -561,7 +610,7 @@ header:hover {
 footer {
     background: var(--color-light-gray);
     color: var(--color-background);
-    padding: 4rem 0;
+    padding: var(--spacing-3xl) 0;
     border-top: 1px solid var(--color-light-gray);
 }
 
@@ -577,18 +626,18 @@ footer {
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-background);
-    opacity: 0.7;
+    opacity: var(--opacity-light);
 }
 
 .footer-links {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--spacing-md);
 }
 
 .footer-links a {
     color: var(--color-background);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
     font-weight: 400;
     font-size: 0.9rem;
 }
@@ -602,9 +651,9 @@ footer {
     display: flex;
     justify-content: center;
     gap: 0;
-    margin-bottom: 3rem;
+    margin-bottom: var(--spacing-2xl);
     background: var(--color-section-alt);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     padding: 4px;
     border: 1px solid var(--color-light-gray);
     max-width: 400px;
@@ -619,9 +668,9 @@ footer {
     padding: 12px 24px;
     font-size: 0.9rem;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     flex: 1;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -650,7 +699,7 @@ footer {
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    transition: opacity var(--transition-fade), visibility var(--transition-fade);
 }
 
 .tab-content.active {
@@ -671,21 +720,21 @@ footer {
     max-width: 700px;
     margin: 0 auto 3rem auto;
     line-height: 1.7;
-    opacity: 0.85;
+    opacity: var(--opacity-heavy);
 }
 
 .addons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: var(--spacing-lg);
     max-width: 800px;
     margin: 0 auto;
 }
 
 .addon-card {
     background: var(--color-section-alt);
-    padding: 2rem;
-    border-radius: 12px;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
     text-align: left;
     border: 1px solid var(--color-border);
     position: relative;
@@ -695,14 +744,14 @@ footer {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-text);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
 }
 
 .addon-price {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--color-border);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-sm);
 }
 
 .addon-description {
@@ -710,7 +759,7 @@ footer {
     color: var(--color-text);
     margin-bottom: 1.5rem;
     line-height: 1.6;
-    opacity: 0.85;
+    opacity: var(--opacity-heavy);
 }
 
 .addon-features {
@@ -740,7 +789,7 @@ input,
 button,
 .cta-white,
 .cta-primary {
-    border-radius: 10px;
+    border-radius: var(--radius-md);
 }
 
 /* Slightly round containers and grid items */
@@ -748,7 +797,7 @@ button,
 .features-multi,
 .pricing-grid,
 .testimonials-grid {
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
 }
 
 /* Responsive Design */
@@ -781,7 +830,7 @@ button,
     }
     
     .nav-menu {
-        gap: 1.5rem;
+        gap: var(--spacing-md);
     }
     
     .container {
@@ -793,19 +842,19 @@ button,
     }
     
     .section-title {
-        margin-bottom: 2rem;
+        margin-bottom: var(--spacing-lg);
     }
     
     .pricing-description {
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: var(--spacing-lg);
     }
 }
 
 @media (max-width: 900px) {
     .feature-row, .feature-row.reverse {
         flex-direction: column !important;
-        gap: 2rem;
+        gap: var(--spacing-lg);
         text-align: center;
     }
     .feature-image, .feature-text {
@@ -831,7 +880,7 @@ button,
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 1.5rem;
+        gap: var(--spacing-md);
     }
     .features-tabbed {
         min-height: 800px;
@@ -859,7 +908,7 @@ button,
     }
     .pricing-tabs {
         max-width: 300px;
-        margin-bottom: 2rem;
+        margin-bottom: var(--spacing-lg);
     }
     .tab-button {
         padding: 10px 16px;
