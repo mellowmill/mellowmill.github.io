@@ -4,7 +4,7 @@
     "homepage": "https://mellowmill.studio",
     "license": "Proprietary",
     "url": "https://mellowmill.studio/apps/mellowmillstudio-windows.zip",
-    "hash": "897a253246419a14067809ce105c3bb419891f16198ee76d8880e15e7c273117",
+    "hash": "84da6f9dd3d4bca49b3cea3dcbf9f417c420c5977980131f6891c1d3320547f6",
     "bin": "mellowmillstudio.exe",
     "shortcuts": [
       [
