@@ -4,15 +4,15 @@
   "platforms": {
     "darwin-aarch64": {
       "signature": "",
-      "url": "https://mellowmill.studio/apps/app-aarch64.app.tar.gz"
+      "url": "app-aarch64.app.tar.gz"
     },
     "linux-x86_64": {
       "signature": "",
-      "url": "https://mellowmill.studio/apps/app.AppImage.tar.gz"
+      "url": "app.AppImage.tar.gz"
     },
     "windows-x86_64": {
       "signature": "",
-      "url": "https://mellowmill.studio/apps/mellowmillstudio.zip"
+      "url": "mellowmillstudio.zip"
     }
   }
 }
