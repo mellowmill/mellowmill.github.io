@@ -1,0 +1,19 @@
+{
+  "version": "1.2512.18",
+  "notes": "Initial release",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "",
+      "url": "https://mellowmill.studio/apps/app-aarch64.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "",
+      "url": "https://mellowmill.studio/apps/app.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "",
+      "url": "https://mellowmill.studio/apps/mellowmillstudio.zip"
+    }
+  }
+}
+
