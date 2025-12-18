@@ -6,7 +6,7 @@
   "url": "https://mellowmill.studio/apps/mellowmillstudio-windows.zip",
   "shortcuts": [
     [
-        "MellowMillStudio.exe"
+        "MellowMillStudio.exe",
         "MellowMillStudio"
     ]
   ]
