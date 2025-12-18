@@ -1,0 +1,23 @@
+{
+    "version": "1.2512.18",
+    "description": "MellowMill Studio - calm productivity",
+    "homepage": "https://mellowmill.studio",
+    "license": "Proprietary",
+    "url": "https://mellowmill.studio/apps/mellowmillstudio.zip",
+    "hash": "897a253246419a14067809ce105c3bb419891f16198ee76d8880e15e7c273117",
+    "bin": "mellowmillstudio.exe",
+    "shortcuts": [
+      [
+        "mellowmillstudio.exe",
+        "MellowMill Studio"
+      ]
+    ],
+    "checkver": {
+      "url": "https://mellowmill.studio/update.json",
+      "jsonpath": "$.version",
+      "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+      "url": "https://mellowmill.studio/apps/mellowmillstudio.zip"
+    }
+  }
