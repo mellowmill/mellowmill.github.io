@@ -3,7 +3,7 @@
     "description": "MellowMill Studio - calm productivity",
     "homepage": "https://mellowmill.studio",
     "license": "Proprietary",
-    "url": "https://mellowmill.studio/apps/mellowmillstudio.zip",
+    "url": "https://mellowmill.studio/apps/mellowmillstudio-windows.zip",
     "hash": "897a253246419a14067809ce105c3bb419891f16198ee76d8880e15e7c273117",
     "bin": "mellowmillstudio.exe",
     "shortcuts": [
@@ -18,6 +18,6 @@
       "regex": "([\\d.]+)"
     },
     "autoupdate": {
-      "url": "https://mellowmill.studio/apps/mellowmillstudio.zip"
+      "url": "https://mellowmill.studio/apps/mellowmillstudio-windows.zip"
     }
   }
