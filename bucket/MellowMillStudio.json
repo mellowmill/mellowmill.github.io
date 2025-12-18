@@ -3,5 +3,11 @@
   "homepage": "https://mellowmill.studio",
   "hash": "bbda8ed4b188949f0fe35660e74369e8517370c140e60490069547f9bac13e55",
   "license": "Proprietary",
-  "url": "https://mellowmill.studio/apps/mellowmillstudio-windows.zip"
+  "url": "https://mellowmill.studio/apps/mellowmillstudio-windows.zip",
+  "shortcuts": [
+    [
+        "MellowMillStudio.exe"
+        "MellowMillStudio"
+    ]
+  ]
 }
