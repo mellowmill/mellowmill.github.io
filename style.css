@@ -192,9 +192,11 @@ header:hover {
 
 .features {
     padding: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + var(--spacing-3xl));
     background: var(--color-section-alt);
     border-top: 1px solid var(--color-light-gray);
     border-bottom: 1px solid var(--color-light-gray);
+    min-height: 1600px;
 }
 
 /* Feature Layout */
@@ -249,7 +251,13 @@ header:hover {
 }
 
 /* Pricing Section */
-.pricing { padding: var(--section-padding); }
+.pricing { 
+    padding-top: 0;
+    padding-bottom: var(--section-padding);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    margin-top: var(--spacing-3xl);
+}
 
 .pricing-description {
     text-align: left;
@@ -405,6 +413,101 @@ header:hover {
 .tab-content.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* Get Started Section */
+.get-started-section {
+    padding: var(--section-padding);
+    background: var(--color-background);
+}
+
+.get-started-description {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl) auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    opacity: var(--opacity-heavy);
+}
+
+.platform-tabbed {
+    position: relative;
+    min-height: 400px;
+}
+
+.install-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.install-option {
+    background: var(--color-section-alt);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.install-option h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+    min-width: 180px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.install-option-content {
+    flex: 1;
+    text-align: left;
+}
+
+.install-code {
+    background: var(--color-background);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--color-light-gray);
+}
+
+.install-code code {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: var(--color-text);
+    display: block;
+    text-align: left;
+}
+
+.install-option p {
+    font-size: 0.95rem;
+    opacity: var(--opacity-medium);
+    margin-top: var(--spacing-sm);
+}
+
+.coming-soon-message {
+    text-align: center;
+    padding: var(--spacing-3xl);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coming-soon-message h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.coming-soon-message p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: var(--opacity-heavy);
 }
 
 /* Add-ons Section */
