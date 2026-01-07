@@ -42,6 +42,26 @@
 /* Reset & Base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: var(--cta-color-text);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 9999;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: var(--spacing-sm);
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
@@ -79,6 +99,16 @@ html {
 
 .btn:hover {
     background: var(--color-primary-hover);
+}
+
+.btn:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .btn-sm { padding: 8px 16px; font-size: 0.85rem; }
@@ -142,6 +172,12 @@ header:hover {
 
 .nav-menu a:hover { color: var(--color-primary); }
 
+.nav-menu a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
 .nav-button {
     color: var(--cta-color-text) !important;
 }
@@ -153,7 +189,7 @@ header:hover {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    padding: 180px 0 120px;
+    padding: 180px 0 100px;
     background: var(--color-background) url('hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -174,7 +210,7 @@ header:hover {
     letter-spacing: -1.5px;
 }
 
-.hero h2 {
+.hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-lg);
     font-weight: 400;
@@ -183,20 +219,17 @@ header:hover {
 
 /* Sections */
 .section-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-sm);
     text-align: center;
 }
 
 .features {
     padding: var(--section-padding);
-    padding-bottom: calc(var(--section-padding) + var(--spacing-3xl));
     background: var(--color-section-alt);
-    border-top: 1px solid var(--color-light-gray);
-    border-bottom: 1px solid var(--color-light-gray);
-    min-height: 1600px;
+    border-top: 1px solid rgba(84, 79, 81, 0.2);
 }
 
 /* Feature Layout */
@@ -252,18 +285,16 @@ header:hover {
 
 /* Pricing Section */
 .pricing { 
-    padding-top: 0;
-    padding-bottom: var(--section-padding);
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-    margin-top: var(--spacing-3xl);
+    padding: var(--section-padding);
+    background: var(--color-background);
+    border-top: 1px solid rgba(84, 79, 81, 0.2);
 }
 
 .pricing-description {
-    text-align: left;
+    text-align: center;
     max-width: 600px;
-    margin: 0 auto var(--spacing-xl) auto;
-    font-size: 1.15rem;
+    margin: 0 auto var(--spacing-2xl) auto;
+    font-size: 1.1rem;
     line-height: 1.7;
     opacity: var(--opacity-heavy);
 }
@@ -271,23 +302,26 @@ header:hover {
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--color-section-alt);
-    border: 1px solid var(--color-section-alt);
+    gap: var(--spacing-lg);
     max-width: 800px;
     margin: 0 auto;
 }
 
 .pricing-card {
     background: var(--color-section-alt);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     text-align: left;
     position: relative;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(84, 79, 81, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-card.featured {
     background: var(--color-primary);
     color: var(--color-background);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 30px rgba(65, 33, 148, 0.25);
 }
 
 .coming-soon-banner {
@@ -344,7 +378,7 @@ header:hover {
 
 .pricing-features li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid var(--color-section-alt);
+    border-bottom: 1px solid rgba(84, 79, 81, 0.1);
     font-weight: 400;
 }
 
@@ -360,11 +394,12 @@ header:hover {
     display: flex;
     justify-content: center;
     gap: 0;
+    margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-2xl);
-    background: var(--color-section-alt);
+    background: var(--color-background);
     border-radius: var(--radius-lg);
     padding: 4px;
-    border: 1px solid var(--color-light-gray);
+    border: 1px solid rgba(84, 79, 81, 0.2);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -395,30 +430,36 @@ header:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.tab-button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.tab-button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
 .features-tabbed {
     position: relative;
-    min-height: 1000px;
 }
 
 .tab-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    display: none;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--transition-fade), visibility var(--transition-fade);
+    transition: opacity var(--transition-fade);
 }
 
 .tab-content.active {
+    display: block;
     opacity: 1;
-    visibility: visible;
 }
 
 /* Get Started Section */
 .get-started-section {
     padding: var(--section-padding);
-    background: var(--color-background);
+    background: var(--color-section-alt);
+    border-top: 1px solid rgba(84, 79, 81, 0.2);
 }
 
 .get-started-description {
@@ -432,7 +473,6 @@ header:hover {
 
 .platform-tabbed {
     position: relative;
-    min-height: 400px;
 }
 
 .install-options {
@@ -444,13 +484,14 @@ header:hover {
 }
 
 .install-option {
-    background: var(--color-section-alt);
+    background: var(--color-background);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(84, 79, 81, 0.15);
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .install-option h3 {
@@ -469,11 +510,11 @@ header:hover {
 }
 
 .install-code {
-    background: var(--color-background);
+    background: var(--color-section-alt);
     padding: var(--spacing-md);
     border-radius: var(--radius-sm);
-    margin-bottom: var(--spacing-md);
-    border: 1px solid var(--color-light-gray);
+    margin-bottom: 0;
+    border: 1px solid rgba(84, 79, 81, 0.15);
 }
 
 .install-code code {
@@ -576,9 +617,9 @@ header:hover {
 /* CTA Section */
 .cta-section {
     padding: var(--section-padding);
-    background: var(--color-section-alt);
+    background: linear-gradient(180deg, var(--color-background) 0%, var(--color-section-alt) 100%);
     text-align: center;
-    border-top: 1px solid var(--color-light-gray);
+    border-top: 1px solid rgba(84, 79, 81, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -632,10 +673,10 @@ header:hover {
 
 /* Footer */
 footer {
-    background: var(--color-light-gray);
+    background: #1a1a1a;
     color: var(--color-background);
     padding: var(--spacing-3xl) 0;
-    border-top: 1px solid var(--color-light-gray);
+    border-top: none;
 }
 
 .footer-content {
@@ -649,7 +690,7 @@ footer {
 .footer-logo {
     font-size: 1rem;
     font-weight: 600;
-    opacity: var(--opacity-light);
+    opacity: 0.9;
 }
 
 .footer-links {
@@ -660,12 +701,20 @@ footer {
 .footer-links a {
     color: var(--color-background);
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: color var(--transition-fast), opacity var(--transition-fast);
     font-weight: 400;
     font-size: 0.9rem;
 }
 
-.footer-links a:hover { color: var(--color-primary); }
+.footer-links a:hover { 
+    color: #fff;
+    opacity: 1;
+}
+
+.footer-links a:focus {
+    outline: 2px solid var(--color-background);
+    outline-offset: 2px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -681,7 +730,7 @@ footer {
         font-size: 2.5rem;
         line-height: 1.2;
     }
-    .hero h2 {
+    .hero-subtitle {
         font-size: 1.1rem;
         margin-bottom: var(--spacing-md);
     }
@@ -730,6 +779,9 @@ footer {
     .pricing {
         padding: var(--section-padding-mobile);
     }
+    .get-started-section {
+        padding: var(--section-padding-mobile);
+    }
     .cta-section {
         padding: var(--section-padding-mobile);
     }
@@ -741,16 +793,13 @@ footer {
         text-align: center;
         gap: var(--spacing-md);
     }
-    .features-tabbed {
-        min-height: 800px;
-    }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2rem;
     }
-    .hero h2 {
+    .hero-subtitle {
         font-size: 1rem;
     }
     .cta-section h2 {
@@ -772,8 +821,5 @@ footer {
     .tab-button {
         padding: 10px 16px;
         font-size: 0.8rem;
-    }
-    .features-tabbed {
-        min-height: 700px;
     }
 }

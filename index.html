@@ -37,17 +37,18 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
             <div class="container">
                 <div class="header-content">
-                    <a href="#" class="logo"
-                        ><img src="icon.png" width="64" />
+                    <a href="#" class="logo" aria-label="MellowMill Studio - Home"
+                        ><img src="icon.png" width="64" alt="MellowMill Studio logo" />
                         MellowMill Studio</a
                     >
                     <nav class="nav-menu">
                         <a href="#features">Features</a>
                         <a href="#pricing">Pricing</a>
-                        <a href="#cta-section" class="btn btn-sm nav-button"
+                        <a href="#get-started" class="btn btn-sm nav-button"
                             >Get Started</a
                         >
                     </nav>
@@ -55,21 +56,20 @@
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <section class="hero">
                 <div class="container">
                     <div class="hero-text">
                         <h1>Productivity for busy minds.</h1>
-                        <h2>
-                            The minimalist note-taking and task management app
-                            designed to bring clarity to your workflow is
-                            currently cooking...
-                        </h2>
+                        <p class="hero-subtitle">
+                            The minimalist productivity app that is designed to bring 
+                            clarity to your workflow. 
+                        </p>
                         <div class="hero-cta">
                             <a
-                                href="#cta-section"
+                                href="#get-started"
                                 class="btn btn-lg cta-primary"
-                                >Join the Waitlist</a
+                                >Get Started</a
                             >
                         </div>
                     </div>
@@ -84,11 +84,11 @@
                     <h2 class="section-title">Features by Plan</h2>
 
                     <!-- Pricing Plan Tabs -->
-                    <div class="pricing-tabs">
-                        <button class="tab-button active" data-plan="free">
+                    <div class="pricing-tabs" role="tablist" aria-label="Features by plan">
+                        <button class="tab-button active" data-plan="free" role="tab" aria-selected="true" aria-controls="free-features" id="free-tab">
                             Free
                         </button>
-                        <button class="tab-button" data-plan="core">
+                        <button class="tab-button" data-plan="core" role="tab" aria-selected="false" aria-controls="core-features" id="core-tab">
                             Core
                         </button>
                     </div>
@@ -96,7 +96,7 @@
                     <!-- Feature Lists for Each Plan -->
                     <div class="features-tabbed">
                         <!-- Free Plan Features -->
-                        <div class="tab-content active" id="free-features">
+                        <div class="tab-content active" id="free-features" role="tabpanel" aria-labelledby="free-tab">
                             <div class="features-multi">
                                 <div class="feature-row">
                                     <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
@@ -168,7 +168,7 @@
                         </div>
 
                         <!-- Core Plan Features -->
-                        <div class="tab-content" id="core-features">
+                        <div class="tab-content" id="core-features" role="tabpanel" aria-labelledby="core-tab">
                             <div class="features-multi">
                                 <div class="feature-row reverse">
                                     <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
@@ -202,7 +202,7 @@
                                     <div class="feature-text">
                                         <h3>Advanced Tables</h3>
                                         <p>
-                                            Advanced tables support header rows and columns. Plus easy calculations in cells via simply selecting pre-defined forumulas without the need for complex syntax.
+                                            Advanced tables support header rows and columns. Plus easy calculations in cells by simply selecting pre-defined formulas without the need for complex syntax.
                                         </p>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                     <h2 class="section-title">Pricing</h2>
                     <p class="pricing-description">
                         You own the software, forever & including updates. You
-                        can add bonus packs if you need more power..
+                        can add bonus packs if you need more power.
                     </p>
                     <div class="pricing-grid">
                         <div class="pricing-card">
@@ -243,7 +243,7 @@
                                 <li>All data stays local</li>
                             </ul>
                             <a
-                                href="#cta-section"
+                                href="#get-started"
                                 class="btn btn-md pricing-cta"
                                 >Get Started</a
                             >
@@ -279,14 +279,14 @@
                     </p>
 
                     <!-- Platform Tabs -->
-                    <div class="pricing-tabs">
-                        <button class="tab-button active" data-platform="windows">
+                    <div class="pricing-tabs" role="tablist" aria-label="Download platforms">
+                        <button class="tab-button active" data-platform="windows" role="tab" aria-selected="true" aria-controls="windows-content" id="windows-tab">
                             Windows
                         </button>
-                        <button class="tab-button" data-platform="linux">
+                        <button class="tab-button" data-platform="linux" role="tab" aria-selected="false" aria-controls="linux-content" id="linux-tab">
                             Linux
                         </button>
-                        <button class="tab-button" data-platform="mac">
+                        <button class="tab-button" data-platform="mac" role="tab" aria-selected="false" aria-controls="mac-content" id="mac-tab">
                             Mac
                         </button>
                     </div>
@@ -294,7 +294,7 @@
                     <!-- Platform Content -->
                     <div class="platform-tabbed">
                         <!-- Windows Platform -->
-                        <div class="tab-content active" id="windows-content">
+                        <div class="tab-content active" id="windows-content" role="tabpanel" aria-labelledby="windows-tab">
                             <div class="install-options">
                                 <div class="install-option">
                                     <h3>Scoop</h3>
@@ -322,7 +322,7 @@
                         </div>
 
                         <!-- Linux Platform -->
-                        <div class="tab-content" id="linux-content">
+                        <div class="tab-content" id="linux-content" role="tabpanel" aria-labelledby="linux-tab">
                             <div class="coming-soon-message">
                                 <h3>Coming Soon</h3>
                                 <p>Linux support is currently in development. Sign up to our waitlist to be notified when it's available.</p>
@@ -330,7 +330,7 @@
                         </div>
 
                         <!-- Mac Platform -->
-                        <div class="tab-content" id="mac-content">
+                        <div class="tab-content" id="mac-content" role="tabpanel" aria-labelledby="mac-tab">
                             <div class="coming-soon-message">
                                 <h3>Coming Soon</h3>
                                 <p>Mac support is currently in development. Sign up to our waitlist to be notified when it's available.</p>
@@ -374,12 +374,12 @@
         <footer>
             <div class="container">
                 <div class="footer-content">
-                    <p class="footer-logo">&copy; 2025 MellowMill Studio</p>
-                    <nav class="footer-links">
-                        <a href="#">Features</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">Contact</a>
-                        <a href="#">Twitter</a>
+                    <p class="footer-logo">&copy; 2026 MellowMill Studio</p>
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#cta-section">Contact</a>
+                        <a href="https://twitter.com/mellowmill" target="_blank" rel="noopener noreferrer">Twitter</a>
                     </nav>
                 </div>
             </div>
@@ -445,13 +445,15 @@
                             return;
                         }
 
-                        // Remove active class from all buttons in this section
+                        // Remove active class and update aria-selected for all buttons
                         featureTabButtons.forEach(function (btn) {
                             btn.classList.remove("active");
+                            btn.setAttribute("aria-selected", "false");
                         });
 
-                        // Add active class to clicked button
+                        // Add active class and update aria-selected for clicked button
                         this.classList.add("active");
+                        this.setAttribute("aria-selected", "true");
 
                         // Fade out all content first
                         featureTabContents.forEach(function (content) {
@@ -483,13 +485,15 @@
                             return;
                         }
 
-                        // Remove active class from all buttons in this section
+                        // Remove active class and update aria-selected for all buttons
                         platformTabButtons.forEach(function (btn) {
                             btn.classList.remove("active");
+                            btn.setAttribute("aria-selected", "false");
                         });
 
-                        // Add active class to clicked button
+                        // Add active class and update aria-selected for clicked button
                         this.classList.add("active");
+                        this.setAttribute("aria-selected", "true");
 
                         // Fade out all content first
                         platformTabContents.forEach(function (content) {
