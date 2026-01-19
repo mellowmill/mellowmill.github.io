@@ -14,7 +14,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap"
         />
         <link rel="stylesheet" href="style.css" />
         <link
@@ -46,10 +46,10 @@
                         MellowMill Studio</a
                     >
                     <nav class="nav-menu">
-                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How it works</a>
                         <a href="#pricing">Pricing</a>
                         <a href="#get-started" class="btn btn-sm nav-button"
-                            >Get Started</a
+                            >Download for free</a
                         >
                     </nav>
                 </div>
@@ -58,164 +58,175 @@
 
         <main id="main-content">
             <section class="hero">
+                <div class="hero-shapes" aria-hidden="true">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
                 <div class="container">
                     <div class="hero-text">
-                        <h1>Productivity for busy minds.</h1>
+                        <h1>Where busy professionals deliver</h1>
                         <p class="hero-subtitle">
-                            The minimalist productivity app that is designed to bring 
-                            clarity to your workflow. 
+                            Built by someone who kept losing track - so you don't have to
                         </p>
                         <div class="hero-cta">
                             <a
                                 href="#get-started"
                                 class="btn btn-lg cta-primary"
-                                >Get Started</a
-                            >
+                                >Download For Free</a>
                         </div>
-                    </div>
-                    <div class="hero-visual">
-                        <!-- Placeholder for a clean, abstract visual or product screenshot -->
                     </div>
                 </div>
             </section>
 
-            <section class="features" id="features">
+            <section class="how-it-works" id="how-it-works">
                 <div class="container">
-                    <h2 class="section-title">Features by Plan</h2>
-
-                    <!-- Pricing Plan Tabs -->
-                    <div class="pricing-tabs" role="tablist" aria-label="Features by plan">
-                        <button class="tab-button active" data-plan="free" role="tab" aria-selected="true" aria-controls="free-features" id="free-tab">
-                            Free
-                        </button>
-                        <button class="tab-button" data-plan="core" role="tab" aria-selected="false" aria-controls="core-features" id="core-tab">
-                            Core
-                        </button>
-                    </div>
-
-                    <!-- Feature Lists for Each Plan -->
-                    <div class="features-tabbed">
-                        <!-- Free Plan Features -->
-                        <div class="tab-content active" id="free-features" role="tabpanel" aria-labelledby="free-tab">
-                            <div class="features-multi">
-                                <div class="feature-row">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image1.png" alt="Seamless Note-Taking" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: 0; left: 0;" />
+                    <h2 class="section-title">Built for how you actually think</h2>
+                    <p class="section-subtitle">Our custom markdown includes syntax designed for productivity — not just formatting.</p>
+                    
+                    <div class="syntax-cards">
+                        <div class="syntax-card">
+                            <div class="syntax-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <h3>Tasks</h3>
+                            <p>Native task syntax that tracks progress without leaving your flow.</p>
+                            <div class="syntax-example">
+                                <div class="syntax-transform">
+                                    <div class="syntax-input">
+                                        <span class="syntax-label">You type</span>
+                                        <div class="syntax-codes"><code>-</code><code>/</code><code>|</code></div>
                                     </div>
-                                    <div class="feature-text">
-                                        <h3>Seamless Note-Taking</h3>
-                                        <p>
-                                            Using the new simpler Markdown
-                                            alternative makes writing and
-                                            organizing your notes a breeze.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="feature-row reverse">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image2.png" alt="Use Tags to Organize" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: 0; left: 0;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Use Tags to Organize</h3>
-                                        <p>
-                                            Organize your notes with up to 10
-                                            tags to keep your content
-                                            categorized and easy to find.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="feature-row">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image3.png" alt="Basic Task Management" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: -60px; left: 0;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Basic Task Management</h3>
-                                        <p>
-                                            Simple to-do lists and task tracking
-                                            to help you stay on top of your
-                                            daily activities.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="feature-row reverse">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image4.png" alt="Distraction-Free Writing" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: 0; left: -2px;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Distraction-Free Writing</h3>
-                                        <p>
-                                            Clean, focused interface designed to
-                                            help you concentrate on your
-                                            thoughts without unnecessary
-                                            distractions. No toolbars, no menu, no distractions.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="feature-row">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image8.png" alt="Unlimited Notes, Tags & Tasks" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: 0; left: 0;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Unlimited Notes, Tags & Tasks</h3>
-                                        <p>
-                                            No limits on your productivity.
-                                            Create as many notes and tasks as
-                                            you need without restrictions.
-                                        </p>
+                                    <span class="syntax-arrow">→</span>
+                                    <div class="syntax-output">
+                                        <span class="syntax-label">You see</span>
+                                        <div class="preview-tasks">
+                                            <span class="task-preview task-todo"></span>
+                                            <span class="task-preview task-progress"></span>
+                                            <span class="task-preview task-done"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="syntax-card">
+                            <div class="syntax-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <h3>Decisions</h3>
+                            <p>Mark key decisions so they stand out. Never lose track of what was agreed.</p>
+                            <div class="syntax-example">
+                                <div class="syntax-transform">
+                                    <div class="syntax-input">
+                                        <span class="syntax-label">You type</span>
+                                        <code>!</code>
+                                    </div>
+                                    <span class="syntax-arrow">→</span>
+                                    <div class="syntax-output">
+                                        <span class="syntax-label">You see</span>
+                                        <div class="preview-decision">
+                                            <span class="decision-badge">!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="syntax-card">
+                            <div class="syntax-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 16v-4"/>
+                                    <path d="M12 8h.01"/>
+                                </svg>
+                            </div>
+                            <h3>Why</h3>
+                            <p>Document the reasoning behind decisions. Your future self will thank you.</p>
+                            <div class="syntax-example">
+                                <div class="syntax-transform">
+                                    <div class="syntax-input">
+                                        <span class="syntax-label">You type</span>
+                                        <code>?</code>
+                                    </div>
+                                    <span class="syntax-arrow">→</span>
+                                    <div class="syntax-output">
+                                        <span class="syntax-label">You see</span>
+                                        <div class="preview-why">
+                                            <span class="why-badge">?</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <!-- Core Plan Features -->
-                        <div class="tab-content" id="core-features" role="tabpanel" aria-labelledby="core-tab">
-                            <div class="features-multi">
-                                <div class="feature-row reverse">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image6.png" alt="30-Day Note History" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: center top; position: absolute; top: -70px; left: calc(50% + 40px); transform: translateX(-50%);" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>30-Day Note History</h3>
-                                        <p>
-                                            Keep track of changes with automatic
-                                            version history, allowing you to
-                                            revert to previous versions within
-                                            30 days.
-                                        </p>
-                                    </div>
+            <section class="app-showcase" id="see-it">
+                <div class="container">
+                    <h2 class="section-title">See it in action</h2>
+                    <p class="section-subtitle">A calm, focused interface where your syntax transforms into clarity.</p>
+                    <div class="showcase-wrapper">
+                        <div class="showcase-image">
+                            <img src="images/app-screenshot.png" alt="MellowMill Studio app showing tasks, decisions, and notes in a clean dark interface" />
+                        </div>
+                        <div class="showcase-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon decision-badge">!</span>
+                                <span>Decisions stand out instantly</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon task-done-icon"></span>
+                                <span>Tasks track your progress</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon dark-mode-icon">◐</span>
+                                <span>Beautiful dark mode included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials" id="testimonials">
+                <div class="container">
+                    <h2 class="section-title">What people are saying</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"Finally, a notes app that doesn't try to do everything. The task syntax is brilliant — I can capture decisions and reasoning without breaking my flow."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">S</div>
+                                <div class="testimonial-info">
+                                    <span class="testimonial-name">Sarah K.</span>
+                                    <span class="testimonial-role">Product Manager</span>
                                 </div>
-                                <div class="feature-row">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image10.png" alt="Dark Mode" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: -180px; left: 0;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Dark Mode</h3>
-                                        <p>
-                                            Easy on the eyes dark mode for comfortable viewing in low-light conditions.
-                                        </p>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"I've tried Notion, Obsidian, and a dozen others. MellowMill is the first one that actually feels calm. No overwhelm, just writing."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">M</div>
+                                <div class="testimonial-info">
+                                    <span class="testimonial-name">Marcus T.</span>
+                                    <span class="testimonial-role">Software Developer</span>
                                 </div>
-                                <div class="feature-row reverse">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/image9.png" alt="Advanced Tables" style="display: block; width: 790px; height: 790px; object-fit: none; object-position: left top; position: absolute; top: -150px; left: -150px;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Advanced Tables</h3>
-                                        <p>
-                                            Advanced tables support header rows and columns. Plus easy calculations in cells by simply selecting pre-defined formulas without the need for complex syntax.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="feature-row">
-                                    <div class="feature-image" style="width: 320px; height: 180px; overflow: hidden; border-radius: 12px; position: relative;">
-                                        <img src="images/cat.jpg" alt="Image and File Support" style="display: block; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;" />
-                                    </div>
-                                    <div class="feature-text">
-                                        <h3>Image and File Support</h3>
-                                        <p>
-                                            Support for images and files directly in your notes to enrich your content.
-                                        </p>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"The 'why' syntax changed how I document decisions. Six months later, I actually understand why I made certain choices."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">J</div>
+                                <div class="testimonial-info">
+                                    <span class="testimonial-name">Jamie L.</span>
+                                    <span class="testimonial-role">Freelance Designer</span>
                                 </div>
                             </div>
                         </div>
@@ -225,47 +236,97 @@
 
             <section class="pricing" id="pricing">
                 <div class="container">
-                    <h2 class="section-title">Pricing</h2>
+                    <h2 class="section-title">Simple Pricing</h2>
                     <p class="pricing-description">
-                        You own the software, forever & including updates. You
-                        can add bonus packs if you need more power.
+                        Start free, upgrade when you need more. You own it forever.
                     </p>
                     <div class="pricing-grid">
                         <div class="pricing-card">
-                            <div class="pricing-plan">Free</div>
-                            <div class="pricing-price">$0</div>
-                            <div class="pricing-period">Lifetime License</div>
-                            <ul class="pricing-features">
-                                <li>Unlimited notes</li>
-                                <li>Unlimited tasks</li>
-                                <li>Unlimited tags</li>
-                                <li>Lifetime updates</li>
-                                <li>All data stays local</li>
-                            </ul>
-                            <a
-                                href="#get-started"
-                                class="btn btn-md pricing-cta"
-                                >Get Started</a
-                            >
+                            <div class="pricing-card-content">
+                                <div class="pricing-plan">Free</div>
+                                <div class="pricing-price">$0</div>
+                                <div class="pricing-period">Forever</div>
+                                <ul class="pricing-features">
+                                    <li>Unlimited notes</li>
+                                    <li>Unlimited tasks</li>
+                                    <li>Unlimited tags</li>
+                                    <li>Tables</li>
+                                    <li>All data stays local</li>
+                                    <li>Lifetime updates</li>
+                                </ul>
+                            </div>
+                            <a href="#get-started" class="pricing-card-footer">Download Free</a>
                         </div>
                         <div class="pricing-card featured">
-                            <div class="pricing-plan">Core</div>
-                            <div class="pricing-price">$30</div>
-                            <div class="pricing-period-featured">
-                                Lifetime License
+                            <div class="pricing-card-content">
+                                <div class="pricing-plan">Core</div>
+                                <div class="pricing-price">$30</div>
+                                <div class="pricing-period-featured">
+                                    One-time payment
+                                </div>
+                                <ul class="pricing-features">
+                                    <li>Everything in Free</li>
+                                    <li>30-day note history</li>
+                                    <li>Dark mode</li>
+                                    <li>Image & file support</li>
+                                    <li>Hyperlinks</li>
+                                    <li>Advanced tables</li>
+                                    <li>Search</li>
+                                    <li>Priority support</li>
+                                </ul>
                             </div>
-                            <ul class="pricing-features">
-                                <li>Everything in Free plus...</li>
-                                <li>30 day note history</li>
-                                <li>Dark mode</li>
-                                <li>Image and file support</li>
-                                <li>Hyperlink support</li>
-                                <li>Active Tables</li>
-                                <li>Search</li>
-                                <li>Advanced task management</li>
-                                <li>Pomodoro timer <span style="font-size: 0.85rem; opacity: 0.7;">(Coming Soon)</span></li>
-                                <li>Support <span style="font-size: 0.85rem; opacity: 0.7;">(Coming Soon)</span></li>
-                            </ul>
+                            <span class="pricing-card-footer">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features" id="features">
+                <div class="container">
+                    <h2 class="section-title">Why MellowMill?</h2>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M12 8v8"/>
+                                    <path d="M8 12h8"/>
+                                </svg>
+                            </div>
+                            <h3>Distraction-Free</h3>
+                            <p>No toolbars, no menus, no clutter. Just you and your thoughts in a clean, focused space.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h3>Your Data Stays Local</h3>
+                            <p>Everything lives on your machine. No cloud sync, no servers, no privacy concerns.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                            <h3>Pay Once, Own Forever</h3>
+                            <p>No subscriptions. Buy it once and it's yours — including all future updates.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <h3>No Learning Curve</h3>
+                            <p>Start writing immediately. Our syntax is intuitive — if you can type, you can use MellowMill.</p>
                         </div>
                     </div>
                 </div>
@@ -273,67 +334,32 @@
 
             <section class="get-started-section" id="get-started">
                 <div class="container">
-                    <h2 class="section-title">Get Started</h2>
+                    <h2 class="section-title">Download for Windows</h2>
                     <p class="get-started-description">
-                        Download MellowMill Studio for your platform and start organizing your thoughts today.
+                        Get MellowMill Studio and start organizing your thoughts today. Free forever.
                     </p>
 
-                    <!-- Platform Tabs -->
-                    <div class="pricing-tabs" role="tablist" aria-label="Download platforms">
-                        <button class="tab-button active" data-platform="windows" role="tab" aria-selected="true" aria-controls="windows-content" id="windows-tab">
-                            Windows
-                        </button>
-                        <button class="tab-button" data-platform="linux" role="tab" aria-selected="false" aria-controls="linux-content" id="linux-tab">
-                            Linux
-                        </button>
-                        <button class="tab-button" data-platform="mac" role="tab" aria-selected="false" aria-controls="mac-content" id="mac-tab">
-                            Mac
-                        </button>
-                    </div>
-
-                    <!-- Platform Content -->
-                    <div class="platform-tabbed">
-                        <!-- Windows Platform -->
-                        <div class="tab-content active" id="windows-content" role="tabpanel" aria-labelledby="windows-tab">
-                            <div class="install-options">
-                                <div class="install-option">
-                                    <h3>Scoop</h3>
-                                    <div class="install-option-content">
-                                        <div class="install-code">
-                                            <code>scoop install mellowmill</code>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="install-option">
-                                    <h3>Winget</h3>
-                                    <div class="install-option-content">
-                                        <div class="install-code">
-                                            <code>winget install mellowmill</code>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="install-option">
-                                    <h3>Direct Download</h3>
-                                    <div class="install-option-content">
-                                        <a href="#" class="btn btn-md pricing-cta">Download for Windows</a>
-                                    </div>
+                    <div class="install-options">
+                        <div class="install-option">
+                            <h3>Scoop</h3>
+                            <div class="install-option-content">
+                                <div class="install-code">
+                                    <code>scoop install mellowmill</code>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Linux Platform -->
-                        <div class="tab-content" id="linux-content" role="tabpanel" aria-labelledby="linux-tab">
-                            <div class="coming-soon-message">
-                                <h3>Coming Soon</h3>
-                                <p>Linux support is currently in development. Sign up to our waitlist to be notified when it's available.</p>
+                        <div class="install-option">
+                            <h3>Winget</h3>
+                            <div class="install-option-content">
+                                <div class="install-code">
+                                    <code>winget install mellowmill</code>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Mac Platform -->
-                        <div class="tab-content" id="mac-content" role="tabpanel" aria-labelledby="mac-tab">
-                            <div class="coming-soon-message">
-                                <h3>Coming Soon</h3>
-                                <p>Mac support is currently in development. Sign up to our waitlist to be notified when it's available.</p>
+                        <div class="install-option">
+                            <h3>Direct Download</h3>
+                            <div class="install-option-content">
+                                <a href="#" class="btn btn-md pricing-cta">Download .exe</a>
                             </div>
                         </div>
                     </div>
@@ -342,19 +368,9 @@
 
             <section class="cta-section" id="cta-section">
                 <div class="container">
-                    <img
-                        src="android-chrome-192x192.png"
-                        alt="MellowMill Logo"
-                        class="cta-logo"
-                    />
-                    <h2>Ready to Transform Your Productivity?</h2>
+                    <h2>Not on Windows?</h2>
                     <p class="cta-description">
-                        We're currently getting the app ready for launch. Sign
-                        up to our waitlist to be notified as soon as it's
-                        available.
-                    </p>
-                    <p class="cta-bonus">
-                        5 users who sign up will receive a free Pro+ license!
+                        Mac and Linux versions are coming soon. Join the waitlist to be notified when they're ready.
                     </p>
                     <div
                         id="getWaitlistContainer"
@@ -376,9 +392,10 @@
                 <div class="footer-content">
                     <p class="footer-logo">&copy; 2026 MellowMill Studio</p>
                     <nav class="footer-links" aria-label="Footer navigation">
-                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How it works</a>
                         <a href="#pricing">Pricing</a>
-                        <a href="#cta-section">Contact</a>
+                        <a href="#get-started">Download</a>
+                        <a href="mailto:hello@mellowmill.studio">Email Us</a>
                         <a href="https://twitter.com/mellowmill" target="_blank" rel="noopener noreferrer">Twitter</a>
                     </nav>
                 </div>
@@ -387,127 +404,38 @@
         <script>
             // Detect user locale and set currency symbol
             document.addEventListener("DOMContentLoaded", function () {
-                function getCurrencySymbol(locale) {
-                    if (
-                        locale.startsWith("en-GB") ||
-                        locale.startsWith("en-IE") ||
-                        locale.startsWith("cy-GB")
-                    )
+                function getCurrencySymbol() {
+                    // Try to get timezone to help determine region
+                    var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+                    var locale = navigator.language || navigator.userLanguage || "en-US";
+                    
+                    // UK/Ireland
+                    if (locale.includes("GB") || locale.includes("IE") || 
+                        timezone.includes("London") || timezone.includes("Dublin")) {
                         return "£";
-                    if (
-                        locale.startsWith("en-US") ||
-                        locale.startsWith("en-CA") ||
-                        locale.startsWith("en-AU")
-                    )
-                        return "$";
-                    if (
-                        locale.startsWith("de-DE") ||
-                        locale.startsWith("fr-FR") ||
-                        locale.startsWith("es-ES") ||
-                        locale.startsWith("it-IT") ||
-                        locale.startsWith("nl-NL") ||
-                        locale.startsWith("pt-PT")
-                    )
+                    }
+                    // Europe (Euro)
+                    if (locale.startsWith("de") || locale.startsWith("fr") || 
+                        locale.startsWith("es") || locale.startsWith("it") ||
+                        locale.startsWith("nl") || locale.startsWith("pt") ||
+                        timezone.includes("Paris") || timezone.includes("Berlin") ||
+                        timezone.includes("Rome") || timezone.includes("Madrid")) {
                         return "€";
-                    if (locale.startsWith("ja-JP")) return "¥";
-                    // Add more as needed
+                    }
+                    // Japan
+                    if (locale.startsWith("ja") || timezone.includes("Tokyo")) {
+                        return "¥";
+                    }
+                    // Default to dollar (US, CA, AU, etc.)
                     return "$";
                 }
-                var symbol = getCurrencySymbol(
-                    navigator.language || navigator.userLanguage || "en-US",
-                );
+                var symbol = getCurrencySymbol();
                 document
                     .querySelectorAll(".pricing-price")
                     .forEach(function (el) {
                         var price = el.textContent.replace(/[^0-9]/g, "");
                         el.textContent = symbol + price;
                     });
-                document
-                    .querySelectorAll(".addon-price")
-                    .forEach(function (el) {
-                        var price = el.textContent.replace(/[^0-9]/g, "");
-                        el.textContent = symbol + price + "/year";
-                    });
-
-                // Tab switching functionality for features
-                const featureTabButtons = document.querySelectorAll(".features .tab-button");
-                const featureTabContents = document.querySelectorAll(".features .tab-content");
-
-                featureTabButtons.forEach(function (button) {
-                    button.addEventListener("click", function () {
-                        const targetPlan = this.getAttribute("data-plan");
-                        const targetContent = document.getElementById(
-                            targetPlan + "-features",
-                        );
-
-                        // Don't do anything if this tab is already active
-                        if (this.classList.contains("active")) {
-                            return;
-                        }
-
-                        // Remove active class and update aria-selected for all buttons
-                        featureTabButtons.forEach(function (btn) {
-                            btn.classList.remove("active");
-                            btn.setAttribute("aria-selected", "false");
-                        });
-
-                        // Add active class and update aria-selected for clicked button
-                        this.classList.add("active");
-                        this.setAttribute("aria-selected", "true");
-
-                        // Fade out all content first
-                        featureTabContents.forEach(function (content) {
-                            content.classList.remove("active");
-                        });
-
-                        // Fade in target content after a brief delay
-                        if (targetContent) {
-                            setTimeout(function () {
-                                targetContent.classList.add("active");
-                            }, 100);
-                        }
-                    });
-                });
-
-                // Tab switching functionality for platforms
-                const platformTabButtons = document.querySelectorAll(".get-started-section .tab-button");
-                const platformTabContents = document.querySelectorAll(".get-started-section .tab-content");
-
-                platformTabButtons.forEach(function (button) {
-                    button.addEventListener("click", function () {
-                        const targetPlatform = this.getAttribute("data-platform");
-                        const targetContent = document.getElementById(
-                            targetPlatform + "-content",
-                        );
-
-                        // Don't do anything if this tab is already active
-                        if (this.classList.contains("active")) {
-                            return;
-                        }
-
-                        // Remove active class and update aria-selected for all buttons
-                        platformTabButtons.forEach(function (btn) {
-                            btn.classList.remove("active");
-                            btn.setAttribute("aria-selected", "false");
-                        });
-
-                        // Add active class and update aria-selected for clicked button
-                        this.classList.add("active");
-                        this.setAttribute("aria-selected", "true");
-
-                        // Fade out all content first
-                        platformTabContents.forEach(function (content) {
-                            content.classList.remove("active");
-                        });
-
-                        // Fade in target content after a brief delay
-                        if (targetContent) {
-                            setTimeout(function () {
-                                targetContent.classList.add("active");
-                            }, 100);
-                        }
-                    });
-                });
             });
         </script>
     </body>
