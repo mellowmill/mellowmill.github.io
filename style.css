@@ -315,23 +315,138 @@ header:hover {
     border-top: 1px solid rgba(84, 79, 81, 0.2);
 }
 
+/* Asymmetric Grid Layout */
 .syntax-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "hero tags"
+        "hero why";
     gap: var(--spacing-lg);
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
+/* Base Card Styles */
 .syntax-card {
     background: var(--color-background);
-    padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     border: 1px solid rgba(84, 79, 81, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow var(--transition-fast);
 }
 
+.syntax-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.syntax-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.syntax-card.visible:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Card (Tasks) */
+.syntax-card--hero {
+    grid-area: hero;
+    padding: var(--spacing-2xl);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition-delay: 0s;
+}
+
+.syntax-card--hero .syntax-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.syntax-card--hero h3 {
+    font-size: 1.6rem;
+}
+
+.syntax-card--hero p {
+    font-size: 1rem;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Compact Cards (Decisions, Why) */
+.syntax-card--compact {
+    padding: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    text-align: left;
+}
+
+.syntax-card--compact:nth-child(2) {
+    grid-area: tags;
+    transition-delay: 0.15s;
+}
+
+.syntax-card--compact:nth-child(3) {
+    grid-area: why;
+    transition-delay: 0.3s;
+}
+
+.syntax-card--compact .syntax-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    margin: 0;
+}
+
+.syntax-card--compact .syntax-card__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.syntax-card--compact h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.syntax-card--compact p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Inline Syntax Example for Compact Cards */
+.syntax-example--inline {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: var(--color-section-alt);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    margin-left: auto;
+}
+
+.syntax-example--inline code {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    background: var(--color-background);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.syntax-example--inline .syntax-arrow {
+    font-size: 1rem;
+}
+
+/* Standard Icon and Typography */
 .syntax-icon {
     width: 60px;
     height: 60px;
@@ -361,6 +476,48 @@ header:hover {
     background: var(--color-section-alt);
     padding: var(--spacing-md);
     border-radius: var(--radius-sm);
+}
+
+/* Stacked Syntax Example for Tasks */
+.syntax-example--stacked {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.syntax-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+.syntax-row code {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 1rem;
+    color: var(--color-text);
+    background: var(--color-background);
+    padding: 4px 12px;
+    border-radius: 4px;
+    min-width: 36px;
+    text-align: center;
+}
+
+.syntax-row .syntax-arrow {
+    font-size: 1rem;
+}
+
+.syntax-desc {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    min-width: 80px;
+    text-align: left;
+}
+
+.task-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
 .syntax-transform {
@@ -461,23 +618,14 @@ header:hover {
     transform: rotate(45deg);
 }
 
-/* Decision Badge */
-.preview-decision {
-    display: flex;
-}
-
-.decision-badge {
-    width: 28px;
-    height: 28px;
-    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1rem;
-    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+/* Tag */
+.tag {
+    background-color: #e8f4fd;
+    color: #1e40af;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
 }
 
 /* Why Badge */
@@ -1054,11 +1202,38 @@ footer {
     outline-offset: 2px;
 }
 
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .syntax-card {
+        opacity: 1;
+        transform: none;
+        transition: box-shadow var(--transition-fast);
+    }
+
+    .syntax-card:hover {
+        transform: none;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .syntax-cards {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "hero"
+            "decisions"
+            "why";
+        max-width: 500px;
+    }
+
+    .syntax-card--hero {
+        padding: var(--spacing-xl);
+    }
+
+    .syntax-card--compact {
+        flex-direction: row;
+        padding: var(--spacing-lg);
     }
     
     .benefits-grid {
@@ -1212,10 +1387,24 @@ footer {
         gap: var(--spacing-sm);
     }
     
-    .syntax-card {
+    .syntax-card--hero {
         padding: var(--spacing-lg);
     }
-    
+
+    .syntax-card--compact {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-lg);
+    }
+
+    .syntax-card--compact .syntax-icon {
+        margin: 0 auto var(--spacing-sm) auto;
+    }
+
+    .syntax-example--inline {
+        margin: var(--spacing-sm) auto 0 auto;
+    }
+
     .benefit-card {
         padding: var(--spacing-lg);
     }

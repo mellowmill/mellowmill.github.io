@@ -86,84 +86,58 @@
                     <p class="section-subtitle">Our custom markdown includes syntax designed for productivity — not just formatting.</p>
                     
                     <div class="syntax-cards">
-                        <div class="syntax-card">
-                            <div class="syntax-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22 4 12 14.01 9 11.01"/>
-                                </svg>
-                            </div>
+                        <div class="syntax-card syntax-card--hero">
                             <h3>Tasks</h3>
-                            <p>Native task syntax that tracks progress without leaving your flow.</p>
-                            <div class="syntax-example">
-                                <div class="syntax-transform">
-                                    <div class="syntax-input">
-                                        <span class="syntax-label">You type</span>
-                                        <div class="syntax-codes"><code>-</code><code>/</code><code>|</code></div>
-                                    </div>
+                            <p>Native task syntax that tracks progress without leaving your flow. Capture todos, mark progress, and complete items with single keystrokes.</p>
+                            <div class="syntax-example syntax-example--stacked">
+                                <div class="syntax-row">
+                                    <code>-</code>
                                     <span class="syntax-arrow">→</span>
-                                    <div class="syntax-output">
-                                        <span class="syntax-label">You see</span>
-                                        <div class="preview-tasks">
-                                            <span class="task-preview task-todo"></span>
-                                            <span class="task-preview task-progress"></span>
-                                            <span class="task-preview task-done"></span>
-                                        </div>
-                                    </div>
+                                    <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="6" fill="none" stroke="#888888" stroke-width="2"/>
+                                    </svg>
+                                    <span class="syntax-desc">Todo</span>
+                                </div>
+                                <div class="syntax-row">
+                                    <code>/</code>
+                                    <span class="syntax-arrow">→</span>
+                                    <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16">
+                                        <path d="M 1 8 C 3.2 2.4 5.1 4.6 8 5.2 C 10.9 5.8 12.8 8 15 8 A 7 7 0 0 1 1 8 Z" fill="var(--color-primary)"/>
+                                    </svg>
+                                    <span class="syntax-desc">In progress</span>
+                                </div>
+                                <div class="syntax-row">
+                                    <code>|</code>
+                                    <span class="syntax-arrow">→</span>
+                                    <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="7" fill="var(--color-primary)"/>
+                                    </svg>
+                                    <span class="syntax-desc">Done</span>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="syntax-card">
-                            <div class="syntax-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M8 12l2 2 4-4"/>
-                                </svg>
+
+                        <div class="syntax-card syntax-card--compact">
+                            <div class="syntax-card__content">
+                                <h3>Tags</h3>
+                                <p>Organize with inline tags.</p>
                             </div>
-                            <h3>Decisions</h3>
-                            <p>Mark key decisions so they stand out. Never lose track of what was agreed.</p>
-                            <div class="syntax-example">
-                                <div class="syntax-transform">
-                                    <div class="syntax-input">
-                                        <span class="syntax-label">You type</span>
-                                        <code>!</code>
-                                    </div>
-                                    <span class="syntax-arrow">→</span>
-                                    <div class="syntax-output">
-                                        <span class="syntax-label">You see</span>
-                                        <div class="preview-decision">
-                                            <span class="decision-badge">!</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="syntax-example syntax-example--inline">
+                                <code>#</code>
+                                <span class="syntax-arrow">→</span>
+                                <span class="tag">#work</span>
                             </div>
                         </div>
-                        
-                        <div class="syntax-card">
-                            <div class="syntax-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 16v-4"/>
-                                    <path d="M12 8h.01"/>
-                                </svg>
+
+                        <div class="syntax-card syntax-card--compact">
+                            <div class="syntax-card__content">
+                                <h3>Why</h3>
+                                <p>Document your reasoning.</p>
                             </div>
-                            <h3>Why</h3>
-                            <p>Document the reasoning behind decisions. Your future self will thank you.</p>
-                            <div class="syntax-example">
-                                <div class="syntax-transform">
-                                    <div class="syntax-input">
-                                        <span class="syntax-label">You type</span>
-                                        <code>?</code>
-                                    </div>
-                                    <span class="syntax-arrow">→</span>
-                                    <div class="syntax-output">
-                                        <span class="syntax-label">You see</span>
-                                        <div class="preview-why">
-                                            <span class="why-badge">?</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="syntax-example syntax-example--inline">
+                                <code>?</code>
+                                <span class="syntax-arrow">→</span>
+                                <span class="why-badge">?</span>
                             </div>
                         </div>
                     </div>
@@ -402,31 +376,47 @@
             </div>
         </footer>
         <script>
-            // Detect user locale and set currency symbol
             document.addEventListener("DOMContentLoaded", function () {
+                // Scroll-triggered animations for syntax cards
+                var syntaxCards = document.querySelectorAll('.syntax-card');
+                if (syntaxCards.length > 0 && 'IntersectionObserver' in window) {
+                    var observer = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+                    syntaxCards.forEach(function(card) {
+                        observer.observe(card);
+                    });
+                } else {
+                    syntaxCards.forEach(function(card) {
+                        card.classList.add('visible');
+                    });
+                }
+
+                // Detect user locale and set currency symbol
                 function getCurrencySymbol() {
-                    // Try to get timezone to help determine region
                     var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
                     var locale = navigator.language || navigator.userLanguage || "en-US";
-                    
-                    // UK/Ireland
-                    if (locale.includes("GB") || locale.includes("IE") || 
+
+                    if (locale.includes("GB") || locale.includes("IE") ||
                         timezone.includes("London") || timezone.includes("Dublin")) {
                         return "£";
                     }
-                    // Europe (Euro)
-                    if (locale.startsWith("de") || locale.startsWith("fr") || 
+                    if (locale.startsWith("de") || locale.startsWith("fr") ||
                         locale.startsWith("es") || locale.startsWith("it") ||
                         locale.startsWith("nl") || locale.startsWith("pt") ||
                         timezone.includes("Paris") || timezone.includes("Berlin") ||
                         timezone.includes("Rome") || timezone.includes("Madrid")) {
                         return "€";
                     }
-                    // Japan
                     if (locale.startsWith("ja") || timezone.includes("Tokyo")) {
                         return "¥";
                     }
-                    // Default to dollar (US, CA, AU, etc.)
                     return "$";
                 }
                 var symbol = getCurrencySymbol();
