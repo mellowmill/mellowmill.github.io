@@ -1,19 +1,11 @@
 {
-  "version": "1.2604.05",
-  "notes": "Initial release",
+  "version": "0.1.21",
+  "pub_date": "2026-02-11T20:27:01Z",
   "platforms": {
-    "darwin-aarch64": {
-      "signature": "",
-      "url": "app-aarch64.app.tar.gz"
-    },
-    "linux-x86_64": {
-      "signature": "",
-      "url": "app.AppImage.tar.gz"
-    },
-    "windows-x86_64": {
-      "signature": "",
-      "url": "mellowmillstudio-windows.zip"
+    "win64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWTZ2cHNBSmJiTGx4V2NsTm1jbVVRRmpQYkRHbWF3MDlRYXN5ci9OVGdYYzhaL1Z5dENuN2dxTyt6Q1BqMGFlY0c2U2JOVEtBK1ZuMStNRnNWVTJCREdQUXZPOUoyZFFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwODQxNjIxCWZpbGU6TWVsbG93TWlsbCBTdHVkaW9fMC4xLjIwX3g2NF9lbi1VUy5tc2kKQXZnamFBNUV6eTRUVXErMnlMcjNLOEd6bnJGbCtTeWNjQjJGMHFFQXFuMlcwZUJVUE1RVUlEQk5TS3oycHpMNlc2TzJSc29yWUdTRW5vZDA2K3RSQ1E9PQo=",
+      "url": "https://mellowmill.studio/downloads/MellowMill Studio_0.1.20_x64_en-US.msi"
     }
-  }
+  },
+  "notes": "First Tauri version"
 }
-
