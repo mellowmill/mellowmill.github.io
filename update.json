@@ -1,11 +1,11 @@
 {
-  "version": "0.1.23",
-  "pub_date": "2026-02-11T21:13:39Z",
+  "version": "0.1.24",
+  "pub_date": "2026-02-12T19:33:33Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWTZ2cHNBSmJiTHJoOTlOOElYVHY2RzBEYVNzaWpsY2VhYUxSWWJaQnBJSGxaVUVEZ2ErelpkdFh5YVQwSGJhalRaQ0hRaTVtMlJ0U0F2T3V0RytHR0U1bG12WjVuM3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwODQ0NDE5CWZpbGU6TWVsbG93TWlsbCBTdHVkaW9fMC4xLjIzX3g2NF9lbi1VUy5tc2kKRERrdTkyaU5HcENlNnBXTXBkTTN2ZG1pZjV6MlgzUHIzdE1ka0M3eFBsYzV0OWxlSkM0VGYrblhIZ09lZFRpdWtFeUVTMGdBMVZmWHBXaksvRzRIQkE9PQo=",
-      "url": "https://mellowmill.studio/downloads/MellowMill Studio_0.1.23_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUWTZ2cHNBSmJiTG9JZnhLRkZ3cHN4OENib2oyZkVDcGk5cDc4eSt3MjBFWjJwaXgyQ3lUOFlIcTUrcHZtMzdDdWNOaGVQNVp1bWR0YmZCTlpFTUxqZCt0RW9waUo4blFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzcwOTI0ODEzCWZpbGU6TWVsbG93TWlsbCBTdHVkaW9fMC4xLjI0X3g2NF9lbi1VUy5tc2kKWUw3elYwV0RIcy9ER0w1WDJoS0ErSWdmU2pmSnU0ZVp6S3V5VnpRd0VoZnVGa2dINjc1cktnQm5LU0I0ZHVTeU9HYythUXNnZ1Z4bXZoR3M2NS9sRGc9PQo=",
+      "url": "https://mellowmill.studio/downloads/MellowMill Studio_0.1.24_x64_en-US.msi"
     }
   },
-  "notes": "Updated Test version"
+  "notes": "Test version"
 }
