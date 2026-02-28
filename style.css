@@ -1,6 +1,8 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
+    padding: 0;
+    margin: 0;
 }
 
 button {
@@ -13,8 +15,14 @@ button {
 }
 
 body {
-    background-image: url('pexels-souvenirpixels-417074.jpg');
-    background-size: cover;
+
+}
+
+.hero {
+    background-image: url('hero.jpg');
+    background-size:cover;
+    min-height: 100vh;
+    padding: 1em;
 }
 
 .navbar {
@@ -33,10 +41,11 @@ body {
 }
 
 .navbar:hover {
-    padding-left: 100px;
-    padding-right: 100px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
     transition: 0.5s;
-    border-color: rgb(228, 228, 228);
+    backdrop-filter: blur(7.5px);
+    border-color: rgb(228, 228, 228, 0.75);
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
@@ -69,4 +78,34 @@ ul li a {
 
 #navtitle {
     flex-grow: 2;
+    padding-left: 5px;
+}
+
+.primary {
+    display: flex;
+    margin-top: 5em;
+    margin-right: 7.5em;
+    justify-content: flex-end;
+}
+
+.primary > img {
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgb(0, 0, 0, 0.35);
+}
+
+.primarytext {
+    margin-top: 0.5em;
+    margin-left: 2.5em;
+    max-width: 50%;
+    padding: 10px;
+}
+
+#herotext {
+    font-size: 3em;
+    max-width: 10em;
+}
+
+#herodesc {
+    margin-top: 1em;
+    font-weight: 450;
 }
