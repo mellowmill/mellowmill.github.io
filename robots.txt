@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /icon-preview.html
+
+Sitemap: https://mellowmill.github.io/sitemap.xml

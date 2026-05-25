@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="icon_recreated.svg">
+    <title>Margin Format Guide — Structured Notes for Tasks, Decisions & AI</title>
+    <meta name="description" content="Learn the Margin language: a structured note-taking format that captures tasks, decisions, and justifications — readable by humans and AI. A productivity-focused alternative to Markdown for professionals and small businesses.">
+    <meta name="keywords" content="Margin format, Margin language, Markdown alternative, structured notes, productivity notes, AI readable notes, task syntax, decision log format">
+    <meta name="author" content="MellowMill">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0f">
+    <link rel="canonical" href="https://mellowmill.github.io/margin-format-guide.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MellowMill Studio">
+    <meta property="og:title" content="Margin Format Guide — Structured Notes for Tasks, Decisions & AI">
+    <meta property="og:description" content="A structured note-taking format that captures tasks, decisions, and justifications — readable by humans and AI. A productivity-focused alternative to Markdown.">
+    <meta property="og:url" content="https://mellowmill.github.io/margin-format-guide.html">
+    <meta property="og:image" content="https://mellowmill.github.io/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Margin Format Guide — Structured Notes for Tasks, Decisions & AI">
+    <meta name="twitter:description" content="Structured note format for tasks, decisions, and AI — a productivity-focused alternative to Markdown.">
+    <meta name="twitter:image" content="https://mellowmill.github.io/logo.png">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BWHQVRHY3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BWHQVRHY3');
+    </script>
+    <style>
+        /* === Margin guide theme variables === */
+        :root {
+            --color-background: #ffffff;
+            --color-background2: #f3f4f5;
+            --color-text: #1a202c;
+            --color-text-secondary: #4a5568;
+            --color-border: #d1d5db;
+            --color-primary: #9ca3af;
+        }
+
+        /* === Layout === */
+        .page-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* === Page hero === */
+        .about-hero {
+            padding-bottom: 0.5em;
+        }
+        .guide-hero {
+            text-align: center;
+            padding: 24px 0 20px;
+        }
+        .guide-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            color: #0a0a0a;
+        }
+        .guide-hero .tagline {
+            font-size: 1.05rem;
+            color: #4a5568;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* === Benefits grid === */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 32px 0 48px;
+        }
+        .benefit-card {
+            background: var(--color-background2);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .benefit-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .benefit-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .benefit-card p {
+            font-size: 0.82rem;
+            color: var(--color-text-secondary);
+            line-height: 1.5;
+        }
+
+        /* === Section headers === */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 48px 0 8px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--color-border);
+            text-align: left;
+        }
+        .section-desc {
+            color: var(--color-text-secondary);
+            font-size: 0.88rem;
+            margin-bottom: 20px;
+        }
+
+        /* === Example panels === */
+        .example {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin: 16px 0 28px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+        .example-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-text-secondary);
+            padding: 8px 16px 0;
+        }
+
+        .syntax-panel {
+            background: var(--color-background2);
+            border-right: 1px solid var(--color-border);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .syntax-panel pre {
+            padding: 12px 16px 16px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.82rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            color: var(--color-text);
+        }
+        .rendered-panel {
+            background: var(--color-background);
+            padding: 0 0 4px;
+        }
+        .rendered-content {
+            padding: 12px 20px 16px;
+        }
+        @media (max-width: 680px) {
+            .example { grid-template-columns: 1fr; }
+            .syntax-panel { border-right: none; border-bottom: 1px solid var(--color-border); }
+        }
+
+        /* =============================================
+           Margin component styles — EXACT from editor
+           ============================================= */
+
+        /* Headings */
+        .rendered-content h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; text-align: left; }
+        .rendered-content h2 { font-size: 1.2rem !important; font-weight: 600; margin: 12px 0 4px; color: var(--color-text); text-align: left; }
+        .rendered-content h3 { font-size: 1.05rem !important; font-weight: 600; margin: 10px 0 4px; color: var(--color-text); text-align: left; }
+        .rendered-content h4 { font-size: 0.95rem !important; font-weight: 600; margin: 8px 0 4px; color: var(--color-text); text-align: left; }
+
+        /* Paragraphs */
+        .rendered-content p { margin: 4px 0; }
+
+        /* Tasks */
+        .task {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 4px 0;
+        }
+        .task-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 4px;
+            color: var(--color-primary);
+        }
+
+        /* Bullets */
+        .bullet {
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+        .bullet::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 14px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-text);
+            border-radius: 50%;
+        }
+
+        /* Tags */
+        .tag {
+            background-color: #e8f4fd;
+            color: #1e40af;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 2px 2px;
+        }
+        [data-theme="dark"] .tag {
+            background-color: #1e3a5f;
+            color: #93c5fd;
+        }
+
+        /* Important blocks */
+        .important-block {
+            background-color: rgba(245, 158, 11, 0.18);
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+        .important-block::before {
+            content: '!';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 10px;
+            vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+        }
+        [data-theme="dark"] .important-block {
+            background-color: rgba(245, 158, 11, 0.22);
+        }
+
+        /* Question blocks */
+        .question-block {
+            background-color: rgba(59, 130, 246, 0.08);
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+        .question-block::before {
+            content: '?';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 10px;
+            vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+        }
+        [data-theme="dark"] .question-block {
+            background-color: rgba(59, 130, 246, 0.12);
+        }
+
+        /* Answer blocks */
+        .answer-block {
+            background-color: rgba(34, 197, 94, 0.08);
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+        .answer-block::before {
+            content: 'A';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            margin-right: 10px;
+            vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+        }
+        [data-theme="dark"] .answer-block {
+            background-color: rgba(34, 197, 94, 0.12);
+        }
+
+        /* Q/A visual grouping */
+        .question-block + .answer-block {
+            margin-top: -4px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .question-block:has(+ .answer-block) {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: 0;
+        }
+
+        /* Justification blocks */
+        .justification {
+            background-color: rgba(168, 85, 247, 0.08);
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+        .justification::before {
+            content: 'Why';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #a855f7, #9333ea);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 10px;
+            vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(168, 85, 247, 0.3);
+        }
+        [data-theme="dark"] .justification {
+            background-color: rgba(168, 85, 247, 0.12);
+        }
+
+        /* Important + Justification grouping */
+        .important-block + .justification {
+            margin-top: -4px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .important-block:has(+ .justification) {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: 0;
+        }
+
+        /* Code blocks */
+        .code-block {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 0;
+            padding: 0.4em 0.5em;
+            margin: 0;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            font-size: 0.9em;
+            line-height: 1.15em;
+            color: var(--color-text);
+        }
+        [data-theme="dark"] .code-block {
+            background-color: #2d3748;
+        }
+
+        /* Horizontal rules */
+        .margin-hr {
+            border: none;
+            border-top: 1px solid #d1d5db;
+            margin: 0.8em 0;
+        }
+        [data-theme="dark"] .margin-hr {
+            border-top-color: #4b5563;
+        }
+
+        /* Tables */
+        .margin-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 8px 0;
+            border: 2px solid rgba(209, 213, 219, 0.8);
+            font-size: var(--font-size-base);
+        }
+        .margin-table th,
+        .margin-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border: 2px solid rgba(209, 213, 219, 0.8);
+            min-height: 32px;
+        }
+        .margin-table th:not(:last-child),
+        .margin-table td:not(:last-child) {
+            border-right-color: transparent;
+        }
+        .margin-table tr:not(:last-child) th,
+        .margin-table tr:not(:last-child) td {
+            border-bottom-color: transparent;
+        }
+        .margin-table th {
+            background-color: rgba(209, 213, 219, 0.8);
+            font-weight: bold;
+            color: var(--color-text);
+        }
+        .margin-table tbody tr:nth-child(even) {
+            background-color: var(--color-background2);
+        }
+        [data-theme="dark"] .margin-table {
+            border-color: rgba(74, 85, 104, 0.4);
+        }
+        [data-theme="dark"] .margin-table th,
+        [data-theme="dark"] .margin-table td {
+            border-color: rgba(74, 85, 104, 0.4);
+        }
+        [data-theme="dark"] .margin-table th:not(:last-child),
+        [data-theme="dark"] .margin-table td:not(:last-child) {
+            border-right-color: transparent;
+        }
+        [data-theme="dark"] .margin-table tr:not(:last-child) th,
+        [data-theme="dark"] .margin-table tr:not(:last-child) td {
+            border-bottom-color: transparent;
+        }
+        [data-theme="dark"] .margin-table th {
+            background-color: rgba(156, 163, 175, 0.5);
+            color: white;
+        }
+        [data-theme="dark"] .margin-table tbody tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Links */
+        .rendered-content a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        [data-theme="dark"] .rendered-content a {
+            color: #66a3ff;
+        }
+
+        /* === Prefix reference table === */
+        .ref-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 32px;
+            font-size: 0.85rem;
+        }
+        .ref-table th, .ref-table td {
+            text-align: left;
+            padding: 8px 14px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .ref-table th {
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .ref-table code {
+            background: var(--color-background2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85em;
+        }
+
+        /* === Full demo === */
+        .full-demo {
+            margin: 32px 0;
+        }
+        .full-demo .example {
+            min-height: 300px;
+        }
+
+        /* === Footer === */
+        .footer {
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 0.78rem;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* Syntax highlighting in code panels */
+        .syntax-panel .prefix { color: #d97706; font-weight: 600; }
+        [data-theme="dark"] .syntax-panel .prefix { color: #fbbf24; }
+
+        /* === Tab selector === */
+        .mode-tabs {
+            display: inline-flex;
+            background: var(--color-background2);
+            border-radius: 10px;
+            padding: 4px;
+            margin: 24px auto 8px;
+            gap: 4px;
+        }
+        .mode-tabs-wrap {
+            text-align: center;
+        }
+        .mode-tab {
+            border: none;
+            background: transparent;
+            padding: 8px 22px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            border-radius: 7px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+        .mode-tab:hover {
+            color: var(--color-text);
+        }
+        .mode-tab.active {
+            background: #6a4caf;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(106, 76, 175, 0.3);
+        }
+        .mode-tab.active:hover {
+            color: #ffffff;
+        }
+        .mode-panel {
+            display: none;
+        }
+        .mode-panel.active {
+            display: block;
+        }
+
+        /* === Visual panel placeholder === */
+        .visual-intro {
+            background: var(--color-background2);
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin: 16px 0 24px;
+        }
+        .visual-intro h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .visual-intro p {
+            font-size: 0.92rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+        .key-chip {
+            display: inline-block;
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-bottom-width: 2px;
+            border-radius: 5px;
+            padding: 1px 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .format-menu-popup {
+            display: inline-block;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow:
+                0px 10px 15px rgba(0, 0, 0, 0.2),
+                0 0 5px rgba(255, 255, 255, 0.5) inset;
+            min-width: 220px;
+            max-width: 400px;
+            margin-top: 18px;
+            overflow: hidden;
+        }
+        .format-menu-item {
+            padding: 8px 14px;
+            color: var(--color-text);
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
+        .format-menu-item:last-child {
+            border-bottom: none;
+        }
+        .format-menu-item:hover,
+        .format-menu-item.selected {
+            background-color: #6a4caf;
+            color: #ffffff;
+        }
+        .visual-intro-inner {
+            text-align: center;
+        }
+        .visual-intro-inner > h3,
+        .visual-intro-inner > p {
+            text-align: left;
+        }
+        /* Give the visual intro a softer glassy backdrop so the popup blur reads */
+        .visual-intro {
+            background: linear-gradient(135deg, #f0f4ff, #fef6ff);
+        }
+    </style>
+</head>
+<body>
+
+<section class="about-hero">
+    <div class="navbar">
+        <a href="index.html"><img src="icon_recreated.svg" width="64" height="64"></a>
+        <a href="index.html" id="navtitle-link"><img src="text.svg" id="navtitle" alt="MellowMill Studio"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="updates.html">Updates</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <h2 class="about-title">The Margin Format</h2>
+    <p class="about-subtitle">Plain text that does more.</p>
+</section>
+
+    <div class="page-wrapper">
+
+        <!-- Hero -->
+        <div class="guide-hero">
+            <p class="tagline">
+                Most note-taking tools focus of formatting only as they use Markdown, Margin let's you focus on the meaning of your notes and makes it look fantastic.
+            </p>
+            <p class="tagline" style="margin-top: 16px;">
+                You never have to learn the format unless you want to &mdash; we've crafted a visual editor that does the work for you. Just press <code>\</code> to pick a block type (heading, task, decision, and so on). For those who prefer the keyboard, every block has a prefix you can type directly.
+            </p>
+        </div>
+
+        <!-- Mode tabs -->
+        <div class="mode-tabs-wrap">
+            <div class="mode-tabs" role="tablist">
+                <button class="mode-tab active" data-mode="visual" role="tab">Visual</button>
+                <button class="mode-tab" data-mode="manual" role="tab">Manual</button>
+            </div>
+        </div>
+
+        <!-- Visual panel -->
+        <div class="mode-panel active" id="mode-visual" role="tabpanel">
+            <div class="visual-intro">
+                <div class="visual-intro-inner">
+                    <h3>Pick a block from the menu</h3>
+                    <p>
+                        Press <span class="key-chip">\</span> on a new line to open the block menu. Start typing to filter, then press <span class="key-chip">Enter</span> to insert the block. Every prefix shown in the Manual tab has a matching entry here &mdash; use whichever feels faster.
+                    </p>
+                    <p style="margin-top: 10px;">
+                        Even if the line already has content, pressing <span class="key-chip">\</span> brings up the menu to change the current line's block type &mdash; your text stays put, only the formatting changes.
+                    </p>
+                    <div class="format-menu-popup">
+                        <div class="format-menu-item">Heading 1</div>
+                        <div class="format-menu-item">Heading 2</div>
+                        <div class="format-menu-item">Heading 3</div>
+                        <div class="format-menu-item selected">Task</div>
+                        <div class="format-menu-item">Bullet</div>
+                        <div class="format-menu-item">Numbered</div>
+                        <div class="format-menu-item">Question</div>
+                        <div class="format-menu-item">Answer</div>
+                        <div class="format-menu-item">Justification (why?)</div>
+                        <div class="format-menu-item">Important</div>
+                        <div class="format-menu-item">Blockquote</div>
+                        <div class="format-menu-item">Tag</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manual panel -->
+        <div class="mode-panel" id="mode-manual" role="tabpanel">
+
+        <!-- Why Margin — comparison -->
+        <h2 class="section-title">Comparison to Markdown</h2>
+    
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Markdown</div>
+<pre># My Tasks
+
+## To Do
+- [ ] Design homepage
+- [x] Set up repo
+
+(https://www.google.com)
+
+## Decision
+**Q: Which framework?**
+*A: React — for ecosystem.*
+
+&gt; **Important:** Ship by Friday</pre>
+            </div>
+            <div class="rendered-panel" style="background: var(--color-background2);">
+                <div class="example-label">Margin</div>
+<pre style="padding: 12px 20px 16px; font-family: 'Courier New', Courier, monospace; font-size: 0.82rem; line-height: 1.7; white-space: pre-wrap; color: var(--color-text);">My Tasks
+
+> To Do
+- Design homepage
+| Set up repo
+
+https://www.google.com
+
+? Which framework?
+A. React — for ecosystem.
+
+! Ship by Friday</pre>
+            </div>
+        </div>
+
+        <!-- === EXAMPLES === -->
+
+        <!-- 1. Title & Headings -->
+        <h2 class="section-title">Title &amp; Headings</h2>
+        <p class="section-desc">The first line is always the title, no special syntax needed. Use <code>&gt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code> for subsequent heading levels.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre>My Project Plan
+<span class="prefix">&gt;</span> Overview
+Some introductory text here.
+<span class="prefix">&gt;&gt;</span> Goals
+Define the key objectives.
+<span class="prefix">&gt;&gt;&gt;</span> Milestones
+Track quarterly progress.</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <h1>My Project Plan</h1>
+                    <h2>Overview</h2>
+                    <p>Some introductory text here.</p>
+                    <h3>Goals</h3>
+                    <p>Define the key objectives.</p>
+                    <h4>Milestones</h4>
+                    <p>Track quarterly progress.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Tasks -->
+        <h2 class="section-title">Task Management</h2>
+        <p class="section-desc">Three simple prefixes give you a full task workflow. Cycle between states as work progresses. Things like due dates are automatically deduced from the text.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre><span class="prefix">-</span> Task not started
+<span class="prefix">-</span> Task not started, due 1st July. 
+<span class="prefix">/</span> A task started but not finished.
+<span class="prefix">|</span> Done task. 
+<span class="prefix">|</span> Another done task.</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <div class="task task-pending">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>Task not started</span>
+                    </div>
+                    <div class="task task-pending">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>Task not started, due 1st July.</span>
+                    </div>
+                    
+                    <div class="task task-progress">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><path d="M 2 8 C 4.4 3.2 6.2 4.4 8 5.6 C 9.8 6.8 11.6 8 14 8 A 6 6 0 0 1 2 8 Z" fill="currentColor"/></svg>
+                        <span>A task started but not finished.</span>
+                    </div>
+                    
+                    <div class="task task-complete">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor"/></svg>
+                        <span>Done task.</span>
+                    </div>
+                    <div class="task task-complete">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor"/></svg>
+                        <span>Another done task.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Bullets -->
+        <h2 class="section-title">Bullet Points</h2>
+        <p class="section-desc">Simple, clean lists with <code>*</code>. Lists can be indented to create sub-items.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre><span class="prefix">*</span> Keep the interface minimal
+<span class="prefix">*</span> Prioritize keyboard shortcuts
+<span class="prefix">*</span> Ship weekly, iterate fast
+<span class="prefix">*</span> Measure what matters</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <div class="bullet">Keep the interface minimal</div>
+                    <div class="bullet">Prioritize keyboard shortcuts</div>
+                    <div class="bullet">Ship weekly, iterate fast</div>
+                    <div class="bullet">Measure what matters</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Tags -->
+        <h2 class="section-title">Tags</h2>
+        <p class="section-desc">Categorize content with <code>#tags</code>. Multiple tags can be applied to the same note.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre><span class="prefix">#</span>design
+<span class="prefix">#</span>frontend</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <p><span class="tag">#design</span></p>
+                    <p><span class="tag">#frontend</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Questions & Answers -->
+        <h2 class="section-title">Questions &amp; Answers</h2>
+        <p class="section-desc">Capture questions and their answers easily with <code>?</code>, <code>A. syntax. Simply place the answer after the question to link them together. A question without an answer is considered a task that needs to be completed.</code>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre><span class="prefix">?</span> Which database should we use?
+<span class="prefix">A.</span> PostgreSQL for the primary store.
+
+<span class="prefix">?</span> Why not use a NoSQL database?
+<span class="prefix">A.</span> We need strong relational queries.
+
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <div class="question-block">Which database should we use?</div>
+                    <div class="answer-block">PostgreSQL for the primary store.</div>
+                    <br>
+                    <div class="question-block">Why not use a NoSQL database?</div>
+                    <div class="answer-block">We need strong relational queries.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Important / Decision blocks -->
+        <h2 class="section-title">Important &amp; Decision Blocks</h2>
+        <p class="section-desc">Highlight critical decisions with <code>!</code> and then simply pair with <code>why?</code> to record the rationale.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre><span class="prefix">!</span> Ship the MVP by March 15th
+<span class="prefix">why?</span> Conference demo is on the 18th
+    and we need 2 days for staging.
+
+<span class="prefix">!</span> Use server-side rendering only</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <div class="important-block">Ship the MVP by March 15th</div>
+                    <div class="justification">Conference demo is on the 18th and we need 2 days for staging.</div>
+                    <br>
+                    <div class="important-block">Use server-side rendering only</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Tables -->
+        <h2 class="section-title">Tables</h2>
+        <p class="section-desc">Create data tables with <code>:</code> and pipe-delimited columns. Add a bit of metadate,<code>&lt;&lt;header-row&gt;&gt;</code>, to specify things like header rows.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre>&lt;&lt;header-row&gt;&gt;
+<span class="prefix">:</span> Feature | Status | Owner
+<span class="prefix">:</span> Auth | Complete | Alice
+<span class="prefix">:</span> Dashboard | In Progress | Bob
+<span class="prefix">:</span> API Docs | Pending | Carol</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <table class="margin-table">
+                        <thead>
+                            <tr><th>Feature</th><th>Status</th><th>Owner</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Auth</td><td>Complete</td><td>Alice</td></tr>
+                            <tr><td>Dashboard</td><td>In Progress</td><td>Bob</td></tr>
+                            <tr><td>API Docs</td><td>Pending</td><td>Carol</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. Code blocks -->
+        <h2 class="section-title">Code Blocks</h2>
+        <p class="section-desc">Prefix lines with <code>`</code> for monospaced code formatting.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre><span class="prefix">`</span>function greet(name) {
+<span class="prefix">`</span>  return `Hello, ${name}!`;
+<span class="prefix">`</span>}</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <p class="code-block">function greet(name) {</p>
+                    <p class="code-block">  return `Hello, ${name}!`;</p>
+                    <p class="code-block">}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Links -->
+        <h2 class="section-title">Links &amp; Files</h2>
+        <p class="section-desc">URLs are automatically linked, no need for any special markup. File paths reference local documents and images.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre>Check the docs at https://www.google.com
+
+https://www.google.com
+
+file://C:/reports/Q2-results.pdf</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <p>Check the docs at <a href="#">https://www.google.com</a></p>
+                    <br>
+                    <p><a href="#">https://www.google.com</a></p>
+                    <br>
+                    <p><a href="#">C:/reports/Q2-results.pdf</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. Horizontal rules -->
+        <h2 class="section-title">Horizontal Rules</h2>
+        <p class="section-desc">Use <code>---</code> to separate sections visually.</p>
+        <div class="example">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre>Some content above.
+
+---
+
+Some content below.</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <p>Some content above.</p>
+                    <hr class="margin-hr">
+                    <p>Some content below.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- === FULL DOCUMENT DEMO === -->
+        <h2 class="section-title">Full Document Example</h2>
+        <p class="section-desc">A realistic project document combining every feature — as raw Margin text and as it renders.</p>
+        <div class="example full-demo">
+            <div class="syntax-panel">
+                <div class="example-label">Margin Syntax</div>
+<pre>Product Launch Plan
+
+#product #launch #Q2
+
+> Goals
+* Reach 1,000 beta signups
+* Achieve &lt;2s page load time
+* Ship all P0 features
+
+> Task Tracker
+- Write launch blog post
+- Create demo video
+/ Finalize pricing page
+/ QA pass on mobile
+| Design system complete
+| Domain and SSL configured
+
+> Key Decisions
+! Launch date is April 30th
+why? Aligns with the industry
+     conference on May 2nd.
+
+? Should we offer a free tier?
+A. Yes — capped at 3 projects.
+
+> Sprint Data
+&lt;&lt;header-row&gt;&gt;
+: Sprint | Points | Velocity
+: Sprint 1 | 34 | 34
+: Sprint 2 | 29 | 31.5
+: Sprint 3 | 38 | 33.7
+
+> Technical Notes
+`server.listen(3000);
+`console.log("Ready");
+
+---
+
+See https://example.com/roadmap</pre>
+            </div>
+            <div class="rendered-panel">
+                <div class="example-label">Rendered</div>
+                <div class="rendered-content">
+                    <h1>Product Launch Plan</h1>
+                    <p><span class="tag">#product</span> <span class="tag">#launch</span> <span class="tag">#Q2</span></p>
+
+                    <h2>Goals</h2>
+                    <div class="bullet">Reach 1,000 beta signups</div>
+                    <div class="bullet">Achieve &lt;2s page load time</div>
+                    <div class="bullet">Ship all P0 features</div>
+
+                    <h2>Task Tracker</h2>
+                    <div class="task task-pending">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>Write launch blog post</span>
+                    </div>
+                    <div class="task task-pending">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        <span>Create demo video</span>
+                    </div>
+                    <div class="task task-progress">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><path d="M 2 8 C 4.4 3.2 6.2 4.4 8 5.6 C 9.8 6.8 11.6 8 14 8 A 6 6 0 0 1 2 8 Z" fill="currentColor"/></svg>
+                        <span>Finalize pricing page</span>
+                    </div>
+                    <div class="task task-progress">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><path d="M 2 8 C 4.4 3.2 6.2 4.4 8 5.6 C 9.8 6.8 11.6 8 14 8 A 6 6 0 0 1 2 8 Z" fill="currentColor"/></svg>
+                        <span>QA pass on mobile</span>
+                    </div>
+                    <div class="task task-complete">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor"/></svg>
+                        <span>Design system complete</span>
+                    </div>
+                    <div class="task task-complete">
+                        <svg class="task-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="currentColor"/></svg>
+                        <span>Domain and SSL configured</span>
+                    </div>
+
+                    <h2>Key Decisions</h2>
+                    <div class="important-block">Launch date is April 30th</div>
+                    <div class="justification">Aligns with the industry conference on May 2nd.</div>
+                    <br>
+                    <div class="question-block">Should we offer a free tier?</div>
+                    <div class="answer-block">Yes — capped at 3 projects.</div>
+
+                    <h2>Sprint Data</h2>
+                    <table class="margin-table">
+                        <thead>
+                            <tr><th>Sprint</th><th>Points</th><th>Velocity</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sprint 1</td><td>34</td><td>34</td></tr>
+                            <tr><td>Sprint 2</td><td>29</td><td>31.5</td></tr>
+                            <tr><td>Sprint 3</td><td>38</td><td>33.7</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Technical Notes</h2>
+                    <p class="code-block">server.listen(3000);</p>
+                    <p class="code-block">console.log("Ready");</p>
+
+                    <hr class="margin-hr">
+
+                    <p>See <a href="#">https://example.com/roadmap</a></p>
+                </div>
+            </div>
+        </div>
+
+        </div><!-- /#mode-manual -->
+
+        <div class="footer">
+            Margin Format &mdash; plain text that does more.
+        </div>
+    </div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="text-light.svg" class="footer-logo" alt="MellowMill Studio">
+            <p class="footer-tagline">Productivity for busy minds.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4 class="footer-col-title">Product</h4>
+                <ul>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#core">Core</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="updates.html">Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="margin-format-guide.html">Margin Language</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#" id="contact-link">Contact</a></li>
+                    <li><a href="#" id="privacy-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; MellowMill Ltd 2026. All rights reserved.</p>
+        <address class="footer-address">MellowMill Ltd, 82A James Carter Road, Mildenhall, IP28 7DE</address>
+    </div>
+</footer>
+
+<!-- Contact Modal -->
+<div class="modal-overlay" id="contact-modal">
+    <div class="modal">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h3 class="modal-title">Get in touch</h3>
+        <p class="modal-text">Got a question, found a bug, or simply want to share a joke? Feel free to drop us a line at:</p>
+        <p class="modal-email"><a href="mailto:hello@mellowmill.studio">hello@mellowmill.studio</a></p>
+    </div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div class="modal-overlay" id="privacy-modal">
+    <div class="modal modal--wide">
+        <button class="modal-close" id="privacy-close">&times;</button>
+        <h3 class="modal-title">Privacy Policy</h3>
+        <div class="modal-body">
+            <p><strong>Effective date:</strong> April 17, 2026</p>
+            <p>MellowMill Studio ("we", "us", "our") respects your privacy. This policy explains what data we collect through our website and how we use it.</p>
+            <h4>Website Analytics</h4>
+            <p>We use Google Analytics to understand how visitors interact with our website. Google Analytics collects:</p>
+            <ul>
+                <li>Pages visited and time spent on each page</li>
+                <li>Referring website or source</li>
+                <li>Browser type and device information</li>
+                <li>Approximate geographic location (country/city level)</li>
+            </ul>
+            <p>This data is aggregated and anonymous. We do not use it to identify individual visitors. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a>.</p>
+            <h4>MellowMill Studio Application</h4>
+            <p>MellowMill Studio is a local-first application. Your notes, tasks, and files are stored entirely on your device. We do not collect, transmit, or have access to any of your content.</p>
+            <h4>Cookies</h4>
+            <p>Our website uses cookies only for Google Analytics. No advertising or tracking cookies are used.</p>
+            <h4>Third-Party Services</h4>
+            <p>We use Fourthwall for processing purchases. Their privacy policy governs any data collected during checkout.</p>
+            <h4>Contact</h4>
+            <p>If you have questions about this policy, email us at <a href="mailto:hello@mellowmill.studio">hello@mellowmill.studio</a>.</p>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anim-in').forEach(el => observer.observe(el));
+
+        // Mode tab switching
+        document.querySelectorAll('.mode-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const mode = tab.dataset.mode;
+                document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t.dataset.mode === mode));
+                document.querySelectorAll('.mode-panel').forEach(p => p.classList.toggle('active', p.id === 'mode-' + mode));
+            });
+        });
+
+        const modal = document.getElementById('contact-modal');
+        document.getElementById('contact-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+        });
+        document.getElementById('modal-close').addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+
+        const privacyModal = document.getElementById('privacy-modal');
+        document.getElementById('privacy-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            privacyModal.classList.add('active');
+        });
+        document.getElementById('privacy-close').addEventListener('click', () => {
+            privacyModal.classList.remove('active');
+        });
+        privacyModal.addEventListener('click', (e) => {
+            if (e.target === privacyModal) privacyModal.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
