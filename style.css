@@ -1133,6 +1133,39 @@ ul li a {
     animation: cardFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
 }
 
+.comparison-currency-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #a8a8ad;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin: 0 auto 2.5em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.comparison-currency-note::before {
+    content: "$";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.15);
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 0.85em;
+}
+
 .comparison-table-wrap {
     max-width: 820px;
     margin: 0 auto;

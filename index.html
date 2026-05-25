@@ -10,7 +10,48 @@
     <link rel="stylesheet" href="style.css">
     <script src="nav.js" defer></script>
     <link rel="icon" type="image/svg+xml" href="icon_recreated.svg">
-    <title>MellowMill</title>
+    <title>MellowMill Studio — Productivity Software for Professionals & Small Businesses</title>
+    <meta name="description" content="MellowMill Studio is a productivity-first note-taking app for professionals and small businesses. Capture tasks, decisions, and projects in one fluid Margin format — and bring your own AI to make sense of it all.">
+    <meta name="keywords" content="productivity app, note taking app, small business productivity, professional notes, task management, project management, Margin format, Markdown alternative, structured notes, AI notes, Claude Code notes">
+    <meta name="author" content="MellowMill">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0f">
+    <link rel="canonical" href="https://mellowmill.github.io/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MellowMill Studio">
+    <meta property="og:title" content="MellowMill Studio — Productivity Software for Professionals & Small Businesses">
+    <meta property="og:description" content="A productivity-first note-taking app built for professionals and small businesses. Structured notes, tasks, decisions, and bring-your-own-AI — no recurring subscription.">
+    <meta property="og:url" content="https://mellowmill.github.io/">
+    <meta property="og:image" content="https://mellowmill.github.io/logo.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MellowMill Studio — Productivity Software for Professionals & Small Businesses">
+    <meta name="twitter:description" content="A productivity-first note-taking app for professionals and small businesses. Structured notes, tasks, decisions, and bring-your-own-AI.">
+    <meta name="twitter:image" content="https://mellowmill.github.io/logo.png">
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "MellowMill Studio",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows, macOS",
+      "description": "A productivity-first note-taking app for professionals and small businesses. Capture tasks, decisions, and projects in the structured Margin format, with bring-your-own-AI support.",
+      "url": "https://mellowmill.github.io/",
+      "image": "https://mellowmill.github.io/logo.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MellowMill",
+        "url": "https://mellowmill.github.io/"
+      }
+    }
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BWHQVRHY3"></script>
     <script>
@@ -252,11 +293,7 @@
     <h2 class="comparison-heading anim-in">Compare Plans</h2>
     <p class="comparison-sub anim-in">Simple pricing for everyone - not a subscription in sight. Pay once and get all future updates for free!
     </p>
-    <div class="currency-switcher anim-in" role="radiogroup" aria-label="Currency">
-        <button type="button" class="currency-option" data-currency="USD" role="radio" aria-checked="false"><span class="currency-symbol">$</span>USD</button>
-        <button type="button" class="currency-option" data-currency="GBP" role="radio" aria-checked="false"><span class="currency-symbol">£</span>GBP</button>
-        <button type="button" class="currency-option" data-currency="EUR" role="radio" aria-checked="false"><span class="currency-symbol">€</span>EUR</button>
-    </div>
+    <p class="comparison-currency-note anim-in">Prices shown in USD — or equivalent in your local currency.</p>
     <div class="comparison-table-wrap anim-in">
         <table class="comparison-table">
             <thead>
@@ -265,14 +302,14 @@
                     <th>
                         <div class="plan-header">
                             <span class="plan-name">Free</span>
-                            <span class="plan-price" data-price-usd="$0" data-price-gbp="£0" data-price-eur="€0">$0</span>
+                            <span class="plan-price">$0</span>
                             <span class="plan-note">forever</span>
                         </div>
                     </th>
                     <th>
                         <div class="plan-header plan-header--accent">
                             <span class="plan-name">Core</span>
-                            <span class="plan-price" data-price-usd="$50" data-price-gbp="£40" data-price-eur="€45">$50</span>
+                            <span class="plan-price">$50</span>
                             <span class="plan-note">one-time</span>
                         </div>
                     </th>
@@ -365,13 +402,13 @@
 <section id="membership" class="member-cta">
     <div class="member-cta-inner anim-in">
         <span class="member-cta-eyebrow">Launching soon</span>
-        <h2 class="member-cta-heading">Become a member</h2>
+        <h2 class="member-cta-heading">Become a free member</h2>
         <p class="member-cta-text">We're currently working hard to put the finishing touches on 
             MellowMill Studio — the app will be released very soon. 
             
             In the meantime become a member to get the latest news straight to your inbox, 
             including notifications on when  the Windows and Mac versions are ready to download. It's 100% free to join!</p>
-        <a href="https://mellowmill-shop.fourthwall.com/en-gbp" target="_blank" rel="noopener" class="member-cta-btn">Become a member</a>
+        <a href="https://mellowmill-shop.fourthwall.com/en-gbp" target="_blank" rel="noopener" class="member-cta-btn">Become a free member</a>
     </div>
 </section>
 
@@ -546,80 +583,6 @@
         });
     }
 
-    (function () {
-        const switcher = document.querySelector('.currency-switcher');
-        const options = document.querySelectorAll('.currency-option');
-        const prices = document.querySelectorAll('.plan-price[data-price-usd]');
-        if (!switcher || !options.length || !prices.length) return;
-
-        const PRICE_KEY = { USD: 'priceUsd', GBP: 'priceGbp', EUR: 'priceEur' };
-        const EU_LANGS = ['de', 'fr', 'es', 'it', 'nl', 'pt', 'fi', 'el', 'ga', 'mt', 'sk', 'sl', 'et', 'lv', 'lt'];
-
-        const indicator = document.createElement('span');
-        indicator.className = 'currency-indicator';
-        switcher.insertBefore(indicator, switcher.firstChild);
-
-        function detectCurrency() {
-            const stored = localStorage.getItem('mm-currency');
-            if (stored && PRICE_KEY[stored]) return stored;
-            try {
-                const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-                if (tz === 'Europe/London') return 'GBP';
-                if (tz.startsWith('Europe/')) return 'EUR';
-            } catch (e) {}
-            const lang = (navigator.language || '').toLowerCase();
-            if (lang === 'en-gb' || lang.endsWith('-gb')) return 'GBP';
-            if (EU_LANGS.includes(lang.split('-')[0])) return 'EUR';
-            return 'USD';
-        }
-
-        function moveIndicator(activeEl) {
-            const sRect = switcher.getBoundingClientRect();
-            const aRect = activeEl.getBoundingClientRect();
-            indicator.style.left = (aRect.left - sRect.left) + 'px';
-            indicator.style.width = aRect.width + 'px';
-        }
-
-        function apply(currency, animate) {
-            const key = PRICE_KEY[currency];
-            prices.forEach(p => { p.textContent = p.dataset[key]; });
-            let active = null;
-            options.forEach(o => {
-                const on = o.dataset.currency === currency;
-                o.setAttribute('aria-checked', on ? 'true' : 'false');
-                if (on) active = o;
-            });
-            if (!active) return;
-            if (!animate) {
-                const prev = indicator.style.transition;
-                indicator.style.transition = 'none';
-                moveIndicator(active);
-                requestAnimationFrame(() => { indicator.style.transition = prev; });
-            } else {
-                moveIndicator(active);
-            }
-            indicator.classList.add('is-ready');
-        }
-
-        options.forEach(o => {
-            o.addEventListener('click', () => {
-                const c = o.dataset.currency;
-                localStorage.setItem('mm-currency', c);
-                apply(c, true);
-            });
-        });
-
-        apply(detectCurrency(), false);
-        window.addEventListener('resize', () => {
-            const active = switcher.querySelector('.currency-option[aria-checked="true"]');
-            if (active) {
-                const prev = indicator.style.transition;
-                indicator.style.transition = 'none';
-                moveIndicator(active);
-                requestAnimationFrame(() => { indicator.style.transition = prev; });
-            }
-        });
-    })();
 </script>
 </body>
 </html>put the date on the 
