@@ -3,6 +3,7 @@
     color: black;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 
     --font-family-heading: 'Playfair Display', Georgia, serif;
 }
@@ -2239,4 +2240,398 @@ ul li a {
 
 .changelog-list li strong {
     color: #1a1a1a;
+}
+
+/* ============================================================
+   RESPONSIVE — Tablet (≤ 960px) and Mobile (≤ 640px)
+   ============================================================ */
+
+/* Universal safety: prevent horizontal overflow */
+html, body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ----------------------- Tablet ----------------------- */
+@media (max-width: 960px) {
+    /* Navbar — give it more breathing room */
+    .navbar {
+        width: 92%;
+        height: auto;
+        min-height: 50px;
+        padding: 8px 12px;
+        gap: 4px;
+    }
+    .navbar > a:first-child img {
+        width: 44px;
+        height: 44px;
+        transform: translate(0, 0);
+    }
+    #navtitle {
+        height: 1.3em;
+    }
+    ul li a {
+        padding: 10px 8px;
+        font-size: 0.92em;
+    }
+
+    /* Hero */
+    #herotext {
+        font-size: 2.6em;
+    }
+    #herodesc {
+        font-size: 1.05em;
+        line-height: 1.7;
+    }
+    #heroimg {
+        width: 88%;
+    }
+    .primary {
+        margin-top: 5em;
+        padding: 0 1em;
+    }
+
+    /* Feature / Core showcases stack */
+    .feature-showcase,
+    .feature-showcase--reverse,
+    .core-showcase,
+    .core-showcase--reverse {
+        flex-direction: column;
+        gap: 2em;
+        margin-bottom: 4em;
+        padding: 0 1.5em;
+        text-align: center;
+    }
+    .feature-showcase-text,
+    .core-showcase-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .feature-desc,
+    .core-desc {
+        max-width: 60ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .feature-label,
+    .core-label {
+        display: inline-block;
+    }
+    .feature-screenshot,
+    .core-screenshot {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* 3-column extras → 2-column */
+    .feature-extras,
+    .core-extras {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+        padding: 0 1.5em;
+    }
+
+    /* Footer — stack columns */
+    .footer-inner {
+        flex-direction: column;
+        gap: 2.5em;
+        padding: 0 1.5em 3em;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    /* Member CTA */
+    .member-cta-inner {
+        margin: 0 1.5em;
+        padding: 2.5em 2em;
+    }
+
+    /* Pricing table — make scrollable on narrow viewports */
+    .comparison-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 1em;
+    }
+    .comparison-table {
+        min-width: 560px;
+    }
+
+    /* FAQ side padding */
+    .faq-list {
+        padding: 0 1.5em;
+    }
+
+    /* Section headings smaller on tablet */
+    .features-heading,
+    .core-heading {
+        font-size: 1.9em;
+        padding: 0 1em;
+    }
+}
+
+/* ----------------------- Mobile ----------------------- */
+@media (max-width: 640px) {
+    html {
+        scroll-padding-top: 6.5em;
+    }
+
+    /* Belt-and-braces against any source of horizontal overflow */
+    body, .hero, .about-hero, section, .features, .core-features {
+        max-width: 100vw;
+        overflow-x: clip;
+    }
+
+    /* Navbar — icon + 3 essential links; hide Home (logo serves) and About */
+    .navbar {
+        width: calc(100% - 12px);
+        left: 6px;
+        transform: none;
+        padding: 5px 8px;
+        height: auto;
+        min-height: 44px;
+        border-radius: 12px;
+        gap: 4px;
+    }
+    .navbar > a:first-child {
+        display: inline-flex;
+    }
+    .navbar > a:first-child img {
+        width: 32px;
+        height: 32px;
+    }
+    #navtitle,
+    #navtitle-link {
+        display: none;
+    }
+    .navbar ul {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+        gap: 0;
+    }
+    /* Drop secondary nav items on phones so the bar fits */
+    .navbar ul li:first-child,
+    .navbar ul li:nth-child(5) {
+        display: none;
+    }
+    ul li a {
+        padding: 6px 7px;
+        font-size: 0.78em;
+    }
+    .nav-indicator {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 0.5em 0.5em 4em;
+        min-height: auto;
+    }
+    .primary {
+        margin-top: 6em;
+        padding: 0 0.75em;
+    }
+    #herotext {
+        font-size: 1.7em;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+    #herodesc {
+        font-size: 0.95em;
+        line-height: 1.6;
+        margin-bottom: 1.5em;
+    }
+    #herocta {
+        padding: 12px 26px;
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+    #heroimg {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* About / changelog hero */
+    .about-hero {
+        padding: 7em 1em 3em;
+    }
+    .about-title {
+        font-size: 1.9em;
+        word-break: break-word;
+    }
+    .about-subtitle {
+        font-size: 1em;
+        padding: 0 0.5em;
+    }
+    .about-content,
+    .changelog-content {
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+
+    /* Extras → single column */
+    .feature-extras,
+    .core-extras {
+        grid-template-columns: 1fr;
+        padding: 0 1.25em;
+    }
+
+    .feature-extra-card,
+    .core-extra-card {
+        padding: 1.5em;
+    }
+
+    /* Showcase tighten */
+    .feature-showcase,
+    .feature-showcase--reverse,
+    .core-showcase,
+    .core-showcase--reverse {
+        gap: 1.5em;
+        margin-bottom: 3em;
+        padding: 0 1.25em;
+    }
+    .feature-title,
+    .core-title {
+        font-size: 1.5em;
+    }
+    .feature-desc,
+    .core-desc {
+        font-size: 0.98em;
+        line-height: 1.7;
+    }
+
+    /* Section headings */
+    .features-heading,
+    .core-heading {
+        font-size: 1.65em;
+        padding: 0 0.8em;
+    }
+    .features-sub,
+    .core-sub {
+        font-size: 1em;
+        padding: 0 1.5em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+
+    /* Pricing — fit table to viewport, compact cells */
+    .comparison-table-wrap {
+        margin: 0 0.5em;
+        overflow-x: visible;
+        padding-top: 28px;
+    }
+    .comparison-table {
+        min-width: 0;
+        font-size: 0.82em;
+    }
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+        width: 38%;
+    }
+    .comparison-table th:not(:first-child),
+    .comparison-table td:not(:first-child) {
+        width: 31%;
+    }
+    .comparison-table thead th {
+        padding: 0.25em 0.15em 0.8em;
+    }
+    .comparison-table td,
+    .comparison-table th:first-child {
+        padding: 0.55em 0.4em;
+    }
+    .plan-header {
+        display: flex;
+        padding: 0.6em 0.25em 0.5em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .plan-header--accent {
+        transform: none;
+    }
+    .plan-name {
+        font-size: 0.95rem;
+    }
+    .plan-price {
+        font-size: 1.3rem !important;
+    }
+    .plan-note {
+        font-size: 0.58rem;
+        letter-spacing: 0.05em;
+    }
+    .plan-header--accent::before {
+        font-size: 0.5rem !important;
+        padding: 2px 6px !important;
+        top: -8px !important;
+        letter-spacing: 0.05em !important;
+    }
+    .comparison-currency-note {
+        font-size: 0.72em;
+        padding: 5px 12px;
+    }
+
+    /* Member CTA tighter */
+    .member-cta {
+        padding: 3em 0.75em 0;
+    }
+    .member-cta-inner {
+        display: block;
+        width: auto;
+        margin: 0;
+        padding: 2em 1.25em;
+        max-width: 100%;
+    }
+    .member-cta-heading {
+        font-size: 1.6em;
+    }
+    .member-cta-text {
+        font-size: 0.95em;
+        max-width: none;
+    }
+    .member-cta-btn {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+        text-align: center;
+    }
+
+    /* FAQ */
+    .faq-list {
+        padding: 0 1.25em;
+    }
+    .faq-question {
+        font-size: 0.98em;
+        padding: 1.2em 0;
+    }
+
+    /* Footer */
+    .footer-inner {
+        padding: 0 1.25em 2.5em;
+        gap: 2em;
+        text-align: center;
+        align-items: center;
+    }
+    .footer-links {
+        justify-content: center;
+        gap: 2em;
+    }
+    .footer-logo {
+        max-width: 180px;
+    }
+    .footer-bottom {
+        padding: 1.5em 1.25em;
+        text-align: center;
+    }
+
+    /* Reduce decorative shape clutter on tiny screens (they overflow & distract) */
+    .shape,
+    .shape-core {
+        display: none;
+    }
 }
