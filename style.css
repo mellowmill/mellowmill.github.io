@@ -1671,6 +1671,64 @@ ul li a {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
+.windows-download {
+    display: flex;
+    justify-content: center;
+    margin: 2.5em auto 0;
+}
+
+.windows-download-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    background: linear-gradient(135deg, #d4af37, #c5a028);
+    color: #1a1a1a !important;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1.05em;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.windows-download-outline {
+    position: absolute;
+    inset: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    overflow: visible;
+    pointer-events: none;
+}
+
+.windows-download-outline rect {
+    fill: none;
+    stroke: #d4af37;
+    stroke-width: 2;
+    stroke-linecap: round;
+    /* Perimeter is generous — recalculated by JS, but a large value works as a fallback */
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.55));
+    transition: stroke-dashoffset 0.45s ease-out;
+}
+
+.windows-download-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(212, 175, 55, 0.5);
+}
+
+.windows-download-btn:hover .windows-download-outline rect {
+    stroke-dashoffset: 0;
+}
+
+.windows-download-btn i {
+    font-size: 1.1em;
+}
+
 .footer-inner {
     display: flex;
     justify-content: space-between;

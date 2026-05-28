@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <clipPath id="roundedClip">
+      <rect width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+
+    <!-- Sky gradient: warm coral at top to peachy pink at horizon -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#D94060"/>
+      <stop offset="50%"  stop-color="#EF7880"/>
+      <stop offset="100%" stop-color="#F8C0B8"/>
+    </linearGradient>
+
+    <!-- Sun radial: bright white-gold core to warm amber edge -->
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFF8C0"/>
+      <stop offset="30%"  stop-color="#FAD840"/>
+      <stop offset="75%"  stop-color="#F0A820"/>
+      <stop offset="100%" stop-color="#E07010"/>
+    </radialGradient>
+
+    <!-- Sun atmospheric glow -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FAD840" stop-opacity="0.45"/>
+      <stop offset="60%"  stop-color="#F8B040" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#F8B040" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Horizon haze: brightens just above landscape -->
+    <linearGradient id="hazeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FDE0C8" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FDE0C8" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Landscape gradient layers -->
+    <linearGradient id="land1Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#C05878"/>
+      <stop offset="100%" stop-color="#7028A0"/>
+    </linearGradient>
+    <linearGradient id="land2Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#4A10A0"/>
+      <stop offset="100%" stop-color="#1A0450"/>
+    </linearGradient>
+
+    <!-- Bottom glass sheen -->
+    <linearGradient id="sheenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#9060C0" stop-opacity="0.3"/>
+      <stop offset="50%"  stop-color="#8040B8" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#6020A0" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Top gloss highlight -->
+    <linearGradient id="glossGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#roundedClip)">
+
+    <!-- Sky background -->
+    <rect width="512" height="512" fill="url(#skyGrad)"/>
+
+    <!-- Atmospheric sun glow (wide, soft) -->
+    <ellipse cx="256" cy="295" rx="220" ry="180" fill="url(#sunGlow)"/>
+
+    <!-- Sun body -->
+    <circle cx="256" cy="310" r="108" fill="url(#sunGrad)"/>
+
+    <!-- Horizon haze band -->
+    <rect x="0" y="260" width="512" height="80" fill="url(#hazeGrad)"/>
+
+    <!-- Landscape layer 1 — pink-purple near horizon -->
+    <path d="
+      M0 330
+      C 80 305, 180 325, 256 312
+      C 330 300, 430 325, 512 315
+      L512 512 L0 512 Z
+    " fill="url(#land1Grad)"/>
+
+    <!-- Landscape layer 2 — deep indigo foreground -->
+    <path d="
+      M0 430
+      C 60 408, 120 440, 190 418
+      C 260 396, 330 435, 400 415
+      C 440 406, 478 425, 512 415
+      L512 512 L0 512 Z
+    " fill="url(#land2Grad)"/>
+
+    <!-- Bottom glass/sheen reflection on landscape -->
+    <rect x="0" y="420" width="512" height="92" fill="url(#sheenGrad)"/>
+
+    <!-- Top gloss highlight (upper portion of icon) -->
+    <rect x="0" y="0" width="512" height="200" fill="url(#glossGrad)"/>
+
+  </g>
+
+  <!-- Outer subtle border/frame -->
+  <rect width="512" height="512" rx="112" ry="112"
+        fill="none" stroke="#00000018" stroke-width="2"/>
+</svg>

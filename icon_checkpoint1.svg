@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <clipPath id="rounded">
+      <rect width="500" height="500" rx="80" ry="80"/>
+    </clipPath>
+    <mask id="checkMask">
+      <rect width="500" height="500" fill="white"/>
+      <path d="M 150,235 C 195,315 200,355 225,355 C 250,355 390,135 560,-55" fill="none" stroke="black" stroke-width="75" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#rounded)" mask="url(#checkMask)">
+    <rect x="0" y="0"   width="500" height="100" fill="#B28AD9"/>
+    <rect x="0" y="100" width="500" height="100" fill="#9463CC"/>
+    <rect x="0" y="200" width="500" height="100" fill="#6F3EAB"/>
+    <rect x="0" y="300" width="500" height="100" fill="#4C267F"/>
+    <rect x="0" y="400" width="500" height="100" fill="#2A0F3D"/>
+  </g>
+</svg>
