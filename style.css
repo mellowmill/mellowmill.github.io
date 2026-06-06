@@ -2230,9 +2230,21 @@ ul li a {
 }
 
 .changelog-tier--core {
-    color: #d4af37;
-    background: rgba(212, 175, 55, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: #5a4500;
+    background: #f3d987;
+    border: 1px solid #d4af37;
+}
+
+.changelog-tier--new {
+    color: #2563ad;
+    background: rgba(37, 99, 173, 0.08);
+    border: 1px solid rgba(37, 99, 173, 0.22);
+}
+
+.changelog-tier--fix {
+    color: #6a6a6a;
+    background: rgba(106, 106, 106, 0.08);
+    border: 1px solid rgba(106, 106, 106, 0.22);
 }
 
 .changelog-title {
@@ -2272,10 +2284,23 @@ ul li a {
     margin-bottom: 0.3em;
 }
 
-.changelog-list li .changelog-item-head .changelog-tier {
+.changelog-list li .changelog-item-head > .changelog-tier--core,
+.changelog-list li .changelog-item-head > .changelog-tier--free,
+.changelog-list li .changelog-item-head > .changelog-tier--fix {
     position: absolute;
     right: calc(100% + 2.8em);
     top: 0.15em;
+}
+
+.changelog-list li .changelog-item-head .changelog-tiers {
+    position: absolute;
+    right: calc(100% + 2.8em);
+    top: 0.15em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4em;
+    white-space: nowrap;
 }
 
 .changelog-list li .changelog-item-head strong {
