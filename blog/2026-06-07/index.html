@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../nav.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../../icon_recreated.svg">
+    <title>Margin vs Markdown: writing for meaning, not markup — MellowMill Studio</title>
+    <meta name="description" content="Markdown made plain text pretty. The Margin format asks what if your notes understood what you meant. A side-by-side comparison of tasks, decisions, and questions.">
+    <meta name="keywords" content="Margin format, Markdown alternative, plain text notes, semantic notes, productivity, MellowMill">
+    <meta name="author" content="MellowMill">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0f">
+    <link rel="canonical" href="https://mellowmill.github.io/blog/2026-06-07/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MellowMill Studio">
+    <meta property="article:published_time" content="2026-06-07">
+    <meta property="og:title" content="Margin vs Markdown: writing for meaning, not markup">
+    <meta property="og:description" content="Markdown made plain text pretty. The Margin format asks a different question — what if your notes understood what you meant?">
+    <meta property="og:url" content="https://mellowmill.github.io/blog/2026-06-07/">
+    <meta property="og:image" content="https://mellowmill.github.io/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Margin vs Markdown: writing for meaning, not markup">
+    <meta name="twitter:description" content="A side-by-side look at how Margin captures meaning where Markdown only captures formatting.">
+    <meta name="twitter:image" content="https://mellowmill.github.io/logo.png">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BWHQVRHY3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BWHQVRHY3');
+    </script>
+</head>
+<body>
+
+<section class="about-hero">
+    <div class="navbar">
+        <a href="../../index.html"><img src="../../icon_recreated.svg" width="64" height="64"></a>
+        <a href="../../index.html" id="navtitle-link"><img src="../../text.svg" id="navtitle" alt="MellowMill Studio"></a>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#features">Features</a></li>
+            <li><a href="../../index.html#pricing">Pricing</a></li>
+            <li><a href="../../updates.html">Updates</a></li>
+            <li><a href="../index.html">Blog</a></li>
+            <li><a href="../../about.html">About</a></li>
+        </ul>
+    </div>
+    <p class="blog-article-kicker"><a href="../index.html">&larr; Blog</a></p>
+    <h2 class="about-title">Margin vs Markdown:<br>writing for meaning, not markup</h2>
+    <p class="about-subtitle"><time datetime="2026-06-07">7 June 2026</time> &middot; 5 min read</p>
+</section>
+
+<article class="blog-article">
+    <p class="about-text">Markdown, created in 2004 by John Gruber (with input from Aaron Swartz) had a modest goal. At the time writing for the web meant wrapping your words in HTML tags — <code>&lt;p&gt;</code> here, <code>&lt;strong&gt;</code> there — which was tedious and made the raw text hard to both read and write. Gruber's idea was to let people "write using an easy-to-read, easy-to-write plain text format" that could then be converted into valid HTML. Crucially, the plain text was supposed to stay readable as-is, never looking like it had been "marked up with tags or formatting instructions".</p>
+
+    <p class="about-text">It worked. Two decades on Markdown has become a de-facto standard, a convention for writing on the web; asterisks for emphasis, <code>#</code> for headings, hyphens for lists. It has spread from blogs to README files, chat apps, static site generators, documentation systems, and a hundred note-taking tools. From a single beginning it grew uncontrolled, spawning different dialects along the way. A 2014 effort called CommonMark set out to tackle these deviations and create a 'standard' approach. More recently it's started to become a standard in communicating with AI agents. Markdown documents are now (as of 2026) seen as the lingua franca for text-based communication with AI.</p>
+
+    <p class="about-text">But notice what this origin story tells you. Markdown was designed for one job — <em>presentation</em>. It describes how text should <em>look</em> once it becomes HTML. However, at MellowMill we believe this is not good enough for two reasons:</p>
+        
+    <ol>
+        <li>Markdown totally misses the meaning of the text and the intent of the author.</li>
+        <li>Markdown is a general syntax aimed at the lowest common denominator.</li>
+    </ol>
+    
+    <p class="about-text">The Margin format, the plain-text language behind MellowMill Studio, was designed for a different job: capturing what text <em>means</em>. That sounds like a small distinction. In daily work, though, it changes everything.</p>
+
+    <h3 class="about-heading">The same note, two languages</h3>
+    <p class="about-text">Here is a small working example — a couple of tasks, a decision, and an open question. On the left is how you might write it in Markdown. On the right, the same thing in Margin.</p>
+
+    <div class="compare-grid">
+        <div class="compare-col">
+            <div class="compare-label">Markdown</div>
+<pre>## To Do
+- [ ] Draft the launch email
+- [x] Book the venue
+
+## Decision
+**Q: Which date?**
+*A: April 30th — avoids the conference.*
+
+&gt; **Important:** Send invites by Friday</pre>
+        </div>
+        <div class="compare-col compare-col--margin">
+            <div class="compare-label">Margin</div>
+<pre>&gt; To Do
+- Draft the launch email
+| Book the venue
+
+? Which date?
+A. April 30th — avoids the conference.
+
+! Send invites by Friday</pre>
+        </div>
+    </div>
+
+    <p class="about-text">In Markdown, everything is just formatting: a list, some italics, a blockquote. It looks structured, but the software underneath has no idea what any of it means.
+</p>
+
+    <p class="about-text">
+Margin treats the same lines as real objects — tasks, questions, answers, decisions — so the structure you intended becomes structure the software can use.</p>
+
+    <h3 class="about-heading">Markdown describes shapes; Margin describes things</h3>
+    <p class="about-text">In Markdown, <code>- [ ]</code> and <code>- [x]</code> are checkboxes — a visual convention bolted onto the list syntax. The asterisks around the answer mean "make this italic." The blockquote with bold text inside is just that: a quote that happens to start with the word <em>Important</em>. The document looks structured, but to the software underneath it is all paragraphs, emphasis, and lists. Nothing knows that "Send invites by Friday" is a commitment with a deadline.</p>
+
+    <p class="about-text">Margin reads the same note as a set of real objects. A line beginning with <code>-</code> is a task; <code>|</code> marks it complete; <code>/</code> would mark it in progress. <code>?</code> opens a question and <code>A.</code> binds the answer to it, so the two travel together. <code>!</code> is a genuine decision or commitment — and because the line says "Friday," MellowMill Studio can recognise the date without you tagging it. The prefixes are not decoration. They are the meaning, written down. This becomes especially powerful when you then apply it to a specific domain - work, productivity and getting things done.</p>
+
+    <h3 class="about-heading">Why that matters when notes pile up</h3>
+    <p class="about-text">A single note looks similar either way. The difference shows when you have a knowledge-base full of them. Because Margin knows that a task is a task, MellowMill Studio can pull every unfinished item across your whole notebook into one view — without you maintaining a separate to-do app. It can surface open questions you never answered. It can list the decisions you made last month and the reasons you recorded beside them. It can gather every task you need to do, automatically grouped by topic. Markdown can't do any of this because it never knew what those lines meant — only how they should look.</p>
+
+    <div class="pull-quote">
+        Markdown asks "how should this look?" Margin asks "what is this?"
+    </div>
+
+    <h3 class="about-heading">The fair comparison</h3>
+    <p class="about-text">None of this makes Markdown bad. For general writing Markdown is good enough and the two formats optimise for different moments:</p>
+    <ul class="about-list">
+        <li><strong>Markdown</strong> is for general text where you only need to capture what formatting to apply.</li>
+        <li><strong>Margin</strong> is for the thinking you do along the way — tasks, decisions, questions, meeting notes — where structure and recall are the point - it's less about the appearance and more about the meaning.</li>
+    </ul>
+
+    <p class="about-text">There is also a quieter advantage. Margin is still just plain text in a file on your machine. There is no database and no cloud account standing between you and your information. If MellowMill Studio vanished tomorrow, your notes would open in any text editor — exactly like Markdown. You get the durability of plain text <em>and</em> a format that understands what you wrote.</p>
+
+    <h3 class="about-heading">Try it yourself</h3>
+    <p class="about-text">The quickest way to feel the difference is to take a note you already keep in Markdown and add it in MellowMill Studio. Download for free to experience the power of the Margin format, and then upgrade for extra funtionality.</p>
+    <p class="about-text">Read the <a href="../../margin-format-guide.html">Margin format guide</a> for every block type, or <a href="../../index.html#windows-download">download MellowMill Studio</a> and let the visual editor write the syntax for you.</p>
+
+    <p class="blog-article-back"><a href="../index.html">&larr; Back to the blog</a></p>
+</article>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="../../text-light.svg" class="footer-logo" alt="MellowMill Studio">
+            <p class="footer-tagline">Productivity for busy minds.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4 class="footer-col-title">Product</h4>
+                <ul>
+                    <li><a href="../../index.html#features">Features</a></li>
+                    <li><a href="../../index.html#core">Core</a></li>
+                    <li><a href="../../index.html#windows-download">Download</a></li>
+                    <li><a href="../../updates.html">Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Resources</h4>
+                <ul>
+                    <li><a href="../../margin-format-guide.html">Margin Language</a></li>
+                    <li><a href="../index.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">Company</h4>
+                <ul>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="#" id="contact-link">Contact</a></li>
+                    <li><a href="#" id="privacy-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; MellowMill Ltd 2026. All rights reserved.</p>
+        <address class="footer-address">MellowMill Ltd, 82A James Carter Road, Mildenhall, IP28 7DE</address>
+    </div>
+</footer>
+
+<!-- Contact Modal -->
+<div class="modal-overlay" id="contact-modal">
+    <div class="modal">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h3 class="modal-title">Get in touch</h3>
+        <p class="modal-text">Got a question, found a bug, or simply want to share a joke? Feel free to drop us a line at:</p>
+        <p class="modal-email"><a href="mailto:hello@mellowmill.studio">hello@mellowmill.studio</a></p>
+    </div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div class="modal-overlay" id="privacy-modal">
+    <div class="modal modal--wide">
+        <button class="modal-close" id="privacy-close">&times;</button>
+        <h3 class="modal-title">Privacy Policy</h3>
+        <div class="modal-body">
+            <p><strong>Effective date:</strong> April 17, 2026</p>
+            <p>MellowMill Studio ("we", "us", "our") respects your privacy. This policy explains what data we collect through our website and how we use it.</p>
+            <h4>Website Analytics</h4>
+            <p>We use Google Analytics to understand how visitors interact with our website. Google Analytics collects:</p>
+            <ul>
+                <li>Pages visited and time spent on each page</li>
+                <li>Referring website or source</li>
+                <li>Browser type and device information</li>
+                <li>Approximate geographic location (country/city level)</li>
+            </ul>
+            <p>This data is aggregated and anonymous. We do not use it to identify individual visitors. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a>.</p>
+            <h4>MellowMill Studio Application</h4>
+            <p>MellowMill Studio is a local-first application. Your notes, tasks, and files are stored entirely on your device. We do not collect, transmit, or have access to any of your content.</p>
+            <h4>Cookies</h4>
+            <p>Our website uses cookies only for Google Analytics. No advertising or tracking cookies are used.</p>
+            <h4>Third-Party Services</h4>
+            <p>We use Fourthwall for processing purchases. Their privacy policy governs any data collected during checkout.</p>
+            <h4>Contact</h4>
+            <p>If you have questions about this policy, email us at <a href="mailto:hello@mellowmill.studio">hello@mellowmill.studio</a>.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.anim-in').forEach(el => observer.observe(el));
+
+    const modal = document.getElementById('contact-modal');
+    document.getElementById('contact-link').addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+    });
+    document.getElementById('modal-close').addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+    });
+
+    const privacyModal = document.getElementById('privacy-modal');
+    document.getElementById('privacy-link').addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyModal.classList.add('active');
+    });
+    document.getElementById('privacy-close').addEventListener('click', () => {
+        privacyModal.classList.remove('active');
+    });
+    privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) privacyModal.classList.remove('active');
+    });
+</script>
+</body>
+</html>
