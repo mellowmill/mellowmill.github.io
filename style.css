@@ -1274,75 +1274,72 @@ ul li a {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.15em;
-    padding: 1.1em 1.6em 0.9em;
-    border-radius: 18px;
-    background: #ffffff;
-    border: 1px solid #ece8df;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    gap: 0.1em;
+    padding: 0.6em 1em 0.8em;
     min-width: 140px;
-}
-
-.plan-header--accent {
-    background: linear-gradient(160deg, #7a5cba 0%, #6a4caf 100%);
-    border-color: transparent;
-    box-shadow: 0 8px 24px rgba(106, 76, 175, 0.28);
-    transform: translateY(-4px);
     position: relative;
 }
 
 .plan-header--accent::before {
-    content: 'Best value';
+    content: 'Best Value';
     position: absolute;
-    top: -10px;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    background: #f4c95d;
-    color: #2a1f4a;
-    font-size: 0.62rem;
+    color: #6a4caf;
+    font-size: 0.6rem;
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 999px;
     white-space: nowrap;
 }
 
 .plan-name {
-    font-family: var(--font-family-heading, 'Playfair Display', serif);
-    font-size: 1.4rem;
+    font-family: inherit;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #4a3a78;
     letter-spacing: 0.01em;
+    margin-bottom: 0.1em;
 }
 
 .plan-header--accent .plan-name {
-    color: #f7f1ff;
+    color: #6a4caf;
 }
 
 .plan-price {
-    font-size: 2.6rem;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 3rem;
     font-weight: 800;
     color: #1a1a1a;
-    line-height: 1.05;
-    margin-top: 0.05em;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.plan-currency {
+    font-family: inherit;
+    font-size: 0.45em;
+    font-weight: 700;
+    margin-top: 0.45em;
+    margin-right: 0.08em;
+    color: #6a4caf;
+    letter-spacing: 0;
 }
 
 .plan-header--accent .plan-price {
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .plan-note {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #8b8378;
+    font-family: inherit;
+    font-size: 0.66rem;
+    font-weight: 700;
+    color: #9a9184;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    margin-top: 0.35em;
-}
-
-.plan-header--accent .plan-note {
-    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0.13em;
+    margin-top: 0.6em;
 }
 
 .comparison-table thead th:first-child {
