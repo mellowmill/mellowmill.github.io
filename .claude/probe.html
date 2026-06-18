@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<title>Probe</title>
+</head>
+<body>
+<iframe src="../index.html" style="border:0;width:375px;height:812px;display:block" id="f"></iframe>
+<pre id="out" style="position:fixed;top:0;right:0;background:#fff;color:#000;padding:8px;font:11px monospace;max-width:90vw;max-height:90vh;overflow:auto;z-index:99999"></pre>
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const doc = document.getElementById('f').contentDocument;
+    const vw = doc.documentElement.clientWidth;
+    const offenders = [];
+    doc.querySelectorAll('*').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.right > vw + 0.5 || r.width > vw + 0.5) {
+        offenders.push({
+          tag: el.tagName,
+          cls: el.className && el.className.toString().slice(0, 60),
+          id: el.id,
+          w: Math.round(r.width),
+          right: Math.round(r.right),
+          left: Math.round(r.left)
+        });
+      }
+    });
+    const top = offenders.slice(0, 20);
+    document.getElementById('out').textContent =
+      'vw=' + vw + ' bodyScrollW=' + doc.body.scrollWidth + '\n' +
+      'offenders=' + offenders.length + '\n' +
+      top.map(o => `${o.tag}.${o.cls||''}#${o.id||''} w=${o.w} L=${o.left} R=${o.right}`).join('\n');
+  }, 800);
+});
+</script>
+</body>
+</html>

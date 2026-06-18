@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "PowerShell(Get-Command python, py, node, npx -ErrorAction SilentlyContinue)",
+      "PowerShell(\\(Get-Command 'msedge.exe' -ErrorAction SilentlyContinue\\).Source; Test-Path 'C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe'; Test-Path 'C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe')",
+      "Bash(git fetch *)",
+      "Bash(git checkout *)",
+      "Bash(git pull *)",
+      "Bash(git merge *)",
+      "WebFetch(domain:fonts.googleapis.com)",
+      "Bash(mv 2026-06-06 2026-06-07)",
+      "Read(//c/c/GitHub/mellowmill.github.io/**)",
+      "PowerShell($tools = 'magick','inkscape','rsvg-convert','npx','node','dotnet'; foreach \\($t in $tools\\) { $c = Get-Command $t -ErrorAction SilentlyContinue; if \\($c\\) { \"$t -> $\\($c.Source\\)\" } else { \"$t -> NOT FOUND\" } })",
+      "PowerShell(node -e \"for \\(const m of ['sharp','puppeteer','puppeteer-core','@resvg/resvg-js']\\) { try { require.resolve\\(m\\); console.log\\(m+' -> FOUND'\\) } catch { console.log\\(m+' -> no'\\) } }\")",
+      "Bash(git -C \"c:\\\\GitHub\\\\mellowmill.github.io\" add -A)",
+      "Bash(git -C \"c:\\\\GitHub\\\\mellowmill.github.io\" status --short)",
+      "Bash(git -C \"c:\\\\GitHub\\\\mellowmill.github.io\" reset -q)",
+      "Bash(git -C \"c:\\\\GitHub\\\\mellowmill.github.io\" add index.html style.css)"
+    ]
+  }
+}
