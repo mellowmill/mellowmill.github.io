@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:plot.app)"
+      "WebFetch(domain:plot.app)",
+      "Bash(git log *)",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://fonts.googleapis.com/css2?family=Gowun+Dodum\")"
     ]
   }
 }
