@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Gowun Dodum', sans-serif !important;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
 h2 {
@@ -100,7 +100,7 @@ ul li a {
     display: block;
     padding: 14px 16px 14px 0px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-family: 'Gowun Dodum', sans-serif;
 }
 

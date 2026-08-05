@@ -3,7 +3,13 @@
     "allow": [
       "WebFetch(domain:plot.app)",
       "Bash(git log *)",
-      "Bash(curl -s -A \"Mozilla/5.0\" \"https://fonts.googleapis.com/css2?family=Gowun+Dodum\")"
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://fonts.googleapis.com/css2?family=Gowun+Dodum\")",
+      "Bash(curl -sf -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8934/index.html)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(lsof -ti:8934 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(git -C /Users/andydavies/git/mellowmill.github.io diff --stat)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
