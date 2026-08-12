@@ -9,7 +9,11 @@
       "Bash(lsof -ti:8934 -sTCP:LISTEN)",
       "Bash(xargs -r kill)",
       "Bash(git -C /Users/andydavies/git/mellowmill.github.io diff --stat)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(xargs -I{} echo {})",
+      "Bash(awk 'NR==2350,NR==2427' /Users/andydavies/git/mellowmill.github.io/style.css)",
+      "Bash(pkill -f \"http.server 8791\")",
+      "Bash(git commit *)"
     ]
   }
 }
