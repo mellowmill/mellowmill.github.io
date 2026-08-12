@@ -284,7 +284,7 @@ When you feel overloaded MellowMill Studio gives you a fast and private place to
     <h2 class="comparison-heading anim-in">Compare Plans</h2>
     <p class="comparison-sub anim-in">Simple pricing for everyone - not a subscription in sight. Pay once and get all future updates for free!
     </p>
-    <p class="comparison-currency-note anim-in">Prices shown in USD — or equivalent in your local currency.</p>
+    <p class="comparison-currency-note anim-in">Prices shown in your local currency (GBP, EUR, or USD) based on your region.</p>
     <div class="comparison-table-wrap anim-in">
         <div class="pricing-cards">
             <div class="pricing-card">
@@ -334,6 +334,24 @@ When you feel overloaded MellowMill Studio gives you a fast and private place to
         <span>Download Now</span>
     </a>
 </div>
+<script>
+    (function () {
+        // ponytail: timezone-based region guess, not real geolocation. Good enough for
+        // a display price; upgrade to an IP geolocation lookup if accuracy matters.
+        var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+        var region = { symbol: '$', price: 50 };
+        if (tz === 'Europe/London' || tz === 'Europe/Belfast') {
+            region = { symbol: '£', price: 40 };
+        } else if (tz.indexOf('Europe/') === 0) {
+            region = { symbol: '€', price: 45 };
+        }
+        document.querySelectorAll('.plan-currency').forEach(function (el) {
+            el.textContent = region.symbol;
+        });
+        var corePrice = document.querySelector('.pricing-card--accent .plan-price');
+        if (corePrice) corePrice.lastChild.textContent = region.price;
+    })();
+</script>
 <script>
     (function () {
         var ua = navigator.userAgent || '';

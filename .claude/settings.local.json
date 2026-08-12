@@ -13,7 +13,9 @@
       "Bash(xargs -I{} echo {})",
       "Bash(awk 'NR==2350,NR==2427' /Users/andydavies/git/mellowmill.github.io/style.css)",
       "Bash(pkill -f \"http.server 8791\")",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(curl -s -I https://mellowmill.studio)",
+      "Bash(curl -s https://mellowmill.studio/cdn-cgi/trace)"
     ]
   }
 }
