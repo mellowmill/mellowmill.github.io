@@ -1600,6 +1600,12 @@ ul li a {
     margin: 2.5em auto 0;
 }
 
+.substack-signup {
+    display: flex;
+    justify-content: center;
+    margin: 3em auto 0;
+}
+
 .windows-download-btn {
     position: relative;
     display: inline-flex;
