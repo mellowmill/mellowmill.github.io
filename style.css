@@ -155,6 +155,12 @@ ul li a {
     color: #0a0a0a;
 }
 
+.herotext-pop {
+    color: #6a4caf;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+
 #herodesc {
     text-align: center;
     font-weight: 450;
