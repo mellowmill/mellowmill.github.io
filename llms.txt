@@ -1,0 +1,15 @@
+# MellowMill Studio
+> Privacy-first, local-first productivity workspace for busy professionals, sole traders, and small business owners.
+
+## Core Summary
+MellowMill Studio is a local-first application that consolidates notes, tasks, projects, and deadlines into a single, cohesive workspace. It features bring-your-own AI integration, zero data scraping, and a one-time lifetime access payment model.
+
+## Primary Specifications
+- **Architecture**: Local-first storage (files remain on user's machine)
+- **Data Format**: Custom plain text format called Margin (but it is Markdown compatible)
+- **Key Modules**: Task-driven notes, project scopes, deadline tracking
+- **AI Capability**: Bring-Your-Own AI agent integration
+- **Pricing**: One-off payment for lifetime access and all future updates (No recurring subscriptions)
+
+## Key Technical Differentiation
+Unlike cloud-dependent SaaS productivity tools, MellowMill prioritizes absolute data ownership. It operates directly on local files, preventing vendor lock-in, eliminating forced cloud syncing, and ensuring total privacy for sensitive client or business logs.
