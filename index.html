@@ -54,7 +54,7 @@
 <div class="hero">
     <div class="navbar">
         <a href="index.html"><img src="icon_recreated.svg" width="64" height="64"></a>
-        <a href="index.html" id="navtitle-link"><img src="text.svg" id="navtitle" alt="MellowMill Studio"></a>
+        <a href="index.html" id="navtitle-link"><span id="navtitle">MellowMill</span></a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#features">Features</a></li>
@@ -65,10 +65,11 @@
     </div>
 
     <div class="primary">
-        <h2 id="herotext">The <span class="herotext-pop">Local-First</span> Home for Your</br>Tasks, Notes and Projects</h2>
-        <h3 id="herodesc">  
-MellowMill Studio combines deep task tracking, fluid project management, and bring-your-own AI into a secure, lightning-fast app that runs natively on your machine. One-time purchase, lifetime access.</h3>
-        <button id="herocta">Get Started</button>
+        <h1 id="herotext">One place for the questions,<br>decisions, and actions behind your projects.</h1>
+        <p id="herodesc">
+            MellowMill helps you capture the questions you are working through, record the decisions you make, and turn those decisions into actions without losing the context along the way.
+        </p>
+        <button id="herocta">See Plans</button>
         <img id="heroimg" src="images/hero.png" alt="MellowMill Studio interface">
     </div>
 </div>
@@ -76,14 +77,20 @@ MellowMill Studio combines deep task tracking, fluid project management, and bri
 <div class="angle-divider"></div>
 
 <section id="features" class="features">
-    <!-- Floating decorative shapes -->
-    <div class="shape shape-circle shape-1"></div>
-    <div class="shape shape-ring shape-2"></div>
-    <div class="shape shape-triangle shape-3"></div>
-    <div class="shape shape-dot-grid shape-4"></div>
-    <div class="shape shape-circle shape-5"></div>
-    <div class="shape shape-ring shape-6"></div>
-
+    <div class="value-props" aria-label="Why MellowMill">
+        <div class="value-prop-card anim-in">
+            <h3 class="value-prop-title">Private</h3>
+            <p class="value-prop-desc">Your files stay on your machine. No cloud servers storing your notes, and no one else accessing your work.</p>
+        </div>
+        <div class="value-prop-card anim-in">
+            <h3 class="value-prop-title">Performance</h3>
+            <p class="value-prop-desc">Built to be fast and efficient, so you stay productive as your work grows.</p>
+        </div>
+        <div class="value-prop-card anim-in">
+            <h3 class="value-prop-title">Price</h3>
+            <p class="value-prop-desc">Start for free, then pay once for the Core or Professional version. No subscriptions and all future updates included.</p>
+        </div>
+    </div>
     <h2 class="features-heading">Designed for work, built for you</h2>
     <p class="features-sub">Free tools to get you started</p>
 
@@ -104,7 +111,6 @@ MellowMill Studio combines deep task tracking, fluid project management, and bri
 
     <!-- Angled accent band -->
     <div class="accent-band">
-        <div class="accent-band-inner"></div>
     </div>
 
     <!-- Feature 2: Task Tracking (reversed) -->
@@ -165,14 +171,6 @@ MellowMill Studio combines deep task tracking, fluid project management, and bri
 <div class="angle-divider-core"></div>
 
 <section id="core" class="core-features">
-    <!-- Floating decorative shapes (gold tones) -->
-    <div class="shape-core shape-core-circle shape-core-1"></div>
-    <div class="shape-core shape-core-ring shape-core-2"></div>
-    <div class="shape-core shape-core-diamond shape-core-3"></div>
-    <div class="shape-core shape-core-dot-grid shape-core-4"></div>
-    <div class="shape-core shape-core-circle shape-core-5"></div>
-    <div class="shape-core shape-core-ring shape-core-6"></div>
-
     <div class="core-badge anim-in">Core</div>
     <h2 class="core-heading anim-in">Unlock your full potential.</h2>
     <p class="core-sub anim-in">Premium tools for professionals who demand more.</p>
@@ -232,21 +230,21 @@ MellowMill Studio combines deep task tracking, fluid project management, and bri
     <div class="core-extras">
         <div class="core-extra-card anim-in">
             <div class="core-icon" style="background: rgba(255,255,255,0.12);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#6a4caf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
             </div>
             <h4 class="core-extra-title">Markdown Support</h4>
             <p class="core-extra-desc">Paste or import any Markdown document and MellowMill Studio converts it to Margin format instantly. Export back to Markdown any time — your notes stay portable, whatever format you need.</p>
         </div>
         <div class="core-extra-card anim-in">
             <div class="core-icon" style="background: rgba(255,255,255,0.12);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#6a4caf" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <h4 class="core-extra-title">30 Day History</h4>
             <p class="core-extra-desc">Every change you make is automatically saved for 30 days. Browse your full history, see exactly what changed, and roll back to any previous version.</p>
         </div>
         <div class="core-extra-card anim-in">
             <div class="core-icon" style="background: rgba(255,255,255,0.12);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#6a4caf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </div>
             <h4 class="core-extra-title">Dark Mode</h4>
             <p class="core-extra-desc">A carefully designed dark theme built for long working sessions and to be easy on the eyes.</p>
