@@ -229,7 +229,7 @@ ul li a {
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
     max-width: 1100px;
-    margin: 0 auto 5em;
+    margin: 0 auto 8em;
     position: relative;
     z-index: 2;
 }
@@ -2498,7 +2498,7 @@ img {
 
     .value-props {
         grid-template-columns: 1fr;
-        margin-bottom: 3.5em;
+        margin-bottom: 6em;
         padding: 0 0.5em;
     }
 
