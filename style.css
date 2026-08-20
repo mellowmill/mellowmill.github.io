@@ -1332,7 +1332,6 @@ ul li a {
 .pricing-card--accent {
     background: linear-gradient(180deg, #faf8ff 0%, #ffffff 60%);
     border: 2px solid rgba(106, 76, 175, 0.35);
-    box-shadow: 0 12px 40px rgba(106, 76, 175, 0.18);
 }
 
 .pricing-card--accent:hover {
@@ -2629,9 +2628,6 @@ img {
         max-width: 420px;
         width: 100%;
         flex-basis: 100%;
-    }
-    .pricing-card--accent {
-        order: -1;
     }
     .plan-name {
         font-size: 1.15rem;
