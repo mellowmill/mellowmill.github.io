@@ -1181,7 +1181,7 @@ ul li a {
 .comparison-sub {
     text-align: center;
     font-size: 1.15em;
-    color: #5f5f64;
+    color: #8a8a8f;
     margin-bottom: 2.5em;
     font-weight: 400;
     opacity: 0;
@@ -1204,6 +1204,7 @@ ul li a {
     padding: 6px 14px;
     border-radius: 999px;
     margin: 0 auto 2.5em;
+    margin-top: 4em;    
     font-weight: 500;
     letter-spacing: 0.02em;
     position: relative;
@@ -1655,7 +1656,7 @@ ul li a {
 .windows-download {
     display: flex;
     justify-content: center;
-    margin: 2.5em auto 0;
+    margin: 2.5em auto 5em;
 }
 
 .substack-signup-text {
