@@ -1164,6 +1164,7 @@ ul li a {
 }
 
 .comparison-heading {
+    font-family: var(--font-family-heading);
     font-weight: 700;
     font-size: 2.6em;
     text-align: center;
