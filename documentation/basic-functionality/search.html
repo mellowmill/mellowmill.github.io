@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find notes, tasks, tags, and files quickly with MellowMill search.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f7f6f3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../docs.css">
+    <script src="../docs.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../../icon_recreated.svg">
+    <title>Search Your Workspace — MellowMill Documentation</title>
+</head>
+<body class="docs-page">
+<div class="docs-shell">
+    <aside class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar-top"><a class="docs-brand" href="../../index.html"><img src="../../icon_recreated_64.png" alt=""><span>MellowMill</span></a><button class="docs-menu-toggle" type="button" aria-expanded="false" aria-controls="docs-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-menu-label>Menu</span></button></div>
+        <label class="docs-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="is-hidden">Search documentation</span><input type="search" placeholder="Search documentation" aria-label="Search documentation"></label>
+        <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+            <a class="docs-nav-home" href="../index.html" data-search="documentation home overview">Documentation home</a>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Get Started</div><a href="../get-started/index.html" data-search="get started overview basics">Overview</a><a href="../get-started/installation.html" data-search="install installation download launch workspace">Install MellowMill</a><a href="../get-started/opening-your-workspace.html" data-search="opening workspace folder files local">Opening your workspace</a><a href="../get-started/first-note.html" data-search="first note create write margin">Create your first note</a><a href="../../margin-format-guide.html" data-search="margin format language markdown syntax">Understanding Margin</a></div>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Basic functionality</div><a href="index.html" data-search="basic functionality overview">Overview</a><a href="notes-and-notebooks.html" data-search="notes notebooks organize links files">Notes and notebooks</a><a href="tasks.html" data-search="tasks task due dates priorities next actions">Tasks</a><a href="tags.html" data-search="tags tag organize labels themes">Tags</a><a href="search.html" data-search="search find filter workspace" aria-current="page">Search your workspace</a></div>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Core Features</div><a href="../core-features/index.html" data-search="core features overview">Overview</a><a href="../core-features/tables.html" data-search="tables advanced functions sums averages">Advanced tables</a><a href="../core-features/projects.html" data-search="projects scope deadlines">Projects</a><a href="../core-features/bring-your-own-ai.html" data-search="ai mcp claude code provider">Bring your own AI</a></div>
+            <div class="docs-nav-empty" role="status">No matching pages.</div>
+        </nav>
+        <div class="docs-sidebar-foot"><a class="docs-back-link" href="../../index.html"><span aria-hidden="true">←</span>Back to mellowmill.app</a></div>
+    </aside>
+
+    <main class="docs-main">
+        <div class="docs-main-inner">
+            <div class="docs-breadcrumb"><a href="../../index.html">MellowMill</a><span class="docs-breadcrumb-separator">/</span><a href="../index.html">Documentation</a><span class="docs-breadcrumb-separator">/</span><a href="index.html">Basic functionality</a><span class="docs-breadcrumb-separator">/</span><span>Search your workspace</span></div>
+            <div class="docs-content-layout">
+                <article class="docs-article">
+                    <div class="docs-article-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4.5 4.5"/></svg>Basic functionality</div>
+                    <h1>Search your workspace</h1>
+                    <p class="docs-article-lead">Search is the quickest way back to the thread you need when you remember the idea but not the note.</p>
+
+                    <div class="docs-article-body">
+                        <h2 id="search">Search as you type</h2>
+                        <p>MellowMill searches across your notes, tags, and files. Start with the word you remember, then narrow the results as the list appears. You do not need to know which notebook contains the answer first.</p>
+                        <p>Search works best with the language you actually used in the note. Try a client name, a decision phrase, a task verb, or a tag such as <code>#launch</code>.</p>
+
+                        <h2 id="filter">Use filters to narrow the list</h2>
+                        <p>When a broad search returns more than one useful thread, use the notes filter palette to narrow the view. Combine a phrase with a tag or a focused term rather than inventing a new filing system for every topic.</p>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead><tr><th>You remember...</th><th>Try searching for...</th></tr></thead>
+                                <tbody>
+                                    <tr><td>A project name</td><td>The project name or its tag.</td></tr>
+                                    <tr><td>A decision</td><td>A distinctive phrase from the decision.</td></tr>
+                                    <tr><td>An open action</td><td>The task verb or due-date language.</td></tr>
+                                    <tr><td>A related file</td><td>The filename or a word from its note.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 id="habits">Build searchable notes</h2>
+                        <ul>
+                            <li>Give each note a clear, specific title.</li>
+                            <li>Use consistent tags for recurring clients, projects, or themes.</li>
+                            <li>Write decisions and actions in plain language.</li>
+                            <li>Keep important reference files attached to the note they explain.</li>
+                        </ul>
+                        <p>These habits make search a way to recover context, not just a way to locate a filename.</p>
+
+                        <div class="docs-note">
+                            <p><strong>Search for meaning, not perfect filing.</strong> MellowMill is designed so the words in your notes do more of the organizing.</p>
+                        </div>
+                    </div>
+
+                    <nav class="docs-article-footer" aria-label="Article navigation">
+                        <a href="tags.html"><span>Back</span><strong>Tags</strong></a>
+                        <a href="../core-features/index.html"><span>Next</span><strong>Explore Core features →</strong></a>
+                    </nav>
+                </article>
+                <aside class="docs-toc" aria-label="On this page">
+                    <h2>On this page</h2>
+                    <a href="#search">Search as you type</a>
+                    <a href="#filter">Use filters</a>
+                    <a href="#habits">Build searchable notes</a>
+                </aside>
+            </div>
+            <footer class="docs-site-footer"><a href="../index.html">Back to documentation home →</a></footer>
+        </div>
+    </main>
+</div>
+</body>
+</html>

@@ -1228,7 +1228,7 @@ ul li a {
 }
 
 .comparison-table-wrap {
-    max-width: 820px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-top: 18px;
     opacity: 0;
@@ -1361,11 +1361,11 @@ ul li a {
     align-items: center;
     gap: 0.1em;
     padding: 2.2em 1.5em 1.6em;
+    min-height: 160px;
     border-bottom: 1px solid #f0ede5;
 }
 
 .pricing-card--accent .plan-header {
-    padding-top: 2.6em;
     border-bottom-color: rgba(106, 76, 175, 0.14);
 }
 
@@ -1438,12 +1438,17 @@ ul li a {
 .pricing-feature-lead {
     margin: 0;
     padding: 1.4em 1.8em 0;
+    min-height: 3.3em;
     text-align: center;
     font-size: 0.78rem;
     font-weight: 800;
     color: #6a4caf;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+}
+
+.pricing-feature-lead--placeholder {
+    visibility: hidden;
 }
 
 .pricing-feature-lead + .pricing-feature-list {
@@ -2486,7 +2491,7 @@ img {
     }
     /* Drop secondary nav items on phones so the bar fits */
     .navbar ul li:first-child,
-    .navbar ul li:nth-child(5) {
+    .navbar ul li:nth-child(6) {
         display: none;
     }
     ul li a {

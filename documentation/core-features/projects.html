@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use MellowMill Core Projects to bring scope, tasks, and deadlines together.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f7f6f3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../docs.css">
+    <script src="../docs.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../../icon_recreated.svg">
+    <title>Projects — MellowMill Documentation</title>
+</head>
+<body class="docs-page">
+<div class="docs-shell">
+    <aside class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar-top"><a class="docs-brand" href="../../index.html"><img src="../../icon_recreated_64.png" alt=""><span>MellowMill</span></a><button class="docs-menu-toggle" type="button" aria-expanded="false" aria-controls="docs-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-menu-label>Menu</span></button></div>
+        <label class="docs-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="is-hidden">Search documentation</span><input type="search" placeholder="Search documentation" aria-label="Search documentation"></label>
+        <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+            <a class="docs-nav-home" href="../index.html" data-search="documentation home overview">Documentation home</a>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Get Started</div><a href="../get-started/index.html" data-search="get started overview basics">Overview</a><a href="../get-started/installation.html" data-search="install installation download launch workspace">Install MellowMill</a><a href="../get-started/opening-your-workspace.html" data-search="opening workspace folder files local">Opening your workspace</a><a href="../get-started/first-note.html" data-search="first note create write margin">Create your first note</a><a href="../../margin-format-guide.html" data-search="margin format language markdown syntax">Understanding Margin</a></div>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Basic functionality</div><a href="../basic-functionality/index.html" data-search="basic functionality overview">Overview</a><a href="../basic-functionality/notes-and-notebooks.html" data-search="notes notebooks organize links files">Notes and notebooks</a><a href="../basic-functionality/tasks.html" data-search="tasks task due dates priorities next actions">Tasks</a><a href="../basic-functionality/tags.html" data-search="tags tag organize labels themes">Tags</a><a href="../basic-functionality/search.html" data-search="search find filter workspace">Search your workspace</a></div>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Core Features</div><a href="index.html" data-search="core features overview">Overview</a><a href="tables.html" data-search="tables advanced functions sums averages">Advanced tables</a><a href="projects.html" data-search="projects scope deadlines" aria-current="page">Projects</a><a href="bring-your-own-ai.html" data-search="ai mcp claude code provider">Bring your own AI</a></div>
+            <div class="docs-nav-empty" role="status">No matching pages.</div>
+        </nav>
+        <div class="docs-sidebar-foot"><a class="docs-back-link" href="../../index.html"><span aria-hidden="true">←</span>Back to mellowmill.app</a></div>
+    </aside>
+
+    <main class="docs-main">
+        <div class="docs-main-inner">
+            <div class="docs-breadcrumb"><a href="../../index.html">MellowMill</a><span class="docs-breadcrumb-separator">/</span><a href="../index.html">Documentation</a><span class="docs-breadcrumb-separator">/</span><a href="index.html">Core features</a><span class="docs-breadcrumb-separator">/</span><span>Projects</span></div>
+            <div class="docs-content-layout">
+                <article class="docs-article">
+                    <div class="docs-article-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5h6l1.5 2H20v9H4z"/><path d="M4 7.5V5h6l1.5 2.5"/></svg>Core feature</div>
+                    <h1>Projects</h1>
+                    <p class="docs-article-lead">Give a body of work its own scope, tasks, and deadline while keeping the notes where the real reasoning happens.</p>
+
+                    <div class="docs-article-body">
+                        <h2 id="scope">Start with the scope</h2>
+                        <p>A project gives a defined piece of work a home. Start with the outcome, the people involved, and the boundary that tells you what is in or out. You can then connect the notes that explain the work rather than rewriting them into a project board.</p>
+                        <div class="docs-code">
+                            <div class="docs-code-label">Project outline</div>
+                            <pre><code><span class="syntax-purple">Website launch</span>
+<span class="syntax-gold">#project</span> <span class="syntax-gold">#launch</span>
+
+Outcome
+Publish the new site with the onboarding flow ready.
+
+Deadline
+18th September
+
+Next actions
+- Confirm the final copy
+- Review the release checklist</code></pre>
+                        </div>
+
+                        <h2 id="context">Keep project context connected</h2>
+                        <p>Projects are most useful when they point back to the notes where decisions, research, and updates live. Link the scope to a kickoff note, a decision log, or the task note that needs attention next.</p>
+                        <p>This keeps the project view concise while preserving the reasoning behind its status.</p>
+
+                        <h2 id="review">Review progress without rebuilding it</h2>
+                        <ul>
+                            <li>Check the next tasks and their due dates.</li>
+                            <li>Open the linked note when a decision needs context.</li>
+                            <li>Update the scope when the outcome changes.</li>
+                            <li>Leave a short note about what changed and why.</li>
+                        </ul>
+                        <p>The goal is a clear working view, not another place where information can drift away from the work.</p>
+
+                        <div class="docs-note">
+                            <p><strong>Projects are a Core feature.</strong> Notes, tasks, and tags remain the foundation; Projects add a shared scope when the work needs it.</p>
+                        </div>
+                    </div>
+
+                    <nav class="docs-article-footer" aria-label="Article navigation">
+                        <a href="tables.html"><span>Back</span><strong>Advanced tables</strong></a>
+                        <a href="bring-your-own-ai.html"><span>Next</span><strong>Bring your own AI →</strong></a>
+                    </nav>
+                </article>
+                <aside class="docs-toc" aria-label="On this page">
+                    <h2>On this page</h2>
+                    <a href="#scope">Start with the scope</a>
+                    <a href="#context">Keep context connected</a>
+                    <a href="#review">Review progress</a>
+                </aside>
+            </div>
+            <footer class="docs-site-footer"><a href="../index.html">Back to documentation home →</a></footer>
+        </div>
+    </main>
+</div>
+</body>
+</html>

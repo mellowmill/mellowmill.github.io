@@ -1,0 +1,335 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - link [ref=f7e4] [cursor=pointer]:
+        - /url: index.html
+      - link "MellowMill" [ref=f7e6] [cursor=pointer]:
+        - /url: index.html
+      - list [ref=f7e8]:
+        - listitem [ref=f7e9]:
+          - link "Home" [ref=f7e10] [cursor=pointer]:
+            - /url: index.html
+        - listitem [ref=f7e11]:
+          - link "Features" [ref=f7e12] [cursor=pointer]:
+            - /url: "#features"
+        - listitem [ref=f7e13]:
+          - link "Pricing" [ref=f7e14] [cursor=pointer]:
+            - /url: "#pricing"
+        - listitem [ref=f7e15]:
+          - link "Updates" [ref=f7e16] [cursor=pointer]:
+            - /url: updates.html
+        - listitem [ref=f7e17]:
+          - link "Docs" [ref=f7e18] [cursor=pointer]:
+            - /url: documentation/index.html
+        - listitem [ref=f7e19]:
+          - link "About" [ref=f7e20] [cursor=pointer]:
+            - /url: about.html
+    - generic [ref=f7e21]:
+      - heading "One place for the questions, decisions, and actions behind your projects." [level=1] [ref=f7e22]: One place for the questions,decisions, and actions behind your projects.
+      - paragraph [ref=f7e23]: MellowMill helps you capture the questions you are working through, record the decisions you make, and turn those decisions into actions without losing the context along the way.
+      - button "See Plans" [ref=f7e24] [cursor=pointer]
+      - img "MellowMill interface" [ref=f7e25]
+  - generic [ref=f7e26]:
+    - heading "Our Core Values" [level=2] [ref=f7e27]
+    - paragraph [ref=f7e28]: We believe in these values so we built MellowMill around them.
+    - generic "Why MellowMill" [ref=f7e29]:
+      - generic [ref=f7e30]:
+        - heading "Privacy" [level=3] [ref=f7e31]
+        - paragraph [ref=f7e32]: Your files stay on your machine. No cloud servers storing your notes, and no one else accessing your work.
+      - generic [ref=f7e33]:
+        - heading "Performance" [level=3] [ref=f7e34]
+        - paragraph [ref=f7e35]: Built to be fast and efficient, so you stay productive as your work grows.
+      - generic [ref=f7e36]:
+        - heading "Price" [level=3] [ref=f7e37]
+        - paragraph [ref=f7e38]: Start for free, then pay once for the Core or Professional version. No subscriptions and all future updates included.
+    - heading "Always free tools to get you started" [level=2] [ref=f7e39]
+    - paragraph [ref=f7e40]: Designed for work, built for you
+    - generic [ref=f7e41]:
+      - generic [ref=f7e42]:
+        - generic [ref=f7e43]: Writing
+        - heading "Intuitive Editor" [level=3] [ref=f7e44]
+        - paragraph [ref=f7e45]:
+          - text: We've created Margin, a new file format that is designed for real work, not just for formatting. This allows us to capture structure and meaning, tasks, decisions, justification and more all in one fluid syntax. We go beyond formatting.
+          - link "Learn more →" [ref=f7e46] [cursor=pointer]:
+            - /url: margin-format-guide.html
+        - paragraph [ref=f7e47]: With Margin as the foundation, we custom-built an editor from the ground up with usability, performance, and beauty in mind. Every interaction, every animation, every pixel — obsessively refined so writing feels effortless.
+      - img "Margin Language in action" [ref=f7e50]
+    - generic [ref=f7e52]:
+      - generic [ref=f7e53]:
+        - generic [ref=f7e54]: Organization
+        - heading "Task Tracking" [level=3] [ref=f7e55]
+        - paragraph [ref=f7e56]: Tasks live alongside your notes — not in a separate app. Check them off and filter across every note instantly.
+      - img "Task tracking interface" [ref=f7e59]
+    - generic [ref=f7e60]:
+      - generic [ref=f7e61]:
+        - generic [ref=f7e62]: Speed
+        - heading "Instant Search" [level=3] [ref=f7e63]
+        - paragraph [ref=f7e64]: Full-text search across every note, every tag, every file. Results appear as you type — no waiting, no indexing delays.
+      - img "Instant search results" [ref=f7e67]
+    - generic [ref=f7e68]:
+      - generic [ref=f7e69]:
+        - heading "Image & File Support" [level=4] [ref=f7e75]
+        - paragraph [ref=f7e76]: Embed images and attach files directly in your notes. Drag and drop to add visuals, documents, and references without leaving your workflow.
+      - generic [ref=f7e77]:
+        - heading "Dark Mode" [level=4] [ref=f7e81]
+        - paragraph [ref=f7e82]: Switch to a darker interface whenever you need it. Dark mode is easy on the eyes and keeps your workspace comfortable, day or night.
+      - generic [ref=f7e83]:
+        - heading "Unlimited Usage" [level=4] [ref=f7e88]
+        - paragraph [ref=f7e89]: Create as many notes, tasks, and tags as you need. No artificial limits means your workspace can grow with your ideas and your work.
+  - generic [ref=f7e91]:
+    - heading "Unlock your potential with MellowMill Core" [level=2] [ref=f7e92]
+    - paragraph [ref=f7e93]: Tools for professionals who demand more.
+    - generic [ref=f7e94]:
+      - generic [ref=f7e95]:
+        - generic [ref=f7e96]: Tables
+        - heading "Advanced Tables" [level=3] [ref=f7e97]
+        - paragraph [ref=f7e98]: Go beyond standard tables with rich styling options and spreadsheet-like functions built right in. Easily add sums, averages, counts, and more — no formulas to memorise, just results where you need them.
+      - img "Advanced tables" [ref=f7e101]
+    - generic [ref=f7e102]:
+      - generic [ref=f7e103]:
+        - generic [ref=f7e104]: Tasks
+        - heading "Advanced Tasks" [level=3] [ref=f7e105]
+        - paragraph [ref=f7e106]: MellowMill automatically extracts task due dates directly from the text you type and lets you mark tasks as important — no separate fields to fill in. Define sub-tasks to break work into steps, and let your notes do the organizing for you.
+      - img "Advanced tasks" [ref=f7e109]
+    - generic [ref=f7e110]:
+      - generic [ref=f7e111]:
+        - generic [ref=f7e112]: Projects
+        - heading "Projects" [level=3] [ref=f7e113]
+        - paragraph [ref=f7e114]: Define project scope, tasks, and due dates in one central place. Everything linked back to the notes where the work actually lives — making it easy to track progress across all your notebooks without losing context.
+      - img "Projects" [ref=f7e117]
+    - generic [ref=f7e119]:
+      - generic [ref=f7e120]: BYO AI
+      - heading "Bring Your Own AI" [level=3] [ref=f7e121]
+      - paragraph [ref=f7e122]:
+        - text: Connect your favourite AI tooling to your notes through an MCP connection. Start with Claude Code today, with ChatGPT, Gemini, and local models coming soon. Because Margin captures structure (decisions, justifications, tasks, and tags), your AI doesn't just read prose like it would with Markdown — it understands
+        - strong [ref=f7e123]: what
+        - text: you decided,
+        - strong [ref=f7e124]: why
+        - text: you decided it, and
+        - strong [ref=f7e125]: how
+        - text: you work. Ask it questions about your projects and get answers grounded in your actual reasoning.
+    - generic [ref=f7e126]:
+      - generic [ref=f7e127]:
+        - heading "Markdown Support" [level=4] [ref=f7e132]
+        - paragraph [ref=f7e133]: Paste or import any Markdown document and MellowMill converts it to Margin format instantly. Export back to Markdown any time — your notes stay portable, whatever format you need.
+      - generic [ref=f7e134]:
+        - heading "30 Day History" [level=4] [ref=f7e139]
+        - paragraph [ref=f7e140]: Every change you make is automatically saved for 30 days. Browse your full history, see exactly what changed, and roll back to any previous version.
+      - generic [ref=f7e141]:
+        - heading "A Home for Your Information" [level=4] [ref=f7e148]
+        - paragraph [ref=f7e149]: A focused dashboard brings your notes, tasks, projects, and priorities together in one place, so the important things are always close at hand.
+  - generic [ref=f7e152]:
+    - blockquote [ref=f7e155]: I spent years juggling physical notebooks, to-do apps, project boards, and numerous systems across dozens of tools. Nothing ever worked for me for more than a week, some were just distractions from work. Decisions got buried in emails, tasks slipped through the cracks, and I was spending more time trying to manage my systems than actually doing the work. Eventually I stopped looking for the right tool and decided to build it myself — something that solved real problems, not someone else's idea of productivity.
+    - generic [ref=f7e156]: Creator of MellowMill
+  - generic [ref=f7e159]:
+    - heading "Compare Plans" [level=2] [ref=f7e160]
+    - paragraph [ref=f7e161]: Simple pricing for everyone - not a subscription in sight. Pay once and get all future updates to your plan for free!
+    - generic [ref=f7e162]:
+      - generic [ref=f7e163]:
+        - generic [ref=f7e164]:
+          - generic [ref=f7e165]:
+            - generic [ref=f7e166]: Free
+            - generic [ref=f7e167]:
+              - generic [ref=f7e168]: £
+              - text: "0"
+            - generic [ref=f7e169]: Forever
+          - list [ref=f7e170]:
+            - listitem [ref=f7e171]:
+              - generic [ref=f7e172]: 
+              - text: Unlimited Notes
+            - listitem [ref=f7e173]:
+              - generic [ref=f7e174]: 
+              - text: Unlimited Tasks
+            - listitem [ref=f7e175]:
+              - generic [ref=f7e176]: 
+              - text: Unlimited Tags
+            - listitem [ref=f7e177]:
+              - generic [ref=f7e178]: 
+              - text: Local Data Storage
+            - listitem [ref=f7e179]:
+              - generic [ref=f7e180]: 
+              - text: Lifetime Updates
+            - listitem [ref=f7e181]:
+              - generic [ref=f7e182]: 
+              - text: Tables
+            - listitem [ref=f7e183]:
+              - generic [ref=f7e184]: 
+              - text: Interactive Hyperlinks
+            - listitem [ref=f7e185]:
+              - generic [ref=f7e186]: 
+              - text: Image & File Support
+            - listitem [ref=f7e187]:
+              - generic [ref=f7e188]: 
+              - text: Import & Paste Markdown
+            - listitem [ref=f7e189]:
+              - generic [ref=f7e190]: 
+              - text: Dark Mode
+        - generic [ref=f7e191]:
+          - generic [ref=f7e192]: Most Popular
+          - generic [ref=f7e193]:
+            - generic [ref=f7e194]: Core
+            - generic [ref=f7e195]:
+              - generic [ref=f7e196]: £
+              - text: "40"
+            - generic [ref=f7e197]: One-time payment
+          - paragraph [ref=f7e198]: "Everything in Free, plus:"
+          - list [ref=f7e199]:
+            - listitem [ref=f7e200]:
+              - generic [ref=f7e201]: 
+              - text: Table Styles
+            - listitem [ref=f7e202]:
+              - generic [ref=f7e203]: 
+              - text: Table Formulas
+            - listitem [ref=f7e204]:
+              - generic [ref=f7e205]: 
+              - text: Task Due Dates & Important Markers
+            - listitem [ref=f7e206]:
+              - generic [ref=f7e207]: 
+              - text: Advanced Files
+            - listitem [ref=f7e208]:
+              - generic [ref=f7e209]: 
+              - text: Projects
+            - listitem [ref=f7e210]:
+              - generic [ref=f7e211]: 
+              - text: AI Integration
+            - listitem [ref=f7e212]:
+              - generic [ref=f7e213]: 
+              - text: 30 Day Version History
+        - generic [ref=f7e214]:
+          - generic [ref=f7e215]:
+            - generic [ref=f7e216]: Pro
+            - generic [ref=f7e217]:
+              - generic [ref=f7e218]: £
+              - text: "99"
+            - generic [ref=f7e219]: Coming soon
+          - paragraph [ref=f7e220]: "Everything in Core, plus:"
+          - list [ref=f7e221]:
+            - listitem [ref=f7e222]:
+              - generic [ref=f7e223]: 
+              - text: Export as a Website
+      - paragraph [ref=f7e224]: $ Prices shown in your local currency (GBP, EUR, or USD) based on your region.
+      - link " Download Now" [ref=f7e226] [cursor=pointer]:
+        - /url: https://apps.microsoft.com/detail/9N6VL15JKSPJ
+        - generic [ref=f7e227]: 
+        - generic [ref=f7e228]: Download Now
+      - iframe [ref=f7e230]:
+        - generic [ref=f8e2]:
+          - iframe
+          - generic [ref=f8e4]:
+            - generic [ref=f8e5]:
+              - link:
+                - /url: https://mellowmill.substack.com/
+              - generic [ref=f8e10]:
+                - textbox "Type your email..." [ref=f8e13]
+                - button "Subscribe" [disabled] [ref=f8e14]
+              - generic [ref=f8e16]:
+                - text: By subscribing you agree to
+                - link "Substack's Terms of Use" [ref=f8e17] [cursor=pointer]:
+                  - /url: https://mellowmill.substack.com/tos?utm_source=embed_publication
+                - text: ","
+                - link "our Privacy Policy" [ref=f8e18] [cursor=pointer]:
+                  - /url: https://mellowmill.substack.com/privacy?utm_source=embed_publication
+                - text: and
+                - link "our Information collection notice" [ref=f8e19] [cursor=pointer]:
+                  - /url: https://substack.com/ccpa?utm_source=embed_publication#personal-data-collected
+            - link "Substack":
+              - /url: https://substack.com/?utm_source=embed&utm_content=mellowmill
+              - img "Substack" [ref=f8e20] [cursor=pointer]
+          - region "Notifications (F8)":
+            - list
+  - generic [ref=f7e232]:
+    - heading "Frequently Asked Questions" [level=2] [ref=f7e233]
+    - paragraph [ref=f7e234]: Everything you need to know before getting started.
+    - generic [ref=f7e235]:
+      - group [ref=f7e236]:
+        - generic "What is Margin Language and how is it different from Markdown? +" [ref=f7e237] [cursor=pointer]
+      - group [ref=f7e238]:
+        - generic "Is my data stored in the cloud? +" [ref=f7e239] [cursor=pointer]
+      - group [ref=f7e240]:
+        - generic "Do I need to pay a subscription? +" [ref=f7e241] [cursor=pointer]
+      - group [ref=f7e242]:
+        - generic "What platforms does MellowMill support? +" [ref=f7e243] [cursor=pointer]
+      - group [ref=f7e244]:
+        - generic "Can I import notes from other apps? +" [ref=f7e245] [cursor=pointer]
+  - contentinfo [ref=f7e247]:
+    - generic [ref=f7e248]:
+      - generic [ref=f7e249]:
+        - img "MellowMill" [ref=f7e250]
+        - paragraph [ref=f7e251]: Productivity for busy minds.
+      - generic [ref=f7e252]:
+        - generic [ref=f7e253]:
+          - heading "Product" [level=4] [ref=f7e254]
+          - list [ref=f7e255]:
+            - listitem [ref=f7e256]:
+              - link "Features" [ref=f7e257] [cursor=pointer]:
+                - /url: "#features"
+            - listitem [ref=f7e258]:
+              - link "Core" [ref=f7e259] [cursor=pointer]:
+                - /url: "#core"
+            - listitem [ref=f7e260]:
+              - link "Download" [ref=f7e261] [cursor=pointer]:
+                - /url: "#windows-download"
+            - listitem [ref=f7e262]:
+              - link "Updates" [ref=f7e263] [cursor=pointer]:
+                - /url: updates.html
+        - generic [ref=f7e264]:
+          - heading "Resources" [level=4] [ref=f7e265]
+          - list [ref=f7e266]:
+            - listitem [ref=f7e267]:
+              - link "Documentation" [ref=f7e268] [cursor=pointer]:
+                - /url: documentation/index.html
+            - listitem [ref=f7e269]:
+              - link "Margin Language" [ref=f7e270] [cursor=pointer]:
+                - /url: margin-format-guide.html
+        - generic [ref=f7e271]:
+          - heading "Company" [level=4] [ref=f7e272]
+          - list [ref=f7e273]:
+            - listitem [ref=f7e274]:
+              - link "About" [ref=f7e275] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f7e276]:
+              - link "Contact" [ref=f7e277] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f7e278]:
+              - link "Privacy Policy" [ref=f7e279] [cursor=pointer]:
+                - /url: "#"
+    - generic [ref=f7e280]:
+      - paragraph [ref=f7e281]: © MellowMill Ltd 2026. All rights reserved.
+      - generic [ref=f7e282]: MellowMill Ltd, 82A James Carter Road, Mildenhall, IP28 7DE
+  - generic:
+    - generic:
+      - button "×"
+      - heading "Get in touch" [level=3]
+      - paragraph: "Got a question, found a bug, or simply want to share a joke? Feel free to drop us a line at:"
+      - paragraph:
+        - link "hello@mellowmill.app":
+          - /url: mailto:hello@mellowmill.app
+  - generic:
+    - generic:
+      - button "×"
+      - heading "Privacy Policy" [level=3]
+      - generic:
+        - paragraph:
+          - strong: "Effective date:"
+          - text: April 17, 2026
+        - paragraph: MellowMill ("we", "us", "our") respects your privacy. This policy explains what data we collect through our website and how we use it.
+        - heading "Website Analytics" [level=4]
+        - paragraph: "We use Cloudflare Web Analytics, a privacy-first analytics service, to understand how visitors interact with our website. It collects aggregate, anonymous statistics such as:"
+        - list:
+          - listitem: Pages visited and time spent on each page
+          - listitem: Referring website or source
+          - listitem: Browser type and device information
+          - listitem: Approximate geographic location (country/city level)
+        - paragraph: Cloudflare Web Analytics does not use cookies, local storage, or any other client-side state, and does not fingerprint or individually track visitors. The data collected is completely anonymous and cannot be used to identify you.
+        - heading "MellowMill Application" [level=4]
+        - paragraph: MellowMill is a local-first application. Your notes, tasks, and files are stored entirely on your device. We do not collect, transmit, or have access to any of your content.
+        - heading "Cookies" [level=4]
+        - paragraph: Our website does not use cookies, trackers, or fingerprinting of any kind.
+        - heading "Third-Party Services" [level=4]
+        - paragraph: We use Stripe for processing purchases. Their privacy policy governs any data collected during checkout.
+        - heading "Contact" [level=4]
+        - paragraph:
+          - text: If you have questions about this policy, email us at
+          - link "hello@mellowmill.app":
+            - /url: mailto:hello@mellowmill.app
+          - text: .

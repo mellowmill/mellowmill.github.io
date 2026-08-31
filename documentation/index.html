@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MellowMill documentation: get started, learn the basics, and explore Core features.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f7f6f3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="docs.css">
+    <script src="docs.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../icon_recreated.svg">
+    <title>Documentation — MellowMill</title>
+</head>
+<body class="docs-page docs-page--home">
+<!--
+THESIS: Documentation makes MellowMill's structure feel approachable and refuses a marketing-only splash page.
+OWN-WORLD: MellowMill cream, purple, and charcoal in a quiet editorial workspace with fine rules and plain cards.
+STORY: A new or returning user finds the right starting point, learns the core workflow, and then expands into Core.
+FIRST VIEWPORT: A generous title and two clear routes sit beside a compact sidebar that exposes every section.
+FORM: Read-mode documentation index, extending the established MellowMill site rather than replacing it.
+-->
+<div class="docs-shell">
+    <aside class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar-top">
+            <a class="docs-brand" href="../index.html">
+                <img src="../icon_recreated_64.png" alt="">
+                <span>MellowMill</span>
+            </a>
+            <button class="docs-menu-toggle" type="button" aria-expanded="false" aria-controls="docs-nav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M4 7h16M4 12h16M4 17h16"/>
+                </svg>
+                <span data-menu-label>Menu</span>
+            </button>
+        </div>
+
+        <label class="docs-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="6.5"/>
+                <path d="m16 16 4.5 4.5"/>
+            </svg>
+            <span class="is-hidden">Search documentation</span>
+            <input type="search" placeholder="Search documentation" aria-label="Search documentation">
+        </label>
+
+        <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+            <a class="docs-nav-home" href="index.html" data-search="documentation home overview" aria-current="page">Documentation home</a>
+
+            <div class="docs-nav-group">
+                <div class="docs-nav-heading">Get Started</div>
+                <a href="get-started/index.html" data-search="get started overview basics">Overview</a>
+                <a href="get-started/installation.html" data-search="install installation download launch workspace">Install MellowMill</a>
+                <a href="get-started/opening-your-workspace.html" data-search="opening workspace folder files local">Opening your workspace</a>
+                <a href="get-started/first-note.html" data-search="first note create write margin">Create your first note</a>
+                <a href="../margin-format-guide.html" data-search="margin format language markdown syntax">Understanding Margin</a>
+            </div>
+
+            <div class="docs-nav-group">
+                <div class="docs-nav-heading">Basic functionality</div>
+                <a href="basic-functionality/index.html" data-search="basic functionality overview">Overview</a>
+                <a href="basic-functionality/notes-and-notebooks.html" data-search="notes notebooks organize links files">Notes and notebooks</a>
+                <a href="basic-functionality/tasks.html" data-search="tasks task due dates priorities next actions">Tasks</a>
+                <a href="basic-functionality/tags.html" data-search="tags tag organize labels themes">Tags</a>
+                <a href="basic-functionality/search.html" data-search="search find filter workspace">Search your workspace</a>
+            </div>
+
+            <div class="docs-nav-group">
+                <div class="docs-nav-heading">Core Features</div>
+                <a href="core-features/index.html" data-search="core features overview">Overview</a>
+                <a href="core-features/tables.html" data-search="tables advanced functions sums averages">Advanced tables</a>
+                <a href="core-features/projects.html" data-search="projects scope deadlines">Projects</a>
+                <a href="core-features/bring-your-own-ai.html" data-search="ai mcp claude code provider">Bring your own AI</a>
+            </div>
+
+            <div class="docs-nav-empty" role="status">No matching pages.</div>
+        </nav>
+
+        <div class="docs-sidebar-foot">
+            <a class="docs-back-link" href="../index.html">
+                <span aria-hidden="true">←</span>
+                Back to mellowmill.app
+            </a>
+        </div>
+    </aside>
+
+    <main class="docs-main">
+        <div class="docs-main-inner">
+            <div class="docs-breadcrumb">
+                <a href="../index.html">MellowMill</a>
+                <span class="docs-breadcrumb-separator">/</span>
+                <span>Documentation</span>
+            </div>
+
+            <header class="docs-hero">
+                <h1>Make the work<br>make sense.</h1>
+                <p class="docs-hero-lead">A practical guide to MellowMill: get set up, keep notes and tasks together, and add the Core features when your workflow needs more room.</p>
+                <div class="docs-hero-actions">
+                    <a class="docs-button docs-button--primary" href="get-started/index.html">Start with the basics <span aria-hidden="true">→</span></a>
+                    <a class="docs-button docs-button--secondary" href="core-features/index.html">Browse Core features</a>
+                </div>
+            </header>
+
+            <div class="docs-quick-note">
+                <p><strong>Working in Margin?</strong> See the full format guide for syntax, tasks, tags, links, and structured blocks. <a href="../margin-format-guide.html">Read the guide →</a></p>
+            </div>
+
+            <section class="docs-section" aria-labelledby="get-started-heading">
+                <div class="docs-section-heading">
+                    <div>
+                        <h2 id="get-started-heading">Get started</h2>
+                        <p>Go from download to a useful first note without a long setup ritual.</p>
+                    </div>
+                    <a href="get-started/index.html">View section →</a>
+                </div>
+                <div class="docs-guide-list">
+                    <a class="docs-guide-row" href="get-started/installation.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Install MellowMill</h3>
+                            <p>Set up the app and choose where your workspace lives.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="get-started/opening-your-workspace.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Opening your workspace</h3>
+                            <p>Open or create the folder where your work will live.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="get-started/first-note.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Create your first note</h3>
+                            <p>Capture a decision, a task, and the context around them.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="../margin-format-guide.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Understand Margin</h3>
+                            <p>Learn the plain-text format that gives your notes useful structure.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="docs-section" aria-labelledby="basic-heading">
+                <div class="docs-section-heading">
+                    <div>
+                        <h2 id="basic-heading">Basic functionality</h2>
+                        <p>Build a lightweight system around the work you already do.</p>
+                    </div>
+                    <a href="basic-functionality/index.html">View section →</a>
+                </div>
+                <div class="docs-guide-list">
+                    <a class="docs-guide-row" href="basic-functionality/notes-and-notebooks.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Notes and notebooks</h3>
+                            <p>Keep the source material, links, and decisions in one place.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="basic-functionality/tasks.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Tasks</h3>
+                            <p>Turn notes into visible next actions.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="basic-functionality/tags.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Tags</h3>
+                            <p>Connect related notes with a light, memorable index.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="basic-functionality/search.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Search your workspace</h3>
+                            <p>Find the note, task, or tag you need without remembering where it lives.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="docs-section" aria-labelledby="core-heading">
+                <div class="docs-section-heading">
+                    <div>
+                        <h2 id="core-heading">Core features</h2>
+                        <p>Add deeper structure when a simple note needs to become a working system.</p>
+                    </div>
+                    <a href="core-features/index.html">View section →</a>
+                </div>
+                <div class="docs-guide-list">
+                    <a class="docs-guide-row" href="core-features/tables.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Advanced tables</h3>
+                            <p>Use rich tables and spreadsheet-like functions inside your notes.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="core-features/projects.html">
+                        <div class="docs-guide-row-copy">
+                            <h3>Projects</h3>
+                            <p>Give a body of work its own scope, tasks, and deadlines.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="docs-guide-row" href="core-features/bring-your-own-ai.html">
+                        <span class="docs-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7zM18.5 16.5l.7 2.3 2.3.7-2.3.7-.7 2.3-.7-2.3-2.3-.7 2.3-.7z"/>
+                            </svg>
+                        </span>
+                        <div class="docs-guide-row-copy">
+                            <h3>Bring your own AI</h3>
+                            <p>Connect an AI tool through MCP while keeping your workspace yours.</p>
+                        </div>
+                        <span class="docs-guide-action">Read <span aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="docs-callout">
+                <span class="docs-callout-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 10v6M12 7.5h.01"/>
+                    </svg>
+                </span>
+                <p><strong>New to MellowMill?</strong> Start with <a href="get-started/installation.html">Install MellowMill</a>, then create one note that represents the work in front of you today.</p>
+            </div>
+
+            <footer class="docs-site-footer">
+                MellowMill is local-first by design. <a href="../privacy.html">Read our privacy policy</a> or <a href="../index.html">return to the product site</a>.
+            </footer>
+        </div>
+    </main>
+</div>
+</body>
+</html>

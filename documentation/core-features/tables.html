@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use MellowMill Core advanced tables for structured data and spreadsheet-like functions.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f7f6f3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../docs.css">
+    <script src="../docs.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../../icon_recreated.svg">
+    <title>Advanced Tables — MellowMill Documentation</title>
+</head>
+<body class="docs-page">
+<div class="docs-shell">
+    <aside class="docs-sidebar" id="docs-sidebar">
+        <div class="docs-sidebar-top"><a class="docs-brand" href="../../index.html"><img src="../../icon_recreated_64.png" alt=""><span>MellowMill</span></a><button class="docs-menu-toggle" type="button" aria-expanded="false" aria-controls="docs-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-menu-label>Menu</span></button></div>
+        <label class="docs-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="is-hidden">Search documentation</span><input type="search" placeholder="Search documentation" aria-label="Search documentation"></label>
+        <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+            <a class="docs-nav-home" href="../index.html" data-search="documentation home overview">Documentation home</a>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Get Started</div><a href="../get-started/index.html" data-search="get started overview basics">Overview</a><a href="../get-started/installation.html" data-search="install installation download launch workspace">Install MellowMill</a><a href="../get-started/opening-your-workspace.html" data-search="opening workspace folder files local">Opening your workspace</a><a href="../get-started/first-note.html" data-search="first note create write margin">Create your first note</a><a href="../../margin-format-guide.html" data-search="margin format language markdown syntax">Understanding Margin</a></div>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Basic functionality</div><a href="../basic-functionality/index.html" data-search="basic functionality overview">Overview</a><a href="../basic-functionality/notes-and-notebooks.html" data-search="notes notebooks organize links files">Notes and notebooks</a><a href="../basic-functionality/tasks.html" data-search="tasks task due dates priorities next actions">Tasks</a><a href="../basic-functionality/tags.html" data-search="tags tag organize labels themes">Tags</a><a href="../basic-functionality/search.html" data-search="search find filter workspace">Search your workspace</a></div>
+            <div class="docs-nav-group"><div class="docs-nav-heading">Core Features</div><a href="index.html" data-search="core features overview">Overview</a><a href="tables.html" data-search="tables advanced functions sums averages" aria-current="page">Advanced tables</a><a href="projects.html" data-search="projects scope deadlines">Projects</a><a href="bring-your-own-ai.html" data-search="ai mcp claude code provider">Bring your own AI</a></div>
+            <div class="docs-nav-empty" role="status">No matching pages.</div>
+        </nav>
+        <div class="docs-sidebar-foot"><a class="docs-back-link" href="../../index.html"><span aria-hidden="true">←</span>Back to mellowmill.app</a></div>
+    </aside>
+
+    <main class="docs-main">
+        <div class="docs-main-inner">
+            <div class="docs-breadcrumb"><a href="../../index.html">MellowMill</a><span class="docs-breadcrumb-separator">/</span><a href="../index.html">Documentation</a><span class="docs-breadcrumb-separator">/</span><a href="index.html">Core features</a><span class="docs-breadcrumb-separator">/</span><span>Advanced tables</span></div>
+            <div class="docs-content-layout">
+                <article class="docs-article">
+                    <div class="docs-article-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16M16 4v16"/></svg>Core feature</div>
+                    <h1>Advanced tables</h1>
+                    <p class="docs-article-lead">Keep structured data inside the note where you use it, with richer styling and spreadsheet-like functions when a simple list is not enough.</p>
+
+                    <div class="docs-article-body">
+                        <h2 id="when">When to use a table</h2>
+                        <p>Tables are useful when you need to compare options, track a set of values, or keep a small working dataset beside the explanation around it. Because the table lives in the note, the numbers stay close to the decision they support.</p>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead><tr><th>Option</th><th>Owner</th><th>Status</th></tr></thead>
+                                <tbody><tr><td>Existing flow</td><td>Product</td><td>Review</td></tr><tr><td>New flow</td><td>Design</td><td>Draft</td></tr><tr><td>Hybrid flow</td><td>Team</td><td>Open</td></tr></tbody>
+                            </table>
+                        </div>
+
+                        <h2 id="functions">Use functions where they help</h2>
+                        <p>Core advanced tables add spreadsheet-like functions such as sums, averages, and counts. Use them for the small calculations that belong with a project note or decision, without sending the context to a separate spreadsheet.</p>
+                        <div class="docs-code">
+                            <div class="docs-code-label">A table can answer the next question</div>
+                            <pre><code>Budget items
+Design             1200
+Development        2400
+Testing             600
+
+Total              4200</code></pre>
+                        </div>
+                        <p>The exact calculation belongs to the table you are building; the useful part is that the result can stay beside the assumptions and source material.</p>
+
+                        <h2 id="workflow">Keep the explanation nearby</h2>
+                        <ul>
+                            <li>Introduce what the rows and columns represent.</li>
+                            <li>Use a table for values that benefit from comparison.</li>
+                            <li>Record the conclusion underneath, in plain language.</li>
+                            <li>Link the note to the project or decision that uses it.</li>
+                        </ul>
+
+                        <div class="docs-note">
+                            <p><strong>Core is additive.</strong> The everyday note and table workflow remains useful without advanced calculations; use Core when richer data earns its place.</p>
+                        </div>
+                    </div>
+
+                    <nav class="docs-article-footer" aria-label="Article navigation">
+                        <a href="index.html"><span>Back</span><strong>Core features overview</strong></a>
+                        <a href="projects.html"><span>Next</span><strong>Projects →</strong></a>
+                    </nav>
+                </article>
+                <aside class="docs-toc" aria-label="On this page">
+                    <h2>On this page</h2>
+                    <a href="#when">When to use a table</a>
+                    <a href="#functions">Use helpful functions</a>
+                    <a href="#workflow">Keep explanations nearby</a>
+                </aside>
+            </div>
+            <footer class="docs-site-footer"><a href="../index.html">Back to documentation home →</a></footer>
+        </div>
+    </main>
+</div>
+</body>
+</html>

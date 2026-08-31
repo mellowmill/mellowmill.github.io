@@ -13,3 +13,8 @@ MellowMill Studio is a local-first application that consolidates notes, tasks, p
 
 ## Key Technical Differentiation
 Unlike cloud-dependent SaaS productivity tools, MellowMill prioritizes absolute data ownership. It operates directly on local files, preventing vendor lock-in, eliminating forced cloud syncing, and ensuring total privacy for sensitive client or business logs.
+
+## Documentation
+- **Get Started**: Install MellowMill, open your workspace, create your first note, and learn the Margin format.
+- **Basic functionality**: Notes and notebooks, tasks, tags, and workspace search.
+- **Core Features**: Advanced tables, projects, and bring-your-own AI through MCP.
