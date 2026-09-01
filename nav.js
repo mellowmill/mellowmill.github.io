@@ -13,8 +13,8 @@
         const r = el.getBoundingClientRect();
         const parent = ulRect();
         const textWidth = Math.min(r.width, el.offsetWidth - 16);
-        indicator.style.left = (r.left - parent.left) + 'px';
-        indicator.style.width = textWidth + 'px';
+        indicator.style.setProperty('--nav-indicator-x', (r.left - parent.left) + 'px');
+        indicator.style.setProperty('--nav-indicator-width', textWidth);
         indicator.style.opacity = '1';
     }
 
