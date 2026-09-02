@@ -1,0 +1,107 @@
+<!doctype html><html lang="en" data-os="mac"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Basic Formatting</title><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="margin-renderer.css"><link rel="stylesheet" href="publish.css"></head><body><div class="publish-layout has-sidebar has-toc"><aside class="publish-sidebar"><a class="publish-workspace-title" href="index.html"><div class="margin-document">
+<p><img src="assets/Header/pasted_image_20260831141118_5fd6f6b9.png" data-image-src="file://pasted_image_20260831141118_5fd6f6b9.png" class="inline-image" alt="pasted_image_20260831141118_5fd6f6b9.png" loading="lazy"></p>
+<h4>MellowMill Documentation</h4>
+<hr class="margin-hr"></div></a><a class="publish-home-link" href="index.html">Home</a><section class="publish-nav-group"><h3 class="publish-nav-group-title">Getting Started</h3><ul><li><a href="Installation.html">Installation</a></li><li><a href="Opening your Workspace.html">Opening your Workspace</a></li><li><a href="Notes.html">Notes</a></li></ul></section><section class="publish-nav-group"><h3 class="publish-nav-group-title">Basic Functionality</h3><ul><li><a href="Basic Formatting.html" aria-current="page">Basic Formatting</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Decisions.html">Decisions</a></li><li><a href="Tables.html">Tables</a></li></ul></section><section class="publish-nav-group"><h3 class="publish-nav-group-title">Updates</h3><ul><li><a href="September 2026.html">September 2026</a></li></ul></section></aside><main class="publish-main"><article class="publish-content publish-article"><div class="margin-document"><h1>Basic Formatting</h1>
+<p>Margin is a plain-text format for notes. Each line is interpreted by its prefix, so a note stays readable in a text editor while rendering as a structured document in MellowMill.</p>
+<p><br></p>
+<h2 id="start-with-a-title">Start with a title</h2>
+<p>The first line in a note the note title, and is required for the note. Each note needs to have a unique title, if you try and create a note with a duplicate title you will be notified of the conflict.&nbsp;</p>
+<p><br></p>
+<h2 id="approach">Approach</h2>
+<p>Working with notes is designed to be a keyboard-first approach, so that you can be as effecient as possible. &nbsp;</p>
+<p><br></p>
+<p>You can press a backslash (\) character at the start of a line to display a visual selection of line types. This allows you to set the line type without remembering the syntax.&nbsp;</p>
+<p><br></p>
+<p>However, using the Margin syntax makes the editing experience as fast and effecient as possible. We would recommend learning some of the syntax where possible.&nbsp;</p>
+<p><br></p>
+<h2 id="headings">Headings</h2>
+<p>Headings are created by using the &gt; character at the start of the line. Up to three are supported to give three level of headings within the note.&nbsp;</p>
+<p><br></p>
+<p>Use `&gt;` for a first-level heading, `&gt;&gt;` for a second-level heading, and `&gt;&gt;&gt;` for a third-level heading. Leave the prefix followed by a space.</p>
+<p><br></p>
+<p class="code-block">&gt; Heading 1</p>
+<p class="code-block">&gt;&gt; Heading 2</p>
+<p class="code-block">&gt;&gt;&gt; Heading 3</p>
+<p><br></p>
+<p>tasks</p>
+<p>Tasks are added in a note as a line of text.&nbsp;</p>
+<p><br></p>
+<h3 id="not-started-tasks">Not Started Tasks</h3>
+<p>These are denoted by using a hypen at the start of a line:</p>
+<p><br></p>
+<p class="code-block">- A pending task</p>
+<p><br></p>
+<p>This renders as:</p>
+<div class="task task-pending" data-task-status="pending"><span class="task-icon-holder" aria-label="Pending"><svg class="task-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></span><span>A pending task</span></div>
+<p><br></p>
+<h3 id="in-progress-tasks">In Progress Tasks</h3>
+<p>These are denoted by using a forward slash character:</p>
+<p><br></p>
+<p class="code-block">/ A task in progress</p>
+<p><br></p>
+<p>becomes:</p>
+<div class="task task-progress" data-task-status="progress"><span class="task-icon-holder" aria-label="In progress"><svg class="task-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8a6 6 0 1 0 12 0H2Z" fill="currentColor"></path></svg></span><span>A task in progress</span></div>
+<p><br></p>
+<h3 id="completed-tasks">Completed Tasks</h3>
+<p>These are denoted by using a pipe character:</p>
+<p class="code-block">| A completed task</p>
+<p>becomes:</p>
+<div class="task task-complete" data-task-status="complete"><span class="task-icon-holder" aria-label="Complete"><svg class="task-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="currentColor"></circle></svg></span><span>A completed task</span></div>
+<p><br></p>
+<h2 id="unordered-lists">Unordered lists</h2>
+<p>In order to create an unordered list we start the line of each list item with a *&nbsp;</p>
+<p class="code-block">* List item 1</p>
+<p class="code-block">* List item 2</p>
+<p><br></p>
+<p>This renderes as</p>
+<p><br></p>
+<div class="bullet">List item 1</div>
+<div class="bullet">List item 2</div>
+<p><br></p>
+<p>You can created indented list items by pressing the tab key while a list item is selected. Shift + tab lets you un-indent list items.&nbsp;</p>
+<p><br></p>
+<h2 id="ordered-lists">Ordered lists</h2>
+<p>Ordered lists lead with an increasing number as the list icon. These are defined by starting the line for each list item with a plus character.&nbsp;</p>
+<p><br></p>
+<p class="code-block">+ List item 1</p>
+<p class="code-block">+ List item 2</p>
+<p><br></p>
+<p>This renders as:</p>
+<p><br></p>
+<div class="numbered">List item 1</div>
+<div class="numbered">List item 2</div>
+<p><br></p>
+<p>You can created indented list items by pressing the tab key while a list item is selected. Shift + tab lets you un-indent list items.&nbsp;</p>
+<p><br></p>
+<h2 id="tags">Tags</h2>
+<p>Tags are used to categorize notes and the tasks that they contain. Think of a tag like a folder, except that as a note can have multiple tags a note can be in multiple ‘folders’ at the same time.&nbsp;</p>
+<p><br></p>
+<p>Place tags on their own line starting with a hash character.&nbsp;</p>
+<p class="code-block">#tag</p>
+<p><br></p>
+<p>For more information see <a class="wiki-link inline-wiki-link" data-note-id="z7vCmd00EegAqeV6" href="Tags.html" target="_blank" rel="noopener noreferrer">Tags</a></p>
+<p><br></p>
+<h2 id="hyperlinks">Hyperlinks</h2>
+<p>Hyperlinks allow you to link to external resources and web pages. To do this simply add a link to a line. Lines that start with https://&nbsp;are automatically rendered as a link or they can be rendered in the middle of a line of text.&nbsp;</p>
+<p><br></p>
+<p>You can edit a link to alter the display text and whether it displays as a button or as a link.&nbsp;</p>
+<p><br></p>
+<p class="external-link-line" data-link-url="https://mellowmill.app"><a href="https://mellowmill.app" class="external-link" target="_blank" rel="noopener noreferrer">https://mellowmill.app</a></p>
+<p><br></p>
+<p class="external-link-line" data-link-url="Https://mellowmill.app"><a href="Https://mellowmill.app" class="external-link link-button" target="_blank" rel="noopener noreferrer">Goto MellowMill</a></p>
+<p><br></p>
+<div class="info-block">Http links are not supported due to the connection being insecure</div>
+<p><br></p>
+<h2 id="linking-to-another-note">Linking to another note</h2>
+<p>Linking to other notes in your workspace is as simple as typing [[</p>
+<p><br></p>
+<p>This lets you select any existing note which then displays a clickable link. Alternatively you can create a new note by typing in a new note name.&nbsp;</p>
+<p><br></p>
+<h2 id="summary">Summary</h2>
+<p>The basic formatting that can be used in MellowMill can be summarized as:</p>
+<p><br></p>
+<table class="margin-table" data-widths="16,16,16"><colgroup><col style="width: 33.3333%"><col style="width: 33.3333%"><col style="width: 33.3333%"></colgroup><thead><tr><th>Prefix</th><th>Meaning</th><th>Examle</th></tr></thead><tbody><tr><td>&gt;</td><td>Header 1</td><td>&gt; Introduction</td></tr><tr><td>&gt;&gt;</td><td>Header 2</td><td>&gt;&gt; Summary</td></tr><tr><td>&gt;&gt;&gt;</td><td>Header 3</td><td>&gt;&gt;&gt; Details</td></tr><tr><td>-</td><td>Backlog task</td><td>- Pick-up milk</td></tr><tr><td>/</td><td>In progress task</td><td>/ Produce report</td></tr><tr><td>|</td><td>Completed task</td><td>| Review contract</td></tr><tr><td>*</td><td>Unordered list item</td><td>* List item</td></tr><tr><td>+</td><td>Numbered list item</td><td>+ List item 1</td></tr><tr><td>#</td><td>Tag</td><td># Project - Reduce Costs</td></tr><tr><td>https://</td><td>External linl</td><td><a href="https://mellowmill.app" class="external-link" target="_blank" rel="noopener noreferrer">https://mellowmill.app</a></td></tr></tbody></table>
+<p><br></p>
+<p><br></p>
+<p><span class="tag">#Basic Functionality</span></p></div><nav class="publish-page-nav" aria-label="Page navigation"><a class="next" href="Tags.html"><span class="publish-page-nav-label">Next</span><span class="publish-page-nav-title"><span class="publish-page-nav-title-text">Tags</span><span class="publish-page-nav-arrow" aria-hidden="true">&rarr;</span></span></a></nav></article><div class="publish-footer"><div class="publish-shared-note"><div class="margin-document">
+<p>Copyright MellowMill 2026 - All rights reserved</p></div></div></div></main><aside class="publish-toc"><h2>Contents</h2><nav aria-label="Table of contents"><ul><li class="toc-level-2"><a href="#start-with-a-title">Start with a title</a></li><li class="toc-level-2"><a href="#approach">Approach</a></li><li class="toc-level-2"><a href="#headings">Headings</a></li><li class="toc-level-3"><a href="#not-started-tasks">Not Started Tasks</a></li><li class="toc-level-3"><a href="#in-progress-tasks">In Progress Tasks</a></li><li class="toc-level-3"><a href="#completed-tasks">Completed Tasks</a></li><li class="toc-level-2"><a href="#unordered-lists">Unordered lists</a></li><li class="toc-level-2"><a href="#ordered-lists">Ordered lists</a></li><li class="toc-level-2"><a href="#tags">Tags</a></li><li class="toc-level-2"><a href="#hyperlinks">Hyperlinks</a></li><li class="toc-level-2"><a href="#linking-to-another-note">Linking to another note</a></li><li class="toc-level-2"><a href="#summary">Summary</a></li></ul></nav></aside></div></body></html>
