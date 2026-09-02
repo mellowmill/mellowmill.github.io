@@ -65,32 +65,73 @@
     </div>
 
     <div class="primary">
-        <h1 id="herotext">One place for the questions,<br>decisions, and actions behind your projects.</h1>
+        <h1 id="herotext">The workspace where thoughts become actionable steps and visible results.</h1>
         <p id="herodesc">
-            MellowMill helps you capture the questions you are working through, record the decisions you make, and turn those decisions into actions without losing the context along the way.
+            Capture ideas, organise knowledge, track tasks, and make progress visible.
         </p>
-        <button id="herocta">Start for free</button>
+        <div class="hero-action-row">
+            <ul class="hero-checklist" aria-label="Why choose MellowMill">
+                <li>Desktop App</li>
+                <li>One-Time Purchase</li>
+                <li>Your Data Stays Yours</li>
+                <li>Fast &amp; Efficient</li>
+            </ul>
+            <span class="hero-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg>
+            </span>
+            <button id="herocta">Start for free</button>
+        </div>
         <img id="heroimg" src="images/hero.png" width="1200" height="800" fetchpriority="high" decoding="async" alt="MellowMill interface">
     </div>
 </div>
 
-<section id="features" class="features">
-    <h2 class="features-heading">Our Core Values</h2>
-    <p class="features-sub">We believe in these values so we built MellowMill around them.</p>
-    <div class="value-props" aria-label="Why MellowMill">
-        <div class="value-prop-card anim-in">
-            <h3 class="value-prop-title">Privacy</h3>
-            <p class="value-prop-desc">Your notes stay on your machine as plain-text files. Back them up with Git, Dropbox, a USB drive, or the workflow you already use — no cloud lock-in.</p>
-        </div>
-        <div class="value-prop-card anim-in">
-            <h3 class="value-prop-title">Performance</h3>
-            <p class="value-prop-desc">Built to be fast and efficient, so you stay productive as your work grows.</p>
-        </div>
-        <div class="value-prop-card anim-in">
-            <h3 class="value-prop-title">Price</h3>
-            <p class="value-prop-desc">Start for free, then upgrade to Core when your work needs more structure. Pay once, don’t subscribe.</p>
+<section id="how-it-works" class="how-it-works-section" aria-labelledby="how-it-works-heading">
+    <div class="how-it-works-heading anim-in">
+        <h2 id="how-it-works-heading">How it works</h2>
+    </div>
+    <div class="workflow-steps" aria-label="How MellowMill helps you work">
+        <article class="workflow-step workflow-step--capture anim-in">
+            <div class="workflow-step-marker" aria-hidden="true">
+                <span>1</span>
+            </div>
+            <h3>Capture</h3>
+            <p>Write thoughts, notes and ideas.</p>
+        </article>
+        <span class="workflow-arrow" aria-hidden="true">→</span>
+        <article class="workflow-step workflow-step--organise anim-in">
+            <div class="workflow-step-marker" aria-hidden="true">
+                <span>2</span>
+            </div>
+            <h3>Organise</h3>
+            <p>Use filters, tables and projects to structure information.</p>
+        </article>
+        <span class="workflow-arrow" aria-hidden="true">→</span>
+        <article class="workflow-step workflow-step--execute anim-in">
+            <div class="workflow-step-marker" aria-hidden="true">
+                <span>3</span>
+            </div>
+            <h3>Execute</h3>
+            <p>Turn information into tracked tasks and outcomes.</p>
+        </article>
+    </div>
+</section>
+
+<div class="wave-audience-top"></div>
+<section id="audience" class="audience-section" aria-labelledby="audience-heading">
+    <div class="audience-inner anim-in">
+        <h2 id="audience-heading" class="audience-heading">Is this for me?</h2>
+        <div class="audience-copy">
+            <p><strong>MellowMill is for busy professionals who need a fast, dependable place to capture what matters, organise the context around it, and get work done.</strong></p>
+            <p>It is not for people who want to spend their time making pretty dashboards or building an elaborate second brain. MellowMill keeps structure useful and out of the way — the goal is progress, not another system to maintain.</p>
         </div>
     </div>
+</section>
+<div class="wave-audience-bottom"></div>
+
+<section class="features features--tools">
     <h2 class="features-heading">Always free tools to get you started</h2>
     <p class="features-sub">Designed for work, built for you</p>
 
@@ -304,7 +345,7 @@
                 </ul>
             </div>
             <div class="pricing-card pricing-card--accent">
-                <span class="pricing-card-badge">For project work</span>
+                <span class="pricing-card-badge">Advanced Features</span>
                 <div class="plan-header">
                     <span class="plan-name">Core</span>
                     <span class="plan-price"><span class="plan-currency">$</span>50</span>
@@ -331,6 +372,38 @@
                 <ul class="pricing-feature-list">
                     <li><i class="fas fa-check ct-yes"></i>Export as a Website</li>
                 </ul>
+            </div>
+        </div>
+        <div class="pricing-comparison">
+            <h3 class="pricing-comparison-title">Compared with the usual SaaS model</h3>
+            <div class="pricing-comparison-table-wrap">
+                <table class="pricing-comparison-table">
+                    <caption class="sr-only">How MellowMill compares with a typical SaaS productivity tool</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"><span class="sr-only">Comparison</span></th>
+                            <th scope="col">MellowMill</th>
+                            <th scope="col">Typical SaaS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Pricing model</th>
+                            <td>One-time purchase</td>
+                            <td>Monthly subscription</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Platform</th>
+                            <td>Desktop-first</td>
+                            <td>Browser-first</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Data ownership</th>
+                            <td>Local data ownership</td>
+                            <td>Cloud-dependent</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <p class="comparison-currency-note anim-in">Prices shown in your local currency (GBP, EUR, or USD) based on your region.</p>
@@ -393,6 +466,25 @@
     </div>
 </section>
 <div class="wave-comparison-bottom"></div>
+
+<section id="features" class="features features--values">
+    <h2 class="features-heading">Our Core Values</h2>
+    <p class="features-sub">We believe in these values so we built MellowMill around them.</p>
+    <div class="value-props" aria-label="Why MellowMill">
+        <div class="value-prop-card anim-in">
+            <h3 class="value-prop-title">Privacy</h3>
+            <p class="value-prop-desc">Your notes stay on your machine as plain-text files. Back them up with Git, Dropbox, a USB drive, or the workflow you already use — no cloud lock-in.</p>
+        </div>
+        <div class="value-prop-card anim-in">
+            <h3 class="value-prop-title">Performance</h3>
+            <p class="value-prop-desc">Built to be fast and efficient, so you stay productive as your work grows.</p>
+        </div>
+        <div class="value-prop-card anim-in">
+            <h3 class="value-prop-title">Price</h3>
+            <p class="value-prop-desc">Start for free, then upgrade to Core when your work needs more structure. Pay once, don’t subscribe.</p>
+        </div>
+    </div>
+</section>
 
 <section id="faq" class="faq-section">
     <h2 class="faq-heading anim-in">Frequently Asked Questions</h2>
