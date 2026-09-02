@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" data-os="mac"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Decisions</title><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="margin-renderer.css"><link rel="stylesheet" href="publish.css"></head><body><div class="publish-layout has-sidebar has-toc"><aside class="publish-sidebar"><a class="publish-workspace-title" href="index.html"><div class="margin-document">
+<!doctype html><html lang="en" data-os="mac"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Decisions</title><link rel="stylesheet" href="common.css"><link rel="stylesheet" href="margin-renderer.css"><link rel="stylesheet" href="publish.css"></head><body><div class="publish-layout has-sidebar has-toc"><button type="button" class="publish-mobile-menu-toggle" aria-controls="publish-sidebar" aria-expanded="false" aria-label="Open navigation menu"><span class="publish-mobile-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></button><button type="button" class="publish-mobile-menu-backdrop" aria-label="Close navigation menu" hidden></button><aside id="publish-sidebar" class="publish-sidebar" aria-label="Site navigation"><a class="publish-workspace-title" href="index.html"><div class="margin-document">
 <p><img src="assets/Header/pasted_image_20260831141118_5fd6f6b9.png" data-image-src="file://pasted_image_20260831141118_5fd6f6b9.png" class="inline-image" alt="pasted_image_20260831141118_5fd6f6b9.png" loading="lazy"></p>
 <h4>MellowMill Documentation</h4>
 <hr class="margin-hr"></div></a><a class="publish-home-link" href="index.html">Home</a><section class="publish-nav-group"><h3 class="publish-nav-group-title">Getting Started</h3><ul><li><a href="Installation.html">Installation</a></li><li><a href="Opening your Workspace.html">Opening your Workspace</a></li><li><a href="Notes.html">Notes</a></li></ul></section><section class="publish-nav-group"><h3 class="publish-nav-group-title">Basic Functionality</h3><ul><li><a href="Basic Formatting.html">Basic Formatting</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Decisions.html" aria-current="page">Decisions</a></li><li><a href="Tables.html">Tables</a></li></ul></section><section class="publish-nav-group"><h3 class="publish-nav-group-title">Updates</h3><ul><li><a href="September 2026.html">September 2026</a></li></ul></section></aside><main class="publish-main"><article class="publish-content publish-article"><div class="margin-document"><h1>Decisions</h1>
@@ -15,4 +15,76 @@
 <p><img src="assets/Decisions/pasted_image_20260902153925_a977d42d.png" data-image-src="file://pasted_image_20260902153925_a977d42d.png" class="inline-image" alt="pasted_image_20260902153925_a977d42d.png" loading="lazy"></p>
 <p><br></p>
 <p><span class="tag">#Basic Functionality</span></p></div><nav class="publish-page-nav" aria-label="Page navigation"><a class="previous" href="Tags.html"><span class="publish-page-nav-label">Previous</span><span class="publish-page-nav-title"><span class="publish-page-nav-arrow" aria-hidden="true">&larr;</span><span class="publish-page-nav-title-text">Tags</span></span></a><a class="next" href="Tables.html"><span class="publish-page-nav-label">Next</span><span class="publish-page-nav-title"><span class="publish-page-nav-title-text">Tables</span><span class="publish-page-nav-arrow" aria-hidden="true">&rarr;</span></span></a></nav></article><div class="publish-footer"><div class="publish-shared-note"><div class="margin-document">
-<p>Copyright MellowMill 2026 - All rights reserved</p></div></div></div></main></div></body></html>
+<p>Copyright MellowMill 2026 - All rights reserved</p></div></div></div></main></div><script>
+(function () {
+    const layout = document.querySelector('.publish-layout.has-sidebar');
+    const sidebar = document.getElementById('publish-sidebar');
+    const toggle = document.querySelector('.publish-mobile-menu-toggle');
+    const backdrop = document.querySelector('.publish-mobile-menu-backdrop');
+    if (!layout || !sidebar || !toggle || !backdrop) return;
+
+    const mobileQuery = window.matchMedia('(max-width: 720px)');
+    let lastFocusedElement = null;
+
+    const setOpen = (isOpen) => {
+        const open = Boolean(isOpen) && mobileQuery.matches;
+        layout.classList.toggle('mobile-menu-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        backdrop.hidden = !open;
+        document.body.classList.toggle('publish-mobile-menu-lock', open);
+        if (mobileQuery.matches) {
+            sidebar.toggleAttribute('inert', !open);
+        } else {
+            sidebar.removeAttribute('inert');
+        }
+    };
+
+    const close = (restoreFocus) => {
+        const wasOpen = layout.classList.contains('mobile-menu-open');
+        setOpen(false);
+        if (restoreFocus && wasOpen) {
+            lastFocusedElement?.focus();
+            lastFocusedElement = null;
+        }
+    };
+
+    toggle.addEventListener('click', () => {
+        const willOpen = !layout.classList.contains('mobile-menu-open');
+        if (willOpen) {
+            lastFocusedElement = toggle;
+        }
+        setOpen(willOpen);
+        if (willOpen) {
+            sidebar.querySelector('a')?.focus();
+        }
+    });
+
+    backdrop.addEventListener('click', () => close(true));
+    sidebar.addEventListener('click', event => {
+        if (event.target instanceof Element && event.target.closest('a')) {
+            close(false);
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && layout.classList.contains('mobile-menu-open')) {
+            close(true);
+        }
+    });
+
+    const syncViewport = () => {
+        if (!mobileQuery.matches) {
+            close(false);
+        } else {
+            setOpen(layout.classList.contains('mobile-menu-open'));
+        }
+    };
+    if (mobileQuery.addEventListener) {
+        mobileQuery.addEventListener('change', syncViewport);
+    } else {
+        mobileQuery.addListener(syncViewport);
+    }
+    syncViewport();
+})();
+</script></body></html>
