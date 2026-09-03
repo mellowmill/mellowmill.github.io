@@ -2146,7 +2146,9 @@ ul li a {
 }
 
 .about-hero .about-title,
-.about-hero .about-subtitle {
+.about-hero .about-subtitle,
+.about-hero .page-meta,
+.changelog-hero .page-meta {
     position: relative;
     z-index: 2;
 }
@@ -2200,6 +2202,12 @@ ul li a {
     font-size: 1.15em;
     color: #555;
     font-weight: 400;
+}
+
+.page-meta {
+    margin: 1em 0 0;
+    color: #666;
+    font-size: 0.9em;
 }
 
 .about-content {

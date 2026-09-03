@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://mellowmill.app; frame-src 'self' https://mellowmill.substack.com; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; upgrade-insecure-requests">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -47,6 +48,25 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://mellowmill.app/#author",
+      "name": "MellowMill Ltd",
+      "url": "https://mellowmill.app/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://mellowmill.app/",
+      "datePublished": "2026-09-02",
+      "dateModified": "2026-09-03",
+      "author": {"@id": "https://mellowmill.app/#author"}
+    }
+    </script>
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9bec6ceffb274cb3ae28f9b068145ee3"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -69,6 +89,7 @@
         <p id="herodesc">
             Capture ideas, organise knowledge, track tasks, and make progress visible.
         </p>
+        <p class="page-meta">By <span itemprop="author">MellowMill Ltd</span> · Published <time datetime="2026-09-02">2 September 2026</time> · Updated <time datetime="2026-09-03">3 September 2026</time></p>
         <div class="hero-action-row">
             <ul class="hero-checklist" aria-label="Why choose MellowMill">
                 <li>Desktop App</li>
@@ -378,7 +399,7 @@
         <p class="comparison-currency-note anim-in">Prices shown in your local currency (GBP, EUR, or USD) based on your region.</p>
 
 <div id="windows-download" class="windows-download anim-in" hidden>
-    <a href="https://apps.microsoft.com/detail/9N6VL15JKSPJ" target="_blank" rel="noopener" class="windows-download-btn">
+    <a href="https://apps.microsoft.com/detail/9N6VL15JKSPJ" target="_blank" rel="noopener noreferrer" class="windows-download-btn">
         <svg class="windows-download-outline" aria-hidden="true" preserveAspectRatio="none">
             <rect x="0" y="0" rx="999" ry="999" width="100%" height="100%" pathLength="1"></rect>
         </svg>
@@ -387,7 +408,7 @@
     </a>
 </div>
 <div class="substack-signup">
-    <iframe src="https://mellowmill.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://mellowmill.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent" frameborder="0" scrolling="no" sandbox="allow-scripts allow-forms allow-popups" title="Subscribe to the MellowMill newsletter"></iframe>
 </div>
 <script>
     (function () {
