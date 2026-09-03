@@ -6,9 +6,17 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://mellowmill.app; frame-src 'self' https://mellowmill.substack.com; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; upgrade-insecure-requests">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://static.cloudflareinsights.com">
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsukDQ.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="images/hero.png" as="image" type="image/png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
     <script src="nav.js" defer></script>
     <link rel="icon" type="image/svg+xml" href="icon_recreated.svg">
     <title>MellowMill — Productivity for Busy Professionals</title>
@@ -68,11 +76,12 @@
     }
     </script>
     <!-- Cloudflare Web Analytics -->
-    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9bec6ceffb274cb3ae28f9b068145ee3"}'></script><!-- End Cloudflare Web Analytics -->
+    <script type='module' defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9bec6ceffb274cb3ae28f9b068145ee3"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body class="home-page">
-<div class="hero">
-    <div class="navbar">
+<main>
+<header class="hero">
+    <nav class="navbar" aria-label="Primary navigation">
         <a href="index.html"><img src="icon_recreated_64.png" width="64" height="64" alt="MellowMill"></a>
         <a href="index.html" id="navtitle-link"><span id="navtitle">MellowMill</span></a>
         <ul>
@@ -82,14 +91,13 @@
             <li><a href="updates.html">Updates</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-    </div>
+    </nav>
 
     <div class="primary">
         <h1 id="herotext">The workspace where thoughts become actionable steps and visible results.</h1>
         <p id="herodesc">
             Capture ideas, organise knowledge, track tasks, and make progress visible.
         </p>
-        <p class="page-meta">By <span itemprop="author">MellowMill Ltd</span> · Published <time datetime="2026-09-02">2 September 2026</time> · Updated <time datetime="2026-09-03">3 September 2026</time></p>
         <div class="hero-action-row">
             <ul class="hero-checklist" aria-label="Why choose MellowMill">
                 <li>Desktop App</li>
@@ -107,7 +115,7 @@
         </div>
         <img id="heroimg" src="images/hero.png" width="1200" height="800" fetchpriority="high" decoding="async" alt="MellowMill interface">
     </div>
-</div>
+</header>
 
 <div class="wave-audience-top"></div>
 <section id="audience" class="audience-section" aria-labelledby="audience-heading">
@@ -252,7 +260,7 @@
     <div class="core-showcase core-showcase--centered anim-in">
         <div class="core-showcase-text">
             <h3 class="core-title">Bring Your Own AI</h3>
-            <p class="core-desc">Connect your favourite AI tooling to your notes through an MCP connection. Start with Claude Code today, with ChatGPT, Gemini, and local models coming soon. Because Margin captures structure (decisions, justifications, tasks, and tags), your AI doesn't just read prose like it would with Markdown — it understands <strong class="byo-ai-word">what</strong> you decided, <strong class="byo-ai-word">why</strong> you decided it, and <strong class="byo-ai-word">how</strong> you work. Ask it questions about your projects and get answers grounded in your actual reasoning.</p>
+            <p class="core-desc">Connect your favourite AI tooling to your notes through an MCP connection. Start with Claude Code today; ChatGPT, Gemini, and local-model integrations are planned. Because Margin captures structure (decisions, justifications, tasks, and tags), your AI doesn't just read prose like it would with Markdown — it understands <strong class="byo-ai-word">what</strong> you decided, <strong class="byo-ai-word">why</strong> you decided it, and <strong class="byo-ai-word">how</strong> you work. Ask it questions about your projects and get answers grounded in your actual reasoning.</p>
         </div>
     </div>
 
@@ -505,7 +513,7 @@
         <details class="faq-item anim-in">
             <summary class="faq-question">What platforms does MellowMill support?</summary>
             <div class="faq-answer">
-                <p>MellowMill is available on Windows, with MacOS, Linux, and mobile coming soon. Your notes are stored as simple files on your computer, so they're portable across any system.</p>
+                <p>MellowMill is available on Windows, with MacOS, Linux, and mobile support planned. Your notes are stored as simple files on your computer, so they're portable across any system.</p>
             </div>
         </details>
 
@@ -518,6 +526,7 @@
     </div>
 </section>
 <div class="wave-faq-bottom"></div>
+</main>
 
 <footer class="site-footer">
     <div class="footer-inner">
@@ -555,6 +564,7 @@
     <div class="footer-bottom">
         <p>&copy; MellowMill Ltd 2026. All rights reserved.</p>
         <address class="footer-address">MellowMill Ltd, 82A James Carter Road, Mildenhall, IP28 7DE</address>
+        <p class="page-meta">Last updated <time datetime="2026-09-03">3 September 2026</time></p>
     </div>
 </footer>
 

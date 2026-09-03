@@ -6,9 +6,16 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://mellowmill.app; frame-src 'self' https://mellowmill.substack.com; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; upgrade-insecure-requests">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://static.cloudflareinsights.com">
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsukDQ.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Gowun+Dodum&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
     <script src="nav.js" defer></script>
     <link rel="icon" type="image/svg+xml" href="icon_recreated.svg">
     <title>Privacy Policy — MellowMill</title>
@@ -35,12 +42,13 @@
     <meta property="og:url" content="https://mellowmill.app/privacy.html">
     <meta property="og:image" content="https://mellowmill.app/logo.png">
     <!-- Cloudflare Web Analytics -->
-    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9bec6ceffb274cb3ae28f9b068145ee3"}'></script><!-- End Cloudflare Web Analytics -->
+    <script type='module' defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9bec6ceffb274cb3ae28f9b068145ee3"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<main>
 
 <section class="about-hero">
-    <div class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
         <a href="index.html"><img src="icon_recreated_64.png" width="64" height="64" alt="MellowMill"></a>
         <a href="index.html" id="navtitle-link"><span id="navtitle">MellowMill</span></a>
         <ul>
@@ -50,10 +58,9 @@
             <li><a href="updates.html">Updates</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-    </div>
+    </nav>
     <h2 class="about-title">Privacy Policy</h2>
     <p class="about-subtitle">How MellowMill handles your data.</p>
-    <p class="page-meta">By <span itemprop="author">MellowMill Ltd</span> · Published <time datetime="2026-04-17">17 April 2026</time> · Updated <time datetime="2026-09-03">3 September 2026</time></p>
 </section>
 
 <section class="about-content">
@@ -103,6 +110,7 @@
         <p class="about-text">If you have questions, contact us at <a href="mailto:hello@mellowmill.app">hello@mellowmill.app</a>.</p>
     </div>
 </section>
+ </main>
 
 <footer class="site-footer">
     <div class="footer-inner">
@@ -140,6 +148,7 @@
     <div class="footer-bottom">
         <p>&copy; MellowMill Ltd 2026. All rights reserved.</p>
         <address class="footer-address">MellowMill Ltd, 82A James Carter Road, Mildenhall, IP28 7DE</address>
+        <p class="page-meta">Last updated <time datetime="2026-09-03">3 September 2026</time></p>
     </div>
 </footer>
 
